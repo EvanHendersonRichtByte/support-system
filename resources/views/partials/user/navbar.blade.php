@@ -29,8 +29,8 @@
                                 <div class="collapse navbar-collapse p-0" id="bs-example-navbar-collapse-1">
                                     <ul class="nav navbar-nav navbar-right">
                                         <li class=" active "><a href="{{url('/')}}"><i class="fa fa-home"></i> Home</a></li>
-                                        <li class=""><a href="https://demo.appsbd.com/support-system/knowledge.html"><i class="fa fa-graduation-cap"></i> Knowledge</a></li>
-                                        <li> <a data-effect="mfp-move-from-top" class="popupformWR open-ticket apopf" href="https://demo.appsbd.com/support-system/user/login-register.html">
+                                        <li class=""><a href="{{url('/')}}"><i class="fa fa-graduation-cap"></i> Knowledge</a></li>
+                                        <li> <a data-effect="mfp-move-from-top" class="popupformWR open-ticket apopf" href="{{url('/ticket/open')}}">
                                                 <i class="fa fa-ticket"></i> Open Ticket
                                             </a>
                                         </li>

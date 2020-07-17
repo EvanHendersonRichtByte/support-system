@@ -34,3 +34,6 @@ Route::get('/client/panel/profile', function () {
 Route::get('/user/{$id}/change-password', function ($id) {
     return view('alluser.change_password', compact('id'));
 });
+Route::get('/ticket/open', function () {
+    return view('user.open_tickets');
+});
