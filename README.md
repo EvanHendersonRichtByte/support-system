@@ -26,7 +26,10 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 Below is the current issue when developing this project:
 
 - Popup modal login,change password
-- Login, Register, Knowledge, Open Ticket Page
+- Login, Register page/modal
+-----------------------------------------------
+- Admin chart
+- User settings (user list, role list, role access) table bug
 
 ## Learning Laravel
 
