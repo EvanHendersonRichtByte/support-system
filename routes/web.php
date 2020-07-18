@@ -2,17 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 
+
+
 /*
 |--------------------------------------------------------------------------
-| Web Routes
+| User Routes
 |--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
 */
-
 Route::get('/', function () {
     return view('welcome');
 });
@@ -36,4 +32,27 @@ Route::get('/user/{$id}/change-password', function ($id) {
 });
 Route::get('/ticket/open', function () {
     return view('user.open_tickets');
+});
+/*
+|--------------------------------------------------------------------------
+| Admin Routes
+|--------------------------------------------------------------------------
+*/
+Route::get('/admin', function () {
+    return view('admin.admin');
+});
+Route::get('/admin/admin-report', function () {
+    return view('admin.admin_report.admin_report');
+});
+Route::get('/admin/app-permission/user-list', function () {
+    return view('admin.user_settings.user_list');
+});
+Route::get('/admin/app-permission/role-list', function () {
+    return view('admin.user_settings.role_list');
+});
+Route::get('/admin/app-permission/role-access', function () {
+    return view('admin.user_settings.role_access');
+});
+Route::get('/admin/ticket-payment', function () {
+    return view('admin.ticket_payment');
 });
