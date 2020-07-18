@@ -136,7 +136,7 @@
 							<div class="row">
 								<div class="col-md-8">
 									<form action="https://demo.appsbd.com/support-system/ticket/open.html" class="form bv-form" id="ticket_open_form" method="post" enctype="multipart/form-data" data-on-complete="on_complete" data-beforesend="on_beforesend" data-multipart="true" accept-charset="utf-8" novalidate="novalidate">
-										<input type="hidden" name="app_form" value="f488bcf136674cacfc1083876a8081fd">
+										<input type="hidden" name="app_form" value="aa401e2f7769f4ec732697f16f28e676">
 										<div class="panel panel-default app-panel-box">
 											<div class="panel-heading">New Ticket Form</div>
 											<div class="panel-body">
@@ -147,17 +147,15 @@
 															<input type="text" maxlength="150" autocomplete="off" value="" class="form-control" id="title" name="title" placeholder="Title" data-bv-notempty="true" data-bv-notempty-message="Ticket subject is required" data-bv-field="title"><i class="form-control-feedback" data-bv-icon-for="title" style="display: none;"></i>
 															<small class="help-block" data-bv-validator="notEmpty" data-bv-for="title" data-bv-result="NOT_VALIDATED" style="display: none;">Ticket subject is required</small><small class="help-block" data-bv-validator="stringLength" data-bv-for="title" data-bv-result="NOT_VALIDATED" style="display: none;">This value is not valid</small></div>
 													</div>
-													<div class="form-group has-feedback has-error">
-														<label class="control-label label-required col-md-3" for="user_email">Email Address</label>
-														<div class="col-md-9">
-															<input type="Email" class="form-control" id="user_email" data-bv-remote-url="https://demo.appsbd.com/support-system/user/email-check/ticket-open/user_email.html" data-bv-trigger="blur" data-bv-remote="true" value="" name="user_email" placeholder="Email Address" data-bv-notempty="true" data-bv-emailaddress="true" data-bv-emailaddress-message="Invalid email address." data-bv-notempty-message="Email is required" data-bv-field="user_email"><i class="form-control-feedback fa fa-times" data-bv-icon-for="user_email"></i>
-															<small class="help-block" data-bv-validator="emailAddress" data-bv-for="user_email" data-bv-result="VALID" style="display: none;">Invalid email address.</small><small class="help-block" data-bv-validator="notEmpty" data-bv-for="user_email" data-bv-result="INVALID" style="display: inline;">Email is required</small><small class="help-block" data-bv-validator="remote" data-bv-for="user_email" data-bv-result="VALID" style="display: none;">This value is not valid</small></div>
-													</div>
 													<div class="form-group has-feedback">
 														<label class="control-label label-required col-md-3" for="priroty">Priority</label>
 														<div class="col-md-9">
 															<select class="form-control" id="priroty" name="priroty" data-bv-notempty="true" data-bv-notempty-message="Priority is required" data-bv-field="priroty">
-																<option value="L">Low-Please login to set priroty</option>
+																<option value="">Select</option>
+																<option selected="selected" value="L">Low</option>
+																<option value="M">Medium</option>
+																<option value="H">High</option>
+																<option value="U">Urgent</option>
 															</select><i class="form-control-feedback" data-bv-icon-for="priroty" style="display: none;"></i>
 															<small class="help-block" data-bv-validator="notEmpty" data-bv-for="priroty" data-bv-result="NOT_VALIDATED" style="display: none;">Priority is required</small></div>
 													</div>
@@ -236,8 +234,12 @@
 												</div>
 												<div class="form-group has-feedback">
 													<label class="control-label label-required" for="ticket_body">Ticket Body</label>
+
+													<!-- THIS ? -------------------------------------------------------------------------------------------- -->
 													<textarea style="height: 200px; display: none;" class="form-control app-html-editor force-bv .added-ck" id="ticket_body" name="ticket_body" required="required" placeholder="Ticket Body" data-bv-notempty="true" data-bv-notempty-message="Ticket Body is required" data-bv-field="ticket_body"></textarea>
-													<div class="note-editor note-frame panel panel-default">
+													<!-- OR THIS ? -------------------------------------------------------------------------------------------- -->
+
+													<!-- <div class="note-editor note-frame panel panel-default">
 														<div class="note-dropzone">
 															<div class="note-dropzone-message"></div>
 														</div>
@@ -480,19 +482,12 @@
 																</div>
 															</div>
 														</div>
-													</div>
+													</div> -->
 													<div class="text-right app-edittor-limit-text">Characters : 0</div><i class="form-control-feedback" data-bv-icon-for="ticket_body" style="display: none;"></i>
 													<small class="help-block" data-bv-validator="notEmpty" data-bv-for="ticket_body" data-bv-result="NOT_VALIDATED" style="display: none;">Ticket Body is required</small></div>
-												<div class="form-group has-feedback"><br>
-													<label>Captcha</label>
-													<div class="app-default-captcha ">
-														<input data-bv-notempty="true" data-bv-notempty-message="Captcha is required" class="app-captcha-input form-control" type="text" name="app_captcha_response" value="" data-bv-field="app_captcha_response"><i class="form-control-feedback" data-bv-icon-for="app_captcha_response" style="display: none;"></i><img class="app-captcha-img " src="data:image/jpeg;base64,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" alt="Captcha Image">
-													</div>
-													<small class="help-block" data-bv-validator="notEmpty" data-bv-for="app_captcha_response" data-bv-result="NOT_VALIDATED" style="display: none;">Captcha is required</small>
-												</div>
 											</div>
 											<div class="panel-footer text-center">
-												<button type="submit" class="btn btn-theme btn-lg added-ripples" disabled="disabled"><i class="fa fa-ticket"></i> Create Ticket</button>
+												<button type="submit" class="btn btn-theme btn-lg added-ripples"><i class="fa fa-ticket"></i> Create Ticket</button>
 											</div>
 										</div>
 									</form>
@@ -528,6 +523,7 @@
 														</a>
 													</h5>
 												</li>
+
 												<li class=" p-10  ">
 													<h5 class="m-0">
 														<a href="https://demo.appsbd.com/support-system/category/details/5/WordPress Theme Setup.html">
@@ -579,8 +575,8 @@
 												</li>
 												<li class=" p-10  ">
 													<h5 class="m-0">
-														<a href="https://demo.appsbd.com/support-system/knowledge/details/1/how-do-you-find-good-php-programmers.html">
-															<i class="fa fa-angle-double-right"></i> How Do You Find Good PHP Programmers? <span class="pull-right">( <i class="fa fa-eye"></i> 02 )</span>
+														<a href="https://demo.appsbd.com/support-system/knowledge/details/61/five-reasons-you-too-will-love-wordpress.html">
+															<i class="fa fa-angle-double-right"></i> Five Reasons You Too Will Love WordPress <span class="pull-right">( <i class="fa fa-eye"></i> 03 )</span>
 														</a>
 													</h5>
 												</li>
@@ -808,11 +804,6 @@
 									}
 								}
 								$(function() {
-									CallOnAjaxComplete("https://demo.appsbd.com/support-system/user/email-check/ticket-open/user_email.html", function(event, xhr, settings) {
-										if (!xhr.responseJSON.valid) {
-											_popupajaxLoadComplted();
-										}
-									});
 									show_custom_inputs();
 									$(".app-custom-fld-container").removeClass("app-custom-fld-container");
 									$("#cat_id").on("change", function(e) {
@@ -914,7 +905,7 @@
 		</div>
 
 		@include('partials.user.footer')
-		<button class="go_top btn-theme animated hidden zoomOut"><i class="fa fa-chevron-up"></i></button>
+		<button class="go_top btn-theme animated zoomIn"><i class="fa fa-chevron-up"></i></button>
 	</div>
 
 	<script src="https://demo.appsbd.com/support-system/theme/client/js/theme-main.js" type="text/javascript"></script>
@@ -924,14 +915,14 @@
 		$(function() {
 			chatbox = $.appsbdChat({
 				url: "https://demo.appsbd.com/support-system/chat",
-				chatKey: "ct5f11934430e4b",
+				chatKey: "ct5f126f300638c",
 				chatTitle: "Appsbd Live Chat",
 				chatSubTitle: "Smart Techonology",
-				chatLogo: "{{asset('images/logo.png')}}",
+				chatLogo: "https://demo.appsbd.com/support-system/images/logo.png",
 				preMsg: "Welcome to our chat system.if you want to start chat with our agent then please click the button bellow.",
 				startBtnText: 'Start Conversation',
-				audioPath: "{{asset('images/chatnoti.ogg')}}",
-				userImg: "{{asset('images/no-image.png')}}",
+				audioPath: "https://demo.appsbd.com/support-system/images/chatnoti.ogg",
+				userImg: "https://demo.appsbd.com/support-system/images/default-user-image.png",
 				fileUrl: "https://demo.appsbd.com/support-system/chat",
 				fileAccepts: ".jpg,.png,.zip",
 				maxFileSize: 2,
@@ -1167,10 +1158,10 @@
 							<td data-date="16" data-month="6" data-year="2020" class="xdsoft_date xdsoft_day_of_week4 xdsoft_date" title="">
 								<div>16</div>
 							</td>
-							<td data-date="17" data-month="6" data-year="2020" class="xdsoft_date xdsoft_day_of_week5 xdsoft_date xdsoft_current xdsoft_today" title="">
+							<td data-date="17" data-month="6" data-year="2020" class="xdsoft_date xdsoft_day_of_week5 xdsoft_date" title="">
 								<div>17</div>
 							</td>
-							<td data-date="18" data-month="6" data-year="2020" class="xdsoft_date xdsoft_day_of_week6 xdsoft_date xdsoft_weekend" title="">
+							<td data-date="18" data-month="6" data-year="2020" class="xdsoft_date xdsoft_day_of_week6 xdsoft_date xdsoft_current xdsoft_today xdsoft_weekend" title="">
 								<div>18</div>
 							</td>
 						</tr>
@@ -1238,7 +1229,7 @@
 					<div class="xdsoft_time " data-hour="8" data-minute="0">08:00</div>
 					<div class="xdsoft_time " data-hour="9" data-minute="0">09:00</div>
 					<div class="xdsoft_time " data-hour="10" data-minute="0">10:00</div>
-					<div class="xdsoft_time " data-hour="11" data-minute="0">11:00</div>
+					<div class="xdsoft_time xdsoft_current" data-hour="11" data-minute="0">11:00</div>
 					<div class="xdsoft_time " data-hour="12" data-minute="0">12:00</div>
 					<div class="xdsoft_time " data-hour="13" data-minute="0">13:00</div>
 					<div class="xdsoft_time " data-hour="14" data-minute="0">14:00</div>
@@ -1246,7 +1237,7 @@
 					<div class="xdsoft_time " data-hour="16" data-minute="0">16:00</div>
 					<div class="xdsoft_time " data-hour="17" data-minute="0">17:00</div>
 					<div class="xdsoft_time " data-hour="18" data-minute="0">18:00</div>
-					<div class="xdsoft_time xdsoft_current" data-hour="19" data-minute="0">19:00</div>
+					<div class="xdsoft_time " data-hour="19" data-minute="0">19:00</div>
 					<div class="xdsoft_time " data-hour="20" data-minute="0">20:00</div>
 					<div class="xdsoft_time " data-hour="21" data-minute="0">21:00</div>
 					<div class="xdsoft_time " data-hour="22" data-minute="0">22:00</div>
@@ -1257,7 +1248,7 @@
 				</div>
 			</div><button type="button" class="xdsoft_next"></button>
 		</div>
-	</div><iframe id="app-print-iframe" style="border:none;height:0;width:0" __idm_frm__="447"></iframe>
+	</div><iframe id="app-print-iframe" style="border:none;height:0;width:0" __idm_frm__="288"></iframe>
 	<div class="note-popover popover in note-link-popover bottom">
 		<div class="arrow"></div>
 		<div class="popover-content note-children-container"><span><a target="_blank"></a>&nbsp;</span>
@@ -1295,7 +1286,7 @@
 			<div class="apc-header">
 				<div class="apc-header-row">
 					<div class="apc-company-img">
-						<img src="{{asset('images/logo.png')}}" alt="Logo">
+						<img src="https://demo.appsbd.com/support-system/images/logo.png" alt="Logo">
 					</div>
 					<div class="apc-header-info">
 						<div class="apc-header-info-title">Appsbd Live Chat</div>
