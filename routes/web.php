@@ -84,3 +84,36 @@ Route::get('/admin/ticket/all-paid-ticket', function () {
 Route::get('/admin/ticket/closed-ticket', function () {
     return view('admin.ticket.all_closed_tickets');
 });
+// -------------------------------------------------------------------------
+Route::get('/admin/admin-chat', function () {
+    return view('admin.web_chat.chat_panel');
+});
+Route::get('/admin/chat-canned-msg', function () {
+    return view('admin.web_chat.chat_canned_message');
+});
+// -------------------------------------------------------------------------
+Route::get('/admin/ticket-feedback', function () {
+    return view('admin.ticket_feedback');
+});
+Route::get('/admin/notice', function () {
+    return view('admin.announcements');
+});
+Route::get('/admin/knowledge', function () {
+    return view('admin.knowledge');
+});
+Route::get('/admin/category', function () {
+    return view('admin.category');
+});
+Route::get('/admin/canned-msg', function () {
+    return view('admin.canned_msg');
+});
+Route::get('/admin/client', function () {
+    return view('admin.client');
+});
+// -------------------------------------------------------------------------
+Route::get('/admin/admin-message', function () {
+    return view('admin.message.my_message');
+});
+Route::get('/admin/admin-message/sent', function () {
+    return view('admin.message.sent_message');
+});

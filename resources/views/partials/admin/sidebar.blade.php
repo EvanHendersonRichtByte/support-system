@@ -111,37 +111,37 @@
                         <i class="fa fa-angle-left pull-right"></i>
                     </a>
                     <ul class="treeview-menu">
-                        <li class=" "><a class="" href="https://demo.appsbd.com/support-system/admin/admin-chat.html"><i class="fa ap ap-chat"></i> Chat Panel</a></li>
-                        <li class=" "><a class="" href="https://demo.appsbd.com/support-system/admin/chat-canned-msg.html"><i class="fa fa-circle-o"></i> Chat Canned Message</a></li>
+                        <li class=" "><a class="" href="{{url('/admin/admin-chat')}}"><i class="fa ap ap-chat"></i> Chat Panel</a></li>
+                        <li class=" "><a class="" href="{{url('/admin/chat-canned-msg')}}"><i class="fa fa-circle-o"></i> Chat Canned Message</a></li>
                     </ul>
                 </li>
                 <li class=" treeview">
-                    <a href="https://demo.appsbd.com/support-system/admin/ticket-feedback.html" class="">
+                    <a href="{{url('/admin/ticket-feedback')}}" class="">
                         <i class="fa fa fa-ticket"></i> <span>Ticket Feedback</span>
                     </a>
                 </li>
                 <li class=" treeview">
-                    <a href="https://demo.appsbd.com/support-system/admin/notice.html" class="">
+                    <a href="{{url('/admin/notice')}}" class="">
                         <i class="fa fa fa-bullhorn"></i> <span>Announcements</span>
                     </a>
                 </li>
                 <li class=" treeview">
-                    <a href="https://demo.appsbd.com/support-system/admin/knowledge.html" class="">
+                    <a href="{{url('/admin/knowledge')}}" class="">
                         <i class="fa fa fa-graduation-cap"></i> <span>Knowledge</span>
                     </a>
                 </li>
                 <li class=" treeview">
-                    <a href="https://demo.appsbd.com/support-system/admin/category.html" class="">
+                    <a href="{{url('/admin/category')}}" class="">
                         <i class="fa fa fa-table"></i> <span>Category</span>
                     </a>
                 </li>
                 <li class=" treeview">
-                    <a href="https://demo.appsbd.com/support-system/admin/canned-msg.html" class="">
+                    <a href="{{url('/admin/canned-msg')}}" class="">
                         <i class="fa fa fa-stack-exchange"></i> <span>Canned Msg</span>
                     </a>
                 </li>
                 <li class=" treeview">
-                    <a href="https://demo.appsbd.com/support-system/admin/client.html" class="">
+                    <a href="{{url('/admin/client')}}" class="">
                         <i class="fa ap ap-client"></i> <span>Client</span>
                     </a>
                 </li>
@@ -151,8 +151,8 @@
                         <i class="fa fa-angle-left pull-right"></i>
                     </a>
                     <ul class="treeview-menu">
-                        <li class=" "><a class="" href="https://demo.appsbd.com/support-system/admin/admin-message.html"><i class="fa fa fa-envelope-open"></i> My Message</a></li>
-                        <li class=" "><a class="" href="https://demo.appsbd.com/support-system/admin/admin-message/sent.html"><i class="fa fa fa-envelope"></i> Sent Message</a></li>
+                        <li class=" "><a class="" href="{{url('/admin/admin-message')}}"><i class="fa fa fa-envelope-open"></i> My Message</a></li>
+                        <li class=" "><a class="" href="{{url('/admin/admin-message/sent')}}"><i class="fa fa fa-envelope"></i> Sent Message</a></li>
                     </ul>
                 </li>
             </ul>
