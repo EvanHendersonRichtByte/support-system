@@ -77,13 +77,13 @@
                     </ul>
                 </li>
                 <li class=" treeview">
-                    <a href="https://demo.appsbd.com/support-system/admin/ticket-payment.html" class="">
+                    <a href="{{url('/admin/ticket-payment')}}" class="">
                         <i class="fa fa fa-money"></i> <span>Payment List</span>
                     </a>
                 </li>
                 <li class="header">STAFF MENU</li>
                 <li class="active selected open  treeview">
-                    <a href="https://demo.appsbd.com/support-system/admin/dashboard/index.html" class="">
+                    <a href="{{url('/admin')}}" class="">
                         <i class="fa ap ap-dashboard"></i> <span>My Dashboard</span>
                     </a>
                 </li>
@@ -93,16 +93,16 @@
                         <i class="fa fa-angle-left pull-right"></i>
                     </a>
                     <ul class="treeview-menu">
-                        <li class=" "><a class="" href="https://demo.appsbd.com/support-system/admin/ticket/open.html"><i class="fa fa-pencil-square-o"></i> Create Ticket</a></li>
-                        <li class=" "><a class="" href="https://demo.appsbd.com/support-system/admin/ticket.html"><i class="fa fa-circle-o"></i> All Active Tickets</a></li>
-                        <li class=" "><a class="" href="https://demo.appsbd.com/support-system/admin/ticket/my-ticket.html"><i class="fa fa-circle-o"></i> My Active Tickets</a></li>
-                        <li class=" "><a class="" href="https://demo.appsbd.com/support-system/admin/ticket/my-paid-ticket.html"><i class="fa fa-circle-o"></i> My Active Paid Tickets</a></li>
-                        <li class=" "><a class="" href="https://demo.appsbd.com/support-system/admin/ticket/my-closed.html"><i class="fa fa-circle-o"></i> My Closed Tickets</a></li>
+                        <li class=" "><a class="" href="{{url('/admin/ticket/open')}}"><i class="fa fa-pencil-square-o"></i> Create Ticket</a></li>
+                        <li class=" "><a class="" href="{{url('/admin/ticket')}}"><i class="fa fa-circle-o"></i> All Active Tickets</a></li>
+                        <li class=" "><a class="" href="{{url('/admin/ticket/my-ticket')}}"><i class="fa fa-circle-o"></i> My Active Tickets</a></li>
+                        <li class=" "><a class="" href="{{url('/admin/ticket/my-paid-ticket')}}"><i class="fa fa-circle-o"></i> My Active Paid Tickets</a></li>
+                        <li class=" "><a class="" href="{{url('/admin/ticket/my-closed-ticket')}}"><i class="fa fa-circle-o"></i> My Closed Tickets</a></li>
 
-                        <li class=" "><a class="" href="https://demo.appsbd.com/support-system/admin/ticket/my-assigned-ticket.html"><i class="fa fa-circle-o"></i> My Assigned Tickets</a></li>
-                        <li class=" "><a class="" href="https://demo.appsbd.com/support-system/admin/ticket/unassigned-ticket.html"><i class="fa fa-circle-o"></i> All Unassigned Tickets</a></li>
-                        <li class=" "><a class="" href="https://demo.appsbd.com/support-system/admin/ticket/all-paid-ticket.html"><i class="fa fa-circle-o"></i> All Paid Tickets</a></li>
-                        <li class=" "><a class="" href="https://demo.appsbd.com/support-system/admin/ticket/closed-ticket.html"><i class="fa fa-circle-o"></i> All Closed Tickets</a></li>
+                        <li class=" "><a class="" href="{{url('/admin/ticket/my-assigned-ticket')}}"><i class="fa fa-circle-o"></i> My Assigned Tickets</a></li>
+                        <li class=" "><a class="" href="{{url('/admin/ticket/unassigned-ticket')}}"><i class="fa fa-circle-o"></i> All Unassigned Tickets</a></li>
+                        <li class=" "><a class="" href="{{url('/admin/ticket/all-paid-ticket')}}"><i class="fa fa-circle-o"></i> All Paid Tickets</a></li>
+                        <li class=" "><a class="" href="{{url('/admin/ticket/closed-ticket')}}"><i class="fa fa-circle-o"></i> All Closed Tickets</a></li>
                     </ul>
                 </li>
                 <li class=" treeview">

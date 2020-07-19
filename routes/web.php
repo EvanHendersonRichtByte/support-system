@@ -56,3 +56,31 @@ Route::get('/admin/app-permission/role-access', function () {
 Route::get('/admin/ticket-payment', function () {
     return view('admin.ticket_payment');
 });
+// -------------------------------------------------------------------------
+Route::get('/admin/ticket/open', function () {
+    return view('admin.ticket.create_ticket');
+});
+Route::get('/admin/ticket', function () {
+    return view('admin.ticket.all_active_tickets');
+});
+Route::get('/admin/ticket/my-ticket', function () {
+    return view('admin.ticket.my_active_tickets');
+});
+Route::get('/admin/ticket/my-paid-ticket', function () {
+    return view('admin.ticket.my_paid_tickets');
+});
+Route::get('/admin/ticket/my-closed-ticket', function () {
+    return view('admin.ticket.my_closed_tickets');
+});
+Route::get('/admin/ticket/my-assigned-ticket', function () {
+    return view('admin.ticket.my_assigned_tickets');
+});
+Route::get('/admin/ticket/unassigned-ticket', function () {
+    return view('admin.ticket.my_unassigned_tickets');
+});
+Route::get('/admin/ticket/all-paid-ticket', function () {
+    return view('admin.ticket.all_paid_tickets');
+});
+Route::get('/admin/ticket/closed-ticket', function () {
+    return view('admin.ticket.all_closed_tickets');
+});
