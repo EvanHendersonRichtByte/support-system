@@ -5,7 +5,7 @@ All Active Tickets
 @endsection
 
 @section('main-content')
-<div id="main-content" class="content-wrapper" style="min-height: 294px;">
+<div id="main-content" class="content-wrapper" style="min-height: 606px;">
     <div id="MainFormLoader" class="MainLoader">
         <div class="msgText"></div>
     </div>
@@ -49,7 +49,7 @@ All Active Tickets
         <div class="box box-primary">
             <div class="box-body grid-body">
                 <div class="grid-search-panel">
-                    <div class="gs-grid-serach row form-horizontal" id="src_tab1_1595129082" style="padding: 5px;">
+                    <div class="gs-grid-serach row form-horizontal" id="src_tab1_1595151824" style="padding: 5px;">
                         <div class="col-md-5 col-sm-4">
                             <div class="form-group form-group-xs">
                                 <label for="selectpropery" class="control-label first-label col-md-6  hidden-xs"><span class="hidden-sm">Select</span> Property</label>
@@ -66,9 +66,9 @@ All Active Tickets
                             </div>
                         </div>
                         <div class="col-md-5 col-sm-8">
-                            <form id="ms_tab1_1595129082" onsubmit="if (!window.__cfRLUnblockHandlers) return false; return false;">
+                            <form id="ms_tab1_1595151824" onsubmit="if (!window.__cfRLUnblockHandlers) return false; return false;">
                                 <div class="row">
-                                    <div id="src_tab1_1595129082_text" class="col-md-12">
+                                    <div id="src_tab1_1595151824_text" class="col-md-12">
                                         <div class="form-group form-group-xs">
                                             <label for="srcText" class="control-label col-md-6 hidden-xs"><span class="hidden-sm">Select</span> Value</label>
                                             <div class="col-md-6">
@@ -77,7 +77,7 @@ All Active Tickets
                                             </div>
                                         </div>
                                     </div>
-                                    <div id="src_tab1_1595129082_from" class="col-md-6 col-sm-6 hidden">
+                                    <div id="src_tab1_1595151824_from" class="col-md-6 col-sm-6 hidden">
                                         <div class="form-group form-group-xs">
                                             <label for="srcText" class="control-label col-md-2">From</label>
                                             <div class="ag-from-container col-md-10">
@@ -87,7 +87,7 @@ All Active Tickets
                                             </div>
                                         </div>
                                     </div>
-                                    <div id="src_tab1_1595129082_to" class="col-md-6 col-sm-6 hidden">
+                                    <div id="src_tab1_1595151824_to" class="col-md-6 col-sm-6 hidden">
                                         <div class="form-group form-group-xs">
                                             <label for="srcText" class="control-label col-md-2">To</label>
                                             <div class="ag-to-container col-md-10">
@@ -101,15 +101,15 @@ All Active Tickets
                             </form>
                         </div>
                         <div class="col-md-2 col-sm-12 sm-text-right">
-                            <a class="btn btn-xs btn-warning added-ripples" onclick="if (!window.__cfRLUnblockHandlers) return false; javascript:Grid_tab1_1595129082_custom_reload();"><i class="fa fa-search"></i>Search</a> <a class="btn btn-xs btn-danger added-ripples" onclick="if (!window.__cfRLUnblockHandlers) return false; javascript:Grid_tab1_1595129082_reset_custom_reload();"><i class="fa fa-times"> </i> Reset</a>
+                            <a class="btn btn-xs btn-warning added-ripples" onclick="if (!window.__cfRLUnblockHandlers) return false; javascript:Grid_tab1_1595151824_custom_reload();"><i class="fa fa-search"></i>Search</a> <a class="btn btn-xs btn-danger added-ripples" onclick="if (!window.__cfRLUnblockHandlers) return false; javascript:Grid_tab1_1595151824_reset_custom_reload();"><i class="fa fa-times"> </i> Reset</a>
                         </div>
                         <div class="clear"></div>
                     </div>
                 </div>
                 <script type="text/javascript">
-                    var is_init_tab1_1595129082 = false;
-                    var sbtnclick_tab1_1595129082 = false;
-                    var minwidth_tab1_1595129082 = 200;
+                    var is_init_tab1_1595151824 = false;
+                    var sbtnclick_tab1_1595151824 = false;
+                    var minwidth_tab1_1595151824 = 200;
 
                     function app_grid_log(e) {}
 
@@ -120,36 +120,36 @@ All Active Tickets
                     }
                     jQuery(function($) {
 
-                        var srcDivId = "#src_tab1_1595129082";
-                        jQuery("#src_tab1_1595129082 .srcSelectValue").change(function() {
-                            if (jQuery("#autosearch_tab1_1595129082").is(':checked')) {
-                                Grid_tab1_1595129082_custom_reload();
+                        var srcDivId = "#src_tab1_1595151824";
+                        jQuery("#src_tab1_1595151824 .srcSelectValue").change(function() {
+                            if (jQuery("#autosearch_tab1_1595151824").is(':checked')) {
+                                Grid_tab1_1595151824_custom_reload();
                             }
                         });
-                        var timeoutHnd_tab1_1595129082 = null;
-                        jQuery("#src_tab1_1595129082 .srcTextValue").keydown(function(e) {
+                        var timeoutHnd_tab1_1595151824 = null;
+                        jQuery("#src_tab1_1595151824 .srcTextValue").keydown(function(e) {
                             var s = jQuery(this).val();
                             var code = (e.keyCode ? e.keyCode : e.which);
-                            if ((s.length == 1 && code == 8) || jQuery("#autosearch_tab1_1595129082").is(':checked')) {
-                                if (timeoutHnd_tab1_1595129082) clearTimeout(timeoutHnd_tab1_1595129082);
-                                timeoutHnd_tab1_1595129082 = setTimeout(Grid_tab1_1595129082_reload, 500);
+                            if ((s.length == 1 && code == 8) || jQuery("#autosearch_tab1_1595151824").is(':checked')) {
+                                if (timeoutHnd_tab1_1595151824) clearTimeout(timeoutHnd_tab1_1595151824);
+                                timeoutHnd_tab1_1595151824 = setTimeout(Grid_tab1_1595151824_reload, 500);
                             } else if (code == 13) {
-                                Grid_tab1_1595129082_custom_reload();
+                                Grid_tab1_1595151824_custom_reload();
                             }
                         });
 
 
-                        jQuery("#autosearch_tab1_1595129082").click(function() {
-                            if (jQuery("#autosearch_tab1_1595129082").is(':checked')) {
-                                jQuery("#src_tab1_1595129082 .srcButton").hide();
-                                Grid_tab1_1595129082_reload();
+                        jQuery("#autosearch_tab1_1595151824").click(function() {
+                            if (jQuery("#autosearch_tab1_1595151824").is(':checked')) {
+                                jQuery("#src_tab1_1595151824 .srcButton").hide();
+                                Grid_tab1_1595151824_reload();
                             } else {
-                                jQuery("#src_tab1_1595129082 .srcButton").show();
+                                jQuery("#src_tab1_1595151824 .srcButton").show();
                             }
                         });
 
-                        jQuery("#src_tab1_1595129082 .srcOptionList").change(function(e) {
-                            SetSearchOption_src_tab1_1595129082();
+                        jQuery("#src_tab1_1595151824 .srcOptionList").change(function(e) {
+                            SetSearchOption_src_tab1_1595151824();
                         });
                         jQuery(".gs-jq-grid").on("click", ".full-screen:not(.exit-full-screen)", function(e) {
                             $('body').addClass("f-screen").addClass("s-note-fs");
@@ -161,20 +161,20 @@ All Active Tickets
                                 jQuery(".grid-body").addClass('grid-full-screen');
                             } catch (e) {}
                             var panelid = $(this).data("gridid");
-                            var gridh = jQuery("#tab1_1595129082").getGridParam("height");
+                            var gridh = jQuery("#tab1_1595151824").getGridParam("height");
                             $(this).attr("lasth", gridh);
                             $("#" + panelid).addClass("grid-panel-full-screen");
                             $(this).addClass("exit-full-screen");
                             var wheight = $(window).height();
                             var wwidth = $(window).width();
-                            var offset = jQuery("#pager_tab1_1595129082").height();
+                            var offset = jQuery("#pager_tab1_1595151824").height();
                             if (offset <= 0) {
                                 offset = 130;
                             } else {
                                 offset += 75;
                             }
-                            jQuery("#tab1_1595129082").setGridWidth(wwidth);
-                            jQuery("#tab1_1595129082").setGridHeight(wheight - offset);
+                            jQuery("#tab1_1595151824").setGridWidth(wwidth);
+                            jQuery("#tab1_1595151824").setGridHeight(wheight - offset);
 
                             // requestFullScreen(document.getElementById(panelid));
 
@@ -189,44 +189,44 @@ All Active Tickets
                             $(this).removeClass("exit-full-screen");
                             var lastheight = $(this).attr("lasth");
                             $(this).removeAttr("lasth");
-                            jQuery("#tab1_1595129082").setGridHeight(lastheight);
+                            jQuery("#tab1_1595151824").setGridHeight(lastheight);
                             // requestFullScreen(document.getElementById(panelid));
                             try {
                                 jQuery(".grid-body").removeClass('grid-full-screen');
                             } catch (e) {}
-                            tab1_1595129082_ResizeGrid();
+                            tab1_1595151824_ResizeGrid();
 
                         });
-                        SetSearchOption_src_tab1_1595129082();
+                        SetSearchOption_src_tab1_1595151824();
                     });
 
-                    function SetSearchOption_src_tab1_1595129082() {
+                    function SetSearchOption_src_tab1_1595151824() {
                         try {
                             UnsetDateGridPicker();
                         } catch (e) {
                             //gcl(e.message);
                         }
-                        var stype = jQuery("#src_tab1_1595129082 .srcOptionList option:selected").attr("stype");
+                        var stype = jQuery("#src_tab1_1595151824 .srcOptionList option:selected").attr("stype");
 
                         if (stype == "select") {
-                            jQuery("#src_tab1_1595129082 .srcTextValue").hide();
-                            var selectOption = jQuery("#src_tab1_1595129082 .srcOptionList option:selected").attr("data");
+                            jQuery("#src_tab1_1595151824 .srcTextValue").hide();
+                            var selectOption = jQuery("#src_tab1_1595151824 .srcOptionList option:selected").attr("data");
                             selectOption = jQuery.parseJSON(atob(selectOption));
-                            jQuery("#src_tab1_1595129082 .srcSelectValue option").remove();
+                            jQuery("#src_tab1_1595151824 .srcSelectValue option").remove();
                             for (var i in selectOption) {
-                                jQuery("#src_tab1_1595129082 .srcSelectValue").append("<option value='" + i + "'>" + selectOption[i] + "</option>");
+                                jQuery("#src_tab1_1595151824 .srcSelectValue").append("<option value='" + i + "'>" + selectOption[i] + "</option>");
                             }
-                            jQuery("#src_tab1_1595129082 .srcSelectValue").show();
+                            jQuery("#src_tab1_1595151824 .srcSelectValue").show();
                         } else if (stype == "date" || stype == "dateonly" || stype == "time" || stype == "datetime") {
-                            jQuery("#src_tab1_1595129082_from .gs-date-picker-grid-options").attr("data-type", stype);
-                            jQuery("#src_tab1_1595129082_text").addClass("hidden");
-                            jQuery("#src_tab1_1595129082_from").removeClass("hidden");
-                            jQuery("#src_tab1_1595129082_from").removeClass("col-xs-4").addClass("col-xs-8");
-                            jQuery("#src_tab1_1595129082_from .control-label ").removeClass("col-sm-2").addClass("col-sm-6").html('<span class="hidden-sm">Select</span> Value');
-                            jQuery("#src_tab1_1595129082_from .form-group > div.ag-from-container").removeClass("col-sm-8").addClass("col-sm-6");
-                            jQuery("#src_tab1_1595129082_from .srcFrom ").removeClass("col-xs-4").addClass("col-xs-8");
-                            jQuery("#src_tab1_1595129082 .srcTextValue").show();
-                            jQuery("#src_tab1_1595129082 .srcSelectValue").hide();
+                            jQuery("#src_tab1_1595151824_from .gs-date-picker-grid-options").attr("data-type", stype);
+                            jQuery("#src_tab1_1595151824_text").addClass("hidden");
+                            jQuery("#src_tab1_1595151824_from").removeClass("hidden");
+                            jQuery("#src_tab1_1595151824_from").removeClass("col-xs-4").addClass("col-xs-8");
+                            jQuery("#src_tab1_1595151824_from .control-label ").removeClass("col-sm-2").addClass("col-sm-6").html('<span class="hidden-sm">Select</span> Value');
+                            jQuery("#src_tab1_1595151824_from .form-group > div.ag-from-container").removeClass("col-sm-8").addClass("col-sm-6");
+                            jQuery("#src_tab1_1595151824_from .srcFrom ").removeClass("col-xs-4").addClass("col-xs-8");
+                            jQuery("#src_tab1_1595151824 .srcTextValue").show();
+                            jQuery("#src_tab1_1595151824 .srcSelectValue").hide();
                             try {
                                 SetDateGridPicker();
                             } catch (e) {
@@ -234,16 +234,16 @@ All Active Tickets
                             }
 
                         } else if (stype == "daterange" || stype == "datetimerange" || stype == "timerange") {
-                            jQuery("#src_tab1_1595129082_from").removeClass("col-xs-8").addClass("col-xs-4");
-                            jQuery("#src_tab1_1595129082_from .control-label ").removeClass("col-sm-6").addClass("col-sm-2").html('From');
-                            jQuery("#src_tab1_1595129082_from .form-group > div.ag-from-container").removeClass("col-sm-6").addClass("col-sm-8");
-                            jQuery("#src_tab1_1595129082_from .gs-date-picker-grid-options").attr("data-type", stype);
-                            jQuery("#src_tab1_1595129082_to .gs-date-picker-grid-options").attr("data-type", stype);
-                            jQuery("#src_tab1_1595129082_text").addClass("hidden");
-                            jQuery("#src_tab1_1595129082_from").removeClass("hidden");
-                            jQuery("#src_tab1_1595129082_to").removeClass("hidden");
-                            jQuery("#src_tab1_1595129082 .srcTextValue").show();
-                            jQuery("#src_tab1_1595129082 .srcSelectValue").hide();
+                            jQuery("#src_tab1_1595151824_from").removeClass("col-xs-8").addClass("col-xs-4");
+                            jQuery("#src_tab1_1595151824_from .control-label ").removeClass("col-sm-6").addClass("col-sm-2").html('From');
+                            jQuery("#src_tab1_1595151824_from .form-group > div.ag-from-container").removeClass("col-sm-6").addClass("col-sm-8");
+                            jQuery("#src_tab1_1595151824_from .gs-date-picker-grid-options").attr("data-type", stype);
+                            jQuery("#src_tab1_1595151824_to .gs-date-picker-grid-options").attr("data-type", stype);
+                            jQuery("#src_tab1_1595151824_text").addClass("hidden");
+                            jQuery("#src_tab1_1595151824_from").removeClass("hidden");
+                            jQuery("#src_tab1_1595151824_to").removeClass("hidden");
+                            jQuery("#src_tab1_1595151824 .srcTextValue").show();
+                            jQuery("#src_tab1_1595151824 .srcSelectValue").hide();
                             try {
                                 SetDateGridPicker();
                             } catch (e) {
@@ -251,37 +251,37 @@ All Active Tickets
                             }
 
                         } else {
-                            jQuery("#src_tab1_1595129082_from").addClass("hidden").removeAttr("data-type", stype);
-                            jQuery("#src_tab1_1595129082_to").addClass("hidden").removeAttr("data-type", stype);
-                            jQuery("#src_tab1_1595129082_text").removeClass("hidden");
-                            jQuery("#src_tab1_1595129082 .srcTextValue").show();
-                            jQuery("#src_tab1_1595129082 .srcSelectValue").hide();
+                            jQuery("#src_tab1_1595151824_from").addClass("hidden").removeAttr("data-type", stype);
+                            jQuery("#src_tab1_1595151824_to").addClass("hidden").removeAttr("data-type", stype);
+                            jQuery("#src_tab1_1595151824_text").removeClass("hidden");
+                            jQuery("#src_tab1_1595151824 .srcTextValue").show();
+                            jQuery("#src_tab1_1595151824 .srcSelectValue").hide();
                         }
-                        if (jQuery("#autosearch_tab1_1595129082").is(':checked')) {
-                            Grid_tab1_1595129082_custom_reload();
+                        if (jQuery("#autosearch_tab1_1595151824").is(':checked')) {
+                            Grid_tab1_1595151824_custom_reload();
                         }
 
                     }
 
-                    function Grid_tab1_1595129082_download() {
-                        var stype = jQuery("#src_tab1_1595129082 .srcOptionList option:selected").attr("stype");
-                        var data = jQuery("#tab1_1595129082").jqGrid("getGridParam", "postData");
+                    function Grid_tab1_1595151824_download() {
+                        var stype = jQuery("#src_tab1_1595151824 .srcOptionList option:selected").attr("stype");
+                        var data = jQuery("#tab1_1595151824").jqGrid("getGridParam", "postData");
                         data.download_csv = true;
                         data.searchOper = "eq";
                         if (stype == "select") {
-                            data.searchString = jQuery("#src_tab1_1595129082 .srcSelectValue").val();
+                            data.searchString = jQuery("#src_tab1_1595151824 .srcSelectValue").val();
                         } else if (stype == "date" || stype == "daterange") {
-                            data.searchString = "" + jQuery("#src_tab1_1595129082_from .srcFrom").val();
-                            data.toString = "" + jQuery("#src_tab1_1595129082_to .srcTo").val();
+                            data.searchString = "" + jQuery("#src_tab1_1595151824_from .srcFrom").val();
+                            data.toString = "" + jQuery("#src_tab1_1595151824_to .srcTo").val();
                             data.searchOper = "bt";
                         } else {
-                            data.searchString = jQuery("#src_tab1_1595129082 .srcTextValue").val();
+                            data.searchString = jQuery("#src_tab1_1595151824 .srcTextValue").val();
                             data.searchOper = "eq";
                         }
-                        data.searchField = jQuery("#src_tab1_1595129082 .srcOptionList").val();
+                        data.searchField = jQuery("#src_tab1_1595151824 .srcOptionList").val();
                         data._search = true;
                         data.searchString = (typeof(data.searchString) == "undefined") ? "" : data.searchString;
-                        data.searchField = jQuery("#src_tab1_1595129082 .srcOptionList").val();
+                        data.searchField = jQuery("#src_tab1_1595151824 .srcOptionList").val();
                         data.searchField = (typeof(data.searchField) == "undefined") ? "" : data.searchField;
                         data._search = true;
 
@@ -302,14 +302,14 @@ All Active Tickets
                         jQuery("#difrm").attr("src", durl);
                     }
 
-                    function Grid_tab1_1595129082_custom_reload() {
+                    function Grid_tab1_1595151824_custom_reload() {
                         var IsMultiSearch = false;
-                        var data = jQuery("#tab1_1595129082").jqGrid("getGridParam", "postData");
+                        var data = jQuery("#tab1_1595151824").jqGrid("getGridParam", "postData");
                         data.first = true;
                         data.download_csv = false;
                         data.isMultiSearch = IsMultiSearch;
                         if (IsMultiSearch) {
-                            data.ms = jQuery("#ms_tab1_1595129082").serialize();
+                            data.ms = jQuery("#ms_tab1_1595151824").serialize();
                             try {
                                 if (window.Base64) {
                                     data.ms = Base64.encode(data.ms);
@@ -318,59 +318,59 @@ All Active Tickets
                                 app_grid_log(e.message);
                             }
                         }
-                        jQuery("#tab1_1595129082").jqGrid("setGridParam", {
+                        jQuery("#tab1_1595151824").jqGrid("setGridParam", {
                             "postData": data
                         });
-                        Grid_tab1_1595129082_reload();
-                        sbtnclick_tab1_1595129082 = false;
+                        Grid_tab1_1595151824_reload();
+                        sbtnclick_tab1_1595151824 = false;
                         //alert("Test");
                     }
 
-                    function Grid_tab1_1595129082_reset_custom_reload() {
-                        jQuery("#ms_tab1_1595129082")[0].reset();
-                        Grid_tab1_1595129082_custom_reload();
+                    function Grid_tab1_1595151824_reset_custom_reload() {
+                        jQuery("#ms_tab1_1595151824")[0].reset();
+                        Grid_tab1_1595151824_custom_reload();
                     }
 
-                    function Grid_tab1_1595129082_advance_search() {
-                        jQuery("#tab1_1595129082").jqGrid('searchGrid');
+                    function Grid_tab1_1595151824_advance_search() {
+                        jQuery("#tab1_1595151824").jqGrid('searchGrid');
                         $("body > .ui-widget-overlay").prependTo(".gs-jq-grid ");
-                        $("#searchhdfbox_tab1_1595129082").addClass("alert-info");
-                        $("#searchmodfbox_tab1_1595129082").addClass("jqgrid-input");
-                        $("#searchmodfbox_tab1_1595129082 .ui-jqdialog-title").html('<i class="fa fa-search"></i> Advance Search');
-                        $("#searchmodfbox_tab1_1595129082").prependTo(".gs-jq-grid ").css("display", "block");
+                        $("#searchhdfbox_tab1_1595151824").addClass("alert-info");
+                        $("#searchmodfbox_tab1_1595151824").addClass("jqgrid-input");
+                        $("#searchmodfbox_tab1_1595151824 .ui-jqdialog-title").html('<i class="fa fa-search"></i> Advance Search');
+                        $("#searchmodfbox_tab1_1595151824").prependTo(".gs-jq-grid ").css("display", "block");
 
 
 
 
                     }
 
-                    function Grid_tab1_1595129082_reload() {
-                        var stype = jQuery("#src_tab1_1595129082 .srcOptionList option:selected").attr("stype");
-                        var data = jQuery("#tab1_1595129082").jqGrid("getGridParam", "postData");
+                    function Grid_tab1_1595151824_reload() {
+                        var stype = jQuery("#src_tab1_1595151824 .srcOptionList option:selected").attr("stype");
+                        var data = jQuery("#tab1_1595151824").jqGrid("getGridParam", "postData");
                         if (stype == "select") {
-                            data.searchString = jQuery("#src_tab1_1595129082 .srcSelectValue").val();
+                            data.searchString = jQuery("#src_tab1_1595151824 .srcSelectValue").val();
                         } else if (stype == "date" || stype == "daterange") {
-                            data.searchString = "" + jQuery("#src_tab1_1595129082_from .srcFrom").val();
-                            data.toString = "" + jQuery("#src_tab1_1595129082_to .srcTo").val();
+                            data.searchString = "" + jQuery("#src_tab1_1595151824_from .srcFrom").val();
+                            data.toString = "" + jQuery("#src_tab1_1595151824_to .srcTo").val();
                             data.searchOper = "bt";
                         } else {
-                            data.searchString = jQuery("#src_tab1_1595129082 .srcTextValue").val();
+                            data.searchString = jQuery("#src_tab1_1595151824 .srcTextValue").val();
                             data.searchOper = "eq";
                         }
-                        data.searchField = jQuery("#src_tab1_1595129082 .srcOptionList").val();
+                        data.searchField = jQuery("#src_tab1_1595151824 .srcOptionList").val();
                         data._search = true;
 
-                        jQuery("#tab1_1595129082").jqGrid("setGridParam", {
+                        jQuery("#tab1_1595151824").jqGrid("setGridParam", {
                             "postData": data
                         });
-                        jQuery("#tab1_1595129082").trigger("reloadGrid");
+                        jQuery("#tab1_1595151824").trigger("reloadGrid");
                         data.first = false;
-                        jQuery("#tab1_1595129082").jqGrid("setGridParam", {
+                        jQuery("#tab1_1595151824").jqGrid("setGridParam", {
                             "postData": data
                         });
 
                     }
-                    var config_tab1_1595129082 = {
+                    var config_tab1_1595151824 = {
                         "IsCSVDownload": false,
                         "width": "auto",
                         "height": "auto",
@@ -407,7 +407,7 @@ All Active Tickets
                             "width": 260,
                             "name": "title",
                             "index": "title",
-                            "formater": "Grid_tab1_1595129082_formatter",
+                            "formater": "Grid_tab1_1595151824_formatter",
                             "sopt": null,
                             "cellattr": "col_cellattr",
                             "sortable": false,
@@ -423,7 +423,7 @@ All Active Tickets
                             "width": 60,
                             "name": "opened_time",
                             "index": "opened_time",
-                            "formater": "Grid_tab1_1595129082_formatter",
+                            "formater": "Grid_tab1_1595151824_formatter",
                             "sopt": null,
                             "cellattr": "col_cellattr",
                             "sortable": true,
@@ -440,7 +440,7 @@ All Active Tickets
                             "width": 100,
                             "name": "assigned_on",
                             "index": "assigned_on",
-                            "formater": "Grid_tab1_1595129082_formatter",
+                            "formater": "Grid_tab1_1595151824_formatter",
                             "sopt": null,
                             "cellattr": "col_cellattr",
                             "sortable": false,
@@ -457,7 +457,7 @@ All Active Tickets
                             "width": 100,
                             "name": "last_replied_by",
                             "index": "last_replied_by",
-                            "formater": "Grid_tab1_1595129082_formatter",
+                            "formater": "Grid_tab1_1595151824_formatter",
                             "sopt": null,
                             "cellattr": "col_cellattr",
                             "sortable": false,
@@ -474,7 +474,7 @@ All Active Tickets
                             "width": 60,
                             "name": "last_reply_time",
                             "index": "last_reply_time",
-                            "formater": "Grid_tab1_1595129082_formatter",
+                            "formater": "Grid_tab1_1595151824_formatter",
                             "sopt": null,
                             "cellattr": "col_cellattr",
                             "sortable": true,
@@ -491,7 +491,7 @@ All Active Tickets
                             "width": 100,
                             "name": "custom_AA",
                             "index": "custom_AA",
-                            "formater": "Grid_tab1_1595129082_formatter",
+                            "formater": "Grid_tab1_1595151824_formatter",
                             "sopt": null,
                             "cellattr": "col_cellattr",
                             "sortable": false,
@@ -507,7 +507,7 @@ All Active Tickets
                             "width": 80,
                             "name": "action",
                             "index": "action",
-                            "formater": "Grid_tab1_1595129082_formatter",
+                            "formater": "Grid_tab1_1595151824_formatter",
                             "sopt": null,
                             "cellattr": "col_cellattr",
                             "sortable": false,
@@ -577,9 +577,9 @@ All Active Tickets
                         "rowNum": 20,
                         "rowList": [5, 10, 20, 50, 100, 200],
                         "mtype": "POST",
-                        "caption": "<\/span><span style=\"float: left;\" class=\"gridtitle left\"> <a onclick=\"Grid_tab1_1595129082_reload()\" class=\"btn btn-xs btn-primary\" ><i class=\"fa fa-refresh\"><\/i> Reload<\/a> <\/span><span class=\"gridtitle text-right \">&nbsp;<div class=\"form-group form-group-sm\"><label class=\"control-label\" for=\"is_auto_refresh\">Enable Auto Reload (every 1 min) <\/label><div class=\"togglebutton \"><label><input   type=\"checkbox\"  value=\"Y\" class=\"\" id=\"is_auto_refresh\"  name=\"is_auto_refresh\" ><\/label><\/div><\/div> <a onclick=\"Grid_tab1_1595129082_download()\" class=\"btn btn-xs btn-success\" ><i class=\"fa fa-download\"><\/i> Download CSV<\/a> <span data-gridid=\"mc_tab1_1595129082\" class=\"full-screen btn btn-info btn-xs\"><i class=\"fa fa-expand \"><\/i><\/span> ",
+                        "caption": "<\/span><span style=\"float: left;\" class=\"gridtitle left\"> <a onclick=\"Grid_tab1_1595151824_reload()\" class=\"btn btn-xs btn-primary\" ><i class=\"fa fa-refresh\"><\/i> Reload<\/a> <\/span><span class=\"gridtitle text-right \">&nbsp;<div class=\"form-group form-group-sm\"><label class=\"control-label\" for=\"is_auto_refresh\">Enable Auto Reload (every 1 min) <\/label><div class=\"togglebutton \"><label><input   type=\"checkbox\"  value=\"Y\" class=\"\" id=\"is_auto_refresh\"  name=\"is_auto_refresh\" ><\/label><\/div><\/div> <a onclick=\"Grid_tab1_1595151824_download()\" class=\"btn btn-xs btn-success\" ><i class=\"fa fa-download\"><\/i> Download CSV<\/a> <span data-gridid=\"mc_tab1_1595151824\" class=\"full-screen btn btn-info btn-xs\"><i class=\"fa fa-expand \"><\/i><\/span> ",
                         "rownumbers": true,
-                        "pager": "#pager_tab1_1595129082",
+                        "pager": "#pager_tab1_1595151824",
                         "sortname": "",
                         "viewrecords": true,
                         "sortorder": "asc",
@@ -648,14 +648,14 @@ All Active Tickets
                             SetDateGridPicker();
                         } catch (e) {}
 
-                        config_tab1_1595129082.afterInsertRow = eval(config_tab1_1595129082.afterInsertRow);
+                        config_tab1_1595151824.afterInsertRow = eval(config_tab1_1595151824.afterInsertRow);
                         try {
-                            for (var i in config_tab1_1595129082.colModel) {
+                            for (var i in config_tab1_1595151824.colModel) {
                                 try {
-                                    config_tab1_1595129082.colModel[i].cellattr = eval(config_tab1_1595129082.colModel[i].cellattr);
+                                    config_tab1_1595151824.colModel[i].cellattr = eval(config_tab1_1595151824.colModel[i].cellattr);
                                     try {
-                                        if (!config_tab1_1595129082.colModel[i].hidden) {
-                                            config_tab1_1595129082.visible_fields[(config_tab1_1595129082.colModel[i].index)] = config_tab1_1595129082.colModel[i].Title;
+                                        if (!config_tab1_1595151824.colModel[i].hidden) {
+                                            config_tab1_1595151824.visible_fields[(config_tab1_1595151824.colModel[i].index)] = config_tab1_1595151824.colModel[i].Title;
                                         }
                                     } catch (e) {}
                                 } catch (e) {
@@ -667,7 +667,7 @@ All Active Tickets
                             app_grid_log(e.message);
                         }
 
-                        config_tab1_1595129082.loadComplete = function(e) {
+                        config_tab1_1595151824.loadComplete = function(e) {
                             try {
                                 for (i in addonGridDataLoad) {
                                     try {
@@ -684,16 +684,16 @@ All Active Tickets
                             } catch (e) {
                                 app_grid_log(e.message);
                             }
-                            tab1_1595129082_resize_height(e);
-                            jQuery("#gview_tab1_1595129082 .ui-jqgrid-bdiv .gridnorecord").hide().remove();
-                            if (jQuery("#tab1_1595129082").getGridParam("records") == 0) {
-                                jQuery("#gview_tab1_1595129082 .ui-jqgrid-bdiv").append('<div class="gridnorecord" id="gridnorecord">' + jQuery("#tab1_1595129082").getGridParam("emptySetText") + '</div>');
+                            tab1_1595151824_resize_height(e);
+                            jQuery("#gview_tab1_1595151824 .ui-jqgrid-bdiv .gridnorecord").hide().remove();
+                            if (jQuery("#tab1_1595151824").getGridParam("records") == 0) {
+                                jQuery("#gview_tab1_1595151824 .ui-jqgrid-bdiv").append('<div class="gridnorecord" id="gridnorecord">' + jQuery("#tab1_1595151824").getGridParam("emptySetText") + '</div>');
                             }
                             try {
-                                app_handle_grid_unauthorize(e, jQuery("#gview_tab1_1595129082 .ui-jqgrid-bdiv > .gridnorecord"));
+                                app_handle_grid_unauthorize(e, jQuery("#gview_tab1_1595151824 .ui-jqgrid-bdiv > .gridnorecord"));
                             } catch (e) {};
                         };
-                        config_tab1_1595129082.ajaxGridOptions = {
+                        config_tab1_1595151824.ajaxGridOptions = {
                             //contentType: "application/json; charset=utf-8",
                             dataFilter: function(data, dataType) { // preprocess the data
                                 try {
@@ -701,14 +701,14 @@ All Active Tickets
 
                                         var data2 = JSON.parse(data);
                                         jQuery.each(data2.rowdata, function(key, value) {
-                                            var optstr = "<div >" + ("<div class='col-xs-5 app-property-label'>" + config_tab1_1595129082.visible_fields["title"] + "</div>") + "<div class=' app-property-value col-xs-7 text-left '>" + data2.rowdata[key]["title"] + "</div></div>";
+                                            var optstr = "<div >" + ("<div class='col-xs-5 app-property-label'>" + config_tab1_1595151824.visible_fields["title"] + "</div>") + "<div class=' app-property-value col-xs-7 text-left '>" + data2.rowdata[key]["title"] + "</div></div>";
                                             jQuery.each(data2.rowdata[key], function(key2, value2) {
                                                 if (key2 == "title") {
                                                     return;
                                                 }
                                                 try {
-                                                    if (typeof config_tab1_1595129082.visible_fields[key2] != "undefined") {
-                                                        optstr += "<div >" + (key2 == "action" ? "" : "<div class='col-xs-5 app-property-label'>" + config_tab1_1595129082.visible_fields[key2] + "</div>") + "<div class=' app-property-value col-xs-" + (key2 == "action" ? "12 text-center" : "7 text-left") + " '>" + data2.rowdata[key][key2] + "</div></div>";
+                                                    if (typeof config_tab1_1595151824.visible_fields[key2] != "undefined") {
+                                                        optstr += "<div >" + (key2 == "action" ? "" : "<div class='col-xs-5 app-property-label'>" + config_tab1_1595151824.visible_fields[key2] + "</div>") + "<div class=' app-property-value col-xs-" + (key2 == "action" ? "12 text-center" : "7 text-left") + " '>" + data2.rowdata[key][key2] + "</div></div>";
                                                     }
                                                 } catch (e) {}
                                             });
@@ -725,8 +725,8 @@ All Active Tickets
 
                             }
                         };
-                        var isFirstLoaded_tab1_1595129082 = false;
-                        tab1_1595129082_serialize = function(obj) {
+                        var isFirstLoaded_tab1_1595151824 = false;
+                        tab1_1595151824_serialize = function(obj) {
                             var str = [];
                             for (var p in obj)
                                 if (obj.hasOwnProperty(p)) {
@@ -734,21 +734,21 @@ All Active Tickets
                                 }
                             return str.join("&");
                         }
-                        config_tab1_1595129082.beforeRequest = function() {
-                            var data = jQuery("#tab1_1595129082").jqGrid("getGridParam", "postData");
+                        config_tab1_1595151824.beforeRequest = function() {
+                            var data = jQuery("#tab1_1595151824").jqGrid("getGridParam", "postData");
                             //console.log(data);
                             // myGrid.setGridParam({sortname: ''})
                             if (data.sidx != "") {
                                 try {
-                                    var th_obj = $("#jqgh_tab1_1595129082_" + data.sidx);
+                                    var th_obj = $("#jqgh_tab1_1595151824_" + data.sidx);
                                     jQuery(".app-sorting").removeClass("app-sorting");
                                     th_obj.addClass("app-sorting");
-                                    jQuery(".tab1_1595129082-rm-srt").remove();
-                                    var rmicon = jQuery('<i class="tab1_1595129082-rm-srt grid-reset-sort-btn fa fa-times-circle tooltip2" data-tooltip-position="top" title="Remove Sorting"></i>');
+                                    jQuery(".tab1_1595151824-rm-srt").remove();
+                                    var rmicon = jQuery('<i class="tab1_1595151824-rm-srt grid-reset-sort-btn fa fa-times-circle tooltip2" data-tooltip-position="top" title="Remove Sorting"></i>');
                                     rmicon.click(function(e) {
                                         e.preventDefault();
                                         e.stopPropagation();
-                                        tab1_1595129082_reset_sorting();
+                                        tab1_1595151824_reset_sorting();
                                         th_obj.find(">.s-ico > span").addClass("ui-state-disabled");
                                         rmicon.fadeOut("fast", function() {
                                             $(this).remove();
@@ -765,122 +765,122 @@ All Active Tickets
                             } catch (e) {
                                 app_grid_log("grid msg: " + e.message);
                             }
-                            jQuery("#tab1_1595129082").jqGrid("setGridParam", {
+                            jQuery("#tab1_1595151824").jqGrid("setGridParam", {
                                 "postData": data
                             });
                             return true;
                         };
 
-                        config_tab1_1595129082.onSelectAll = function(aRowids, status) {
+                        config_tab1_1595151824.onSelectAll = function(aRowids, status) {
 
                         }
-                        config_tab1_1595129082.onSelectAll = function(aRowids, status) {
+                        config_tab1_1595151824.onSelectAll = function(aRowids, status) {
 
                         }
-                        config_tab1_1595129082.onInitGrid = function() {
+                        config_tab1_1595151824.onInitGrid = function() {
                             //This event does not raised.
                             try {
-                                jQuery("#jqgh_tab1_1595129082_ticket_track_id").addClass("no-hand-css");
-                                jQuery("#jqgh_tab1_1595129082_title").addClass("no-hand-css");
-                                jQuery("#jqgh_tab1_1595129082_opened_time ").addClass("fld-sortable").find(" > .s-ico").show();
-                                jQuery("#jqgh_tab1_1595129082_assigned_on").addClass("no-hand-css");
-                                jQuery("#jqgh_tab1_1595129082_last_replied_by").addClass("no-hand-css");
-                                jQuery("#jqgh_tab1_1595129082_last_reply_time ").addClass("fld-sortable").find(" > .s-ico").show();
-                                jQuery("#jqgh_tab1_1595129082_custom_AA").addClass("no-hand-css");
-                                jQuery("#jqgh_tab1_1595129082_action").addClass("no-hand-css");
-                                jQuery("#jqgh_tab1_1595129082_cat_id").addClass("no-hand-css");
-                                jQuery("#jqgh_tab1_1595129082_priroty").addClass("no-hand-css");
+                                jQuery("#jqgh_tab1_1595151824_ticket_track_id").addClass("no-hand-css");
+                                jQuery("#jqgh_tab1_1595151824_title").addClass("no-hand-css");
+                                jQuery("#jqgh_tab1_1595151824_opened_time ").addClass("fld-sortable").find(" > .s-ico").show();
+                                jQuery("#jqgh_tab1_1595151824_assigned_on").addClass("no-hand-css");
+                                jQuery("#jqgh_tab1_1595151824_last_replied_by").addClass("no-hand-css");
+                                jQuery("#jqgh_tab1_1595151824_last_reply_time ").addClass("fld-sortable").find(" > .s-ico").show();
+                                jQuery("#jqgh_tab1_1595151824_custom_AA").addClass("no-hand-css");
+                                jQuery("#jqgh_tab1_1595151824_action").addClass("no-hand-css");
+                                jQuery("#jqgh_tab1_1595151824_cat_id").addClass("no-hand-css");
+                                jQuery("#jqgh_tab1_1595151824_priroty").addClass("no-hand-css");
                             } catch (e) {}
                         }
 
-                        if (config_tab1_1595129082.width == "auto") {
-                            config_tab1_1595129082.width = jQuery(".grid-body").width();
-                            if (config_tab1_1595129082.width < minwidth_tab1_1595129082) {
-                                config_tab1_1595129082.width = minwidth_tab1_1595129082;
+                        if (config_tab1_1595151824.width == "auto") {
+                            config_tab1_1595151824.width = jQuery(".grid-body").width();
+                            if (config_tab1_1595151824.width < minwidth_tab1_1595151824) {
+                                config_tab1_1595151824.width = minwidth_tab1_1595151824;
                             }
-                            config_tab1_1595129082.width -= 0;
+                            config_tab1_1595151824.width -= 0;
                         }
-                        tab1_1595129082_init_grid();
+                        tab1_1595151824_init_grid();
                     });
 
-                    function check_all_visible_tab1_1595129082() {
+                    function check_all_visible_tab1_1595151824() {
                         try {
                             var cols_hidden = localStorage.getItem("ag_a3a7a22b");
                             if (cols_hidden) {
                                 cols_hidden = JSON.parse(cols_hidden);
                                 if (typeof cols_hidden == "object") {
-                                    config_tab1_1595129082.custom_hidden_fields = cols_hidden;
+                                    config_tab1_1595151824.custom_hidden_fields = cols_hidden;
                                 }
                             } else {
-                                localStorage.setItem("ag_a3a7a22b", JSON.stringify(config_tab1_1595129082.custom_hidden_fields));
+                                localStorage.setItem("ag_a3a7a22b", JSON.stringify(config_tab1_1595151824.custom_hidden_fields));
                             }
                         } catch (e) {
 
                         }
-                        var models = config_tab1_1595129082.colModel;
+                        var models = config_tab1_1595151824.colModel;
                         var $searchOnly = ["ticket_track_id", "cat_id", "priroty"];
                         for (var i in models) {
-                            var isChecked = check_visible_tab1_1595129082(models[i].index);
+                            var isChecked = check_visible_tab1_1595151824(models[i].index);
                             if ($searchOnly.indexOf(models[i].index) > -1) {
                                 continue;
                             }
                             if (models[i].Title) {
-                                append_into_checklist_tab1_1595129082(models[i].index, models[i].Title, isChecked);
+                                append_into_checklist_tab1_1595151824(models[i].index, models[i].Title, isChecked);
                                 if (isChecked) {
-                                    jQuery("#tab1_1595129082").showCol(models[i].index);
+                                    jQuery("#tab1_1595151824").showCol(models[i].index);
                                 }
                             }
                         }
 
                     }
 
-                    function check_visible_tab1_1595129082(index) {
-                        var custom_visible = config_tab1_1595129082.custom_hidden_fields;
+                    function check_visible_tab1_1595151824(index) {
+                        var custom_visible = config_tab1_1595151824.custom_hidden_fields;
                         if (custom_visible.indexOf(index) > -1) {
                             return false;
                         }
                         return true;
                     }
 
-                    function show_coll_tab1_1595129082(index) {
-                        if (config_tab1_1595129082.custom_hidden_fields.indexOf(index) > -1) {
-                            jQuery("#tab1_1595129082").hideCol(index);
+                    function show_coll_tab1_1595151824(index) {
+                        if (config_tab1_1595151824.custom_hidden_fields.indexOf(index) > -1) {
+                            jQuery("#tab1_1595151824").hideCol(index);
                             return;
                         }
-                        jQuery("#tab1_1595129082").showCol(index);
+                        jQuery("#tab1_1595151824").showCol(index);
                     }
 
-                    function set_unset_key_tab1_1595129082(index, isSet) {
+                    function set_unset_key_tab1_1595151824(index, isSet) {
 
                         if (isSet) {
-                            if (config_tab1_1595129082.custom_hidden_fields.indexOf(index) > -1) {
+                            if (config_tab1_1595151824.custom_hidden_fields.indexOf(index) > -1) {
                                 return;
                             }
-                            config_tab1_1595129082.custom_hidden_fields.push(index);
+                            config_tab1_1595151824.custom_hidden_fields.push(index);
                         } else {
-                            var aind = config_tab1_1595129082.custom_hidden_fields.indexOf(index)
+                            var aind = config_tab1_1595151824.custom_hidden_fields.indexOf(index)
                             if (aind !== -1) {
-                                config_tab1_1595129082.custom_hidden_fields.splice(aind, 1);
+                                config_tab1_1595151824.custom_hidden_fields.splice(aind, 1);
                             }
                         }
-                        localStorage.setItem("ag_a3a7a22b", JSON.stringify(config_tab1_1595129082.custom_hidden_fields));
+                        localStorage.setItem("ag_a3a7a22b", JSON.stringify(config_tab1_1595151824.custom_hidden_fields));
 
 
                     }
 
-                    function append_into_checklist_tab1_1595129082(index, title, isChecked) {
-                        jQuery("#mc_tab1_1595129082 .ag_column-choose > .ag-column-container").append('<label class="cl-chose-input"> <input data-cl-key="' + index + '" type="checkbox" ' + (isChecked ? "checked" : "") + '> ' + title + '</label>');
+                    function append_into_checklist_tab1_1595151824(index, title, isChecked) {
+                        jQuery("#mc_tab1_1595151824 .ag_column-choose > .ag-column-container").append('<label class="cl-chose-input"> <input data-cl-key="' + index + '" type="checkbox" ' + (isChecked ? "checked" : "") + '> ' + title + '</label>');
 
                     }
 
-                    function tab1_1595129082_init_grid() {
-                        if (is_init_tab1_1595129082) {
+                    function tab1_1595151824_init_grid() {
+                        if (is_init_tab1_1595151824) {
                             return;
                         }
-                        is_init_tab1_1595129082 = true;
-                        jQuery("#tab1_1595129082").jqGrid(config_tab1_1595129082);
-                        check_all_visible_tab1_1595129082();
-                        jQuery("#tab1_1595129082").jqGrid('navGrid', '#pager_tab1_1595129082', {
+                        is_init_tab1_1595151824 = true;
+                        jQuery("#tab1_1595151824").jqGrid(config_tab1_1595151824);
+                        check_all_visible_tab1_1595151824();
+                        jQuery("#tab1_1595151824").jqGrid('navGrid', '#pager_tab1_1595151824', {
                             edit: false,
                             add: false,
                             del: false,
@@ -890,21 +890,21 @@ All Active Tickets
                         }, {}, {}, {}, {
                             sopt: ['cn', 'bw', 'eq', 'ne', 'lt', 'gt', 'ew']
                         });
-                        $("#pager_tab1_1595129082").after(jQuery("#alertmod_tab1_1595129082"));
+                        $("#pager_tab1_1595151824").after(jQuery("#alertmod_tab1_1595151824"));
 
 
                         jQuery(window).bind('resize', function() {
-                            tab1_1595129082_ResizeGrid();
-                            setTimeout(tab1_1595129082_ResizeGrid, 500);
+                            tab1_1595151824_ResizeGrid();
+                            setTimeout(tab1_1595151824_ResizeGrid, 500);
                         }).trigger('resize');
                         try {
                             jQuery('body').resize(function() {
-                                tab1_1595129082_ResizeGrid();
-                                setTimeout(tab1_1595129082_ResizeGrid, 500);
+                                tab1_1595151824_ResizeGrid();
+                                setTimeout(tab1_1595151824_ResizeGrid, 500);
                             });
                         } catch (e) {}
                         try {
-                            AddOnPageResize(tab1_1595129082_ResizeGrid);
+                            AddOnPageResize(tab1_1595151824_ResizeGrid);
                         } catch (e) {}
 
 
@@ -922,41 +922,41 @@ All Active Tickets
                             }
                         };
                         try {
-                            applyClassesToHeaders(jQuery("#tab1_1595129082"));
+                            applyClassesToHeaders(jQuery("#tab1_1595151824"));
                         } catch (e) {}
 
                         try {
-                            var firstThID = jQuery("#mc_tab1_1595129082 .ui-jqgrid-htable > thead .ui-jqgrid-labels #tab1_1595129082_rn");
+                            var firstThID = jQuery("#mc_tab1_1595151824 .ui-jqgrid-htable > thead .ui-jqgrid-labels #tab1_1595151824_rn");
                             var settings_i = jQuery('<i class="apg-settings fa fa-cog"></i>');
                             settings_i.on("click", function(e) {
                                 e.preventDefault();
                                 e.stopPropagation();
                                 if (jQuery(this).hasClass('ap-db-open')) {
                                     jQuery(this).removeClass('ap-db-open');
-                                    jQuery("#mc_tab1_1595129082 >.ag_column-choose").hide();
+                                    jQuery("#mc_tab1_1595151824 >.ag_column-choose").hide();
                                 } else {
                                     jQuery(this).addClass('ap-db-open');
-                                    jQuery("#mc_tab1_1595129082 >.ag_column-choose").show();
+                                    jQuery("#mc_tab1_1595151824 >.ag_column-choose").show();
                                 }
                                 //alert("Clicked me");
                             });
-                            jQuery("#mc_tab1_1595129082 >.ag_column-choose .cl-chose-input").on("click", function(e) {
+                            jQuery("#mc_tab1_1595151824 >.ag_column-choose .cl-chose-input").on("click", function(e) {
                                 e.stopPropagation();
 
                             });
-                            jQuery("#mc_tab1_1595129082 >.ag_column-choose .cl-chose-input input").on("change", function(e) {
+                            jQuery("#mc_tab1_1595151824 >.ag_column-choose .cl-chose-input input").on("change", function(e) {
                                 var key = jQuery(this).data("cl-key");
-                                var customHidden = config_tab1_1595129082.custom_hidden_fields;
+                                var customHidden = config_tab1_1595151824.custom_hidden_fields;
                                 if (jQuery(this).is(":checked")) {
-                                    set_unset_key_tab1_1595129082(key, false);
+                                    set_unset_key_tab1_1595151824(key, false);
                                 } else {
-                                    set_unset_key_tab1_1595129082(key, true);
+                                    set_unset_key_tab1_1595151824(key, true);
                                 }
-                                show_coll_tab1_1595129082(key);
-                                tab1_1595129082_ResizeGrid();
+                                show_coll_tab1_1595151824(key);
+                                tab1_1595151824_ResizeGrid();
                             });
                             jQuery("body").on("click", function() {
-                                jQuery("#mc_tab1_1595129082 >.ag_column-choose").hide();
+                                jQuery("#mc_tab1_1595151824 >.ag_column-choose").hide();
                                 settings_i.removeClass('ap-db-open');
                             });
                             firstThID.html(settings_i);
@@ -967,27 +967,27 @@ All Active Tickets
 
                     }
 
-                    function tab1_1595129082_resize_height(e) {
+                    function tab1_1595151824_resize_height(e) {
                         if (jQuery(".grid-body").hasClass('grid-full-screen')) {
                             return;
                         }
                         try {
-                            if (config_tab1_1595129082.height == "auto") {
+                            if (config_tab1_1595151824.height == "auto") {
                                 return;
                             }
-                            var data = config_tab1_1595129082.auto_height_records;
+                            var data = config_tab1_1595151824.auto_height_records;
                             if (e.records < data) {
-                                jQuery("#tab1_1595129082").setGridHeight('auto');
+                                jQuery("#tab1_1595151824").setGridHeight('auto');
                             } else {
-                                jQuery("#tab1_1595129082").setGridHeight(config_tab1_1595129082.height);
+                                jQuery("#tab1_1595151824").setGridHeight(config_tab1_1595151824.height);
                             }
-                            //app_grid_log(config_tab1_1595129082.height);
+                            //app_grid_log(config_tab1_1595151824.height);
                         } catch (e) {}
                     }
 
-                    function tab1_1595129082_reset_sorting() {
+                    function tab1_1595151824_reset_sorting() {
 
-                        var myGrid = jQuery("#tab1_1595129082");
+                        var myGrid = jQuery("#tab1_1595151824");
                         $("span.s-ico", myGrid[0].grid.hDiv).hide(); // hide sort icons
                         myGrid.setGridParam({
                             sortname: ''
@@ -995,36 +995,36 @@ All Active Tickets
 
                     }
 
-                    function tab1_1595129082_ResizeGrid() {
+                    function tab1_1595151824_ResizeGrid() {
                         if (jQuery(".grid-body").hasClass('grid-full-screen')) {
                             return;
                         }
-                        var c_minwidth_tab1_1595129082 = jQuery(".grid-body").width();
-                        if (c_minwidth_tab1_1595129082 <= minwidth_tab1_1595129082) {
-                            c_minwidth_tab1_1595129082 = minwidth_tab1_1595129082;
+                        var c_minwidth_tab1_1595151824 = jQuery(".grid-body").width();
+                        if (c_minwidth_tab1_1595151824 <= minwidth_tab1_1595151824) {
+                            c_minwidth_tab1_1595151824 = minwidth_tab1_1595151824;
                         }
-                        c_minwidth_tab1_1595129082 -= 5;
-                        jQuery("#tab1_1595129082").setGridWidth(c_minwidth_tab1_1595129082);
+                        c_minwidth_tab1_1595151824 -= 5;
+                        jQuery("#tab1_1595151824").setGridWidth(c_minwidth_tab1_1595151824);
                         var windowWidth = jQuery(window).width();
 
 
                         if (windowWidth < 768) {
-                            for (var key in config_tab1_1595129082.visible_fields) {
+                            for (var key in config_tab1_1595151824.visible_fields) {
                                 //console.log("title");
                                 if (key != "title") {
-                                    jQuery("#tab1_1595129082").hideCol(key);
+                                    jQuery("#tab1_1595151824").hideCol(key);
                                 }
                             }
                         } else {
-                            for (var kindex in config_tab1_1595129082.visible_fields) {
-                                show_coll_tab1_1595129082(kindex);
+                            for (var kindex in config_tab1_1595151824.visible_fields) {
+                                show_coll_tab1_1595151824(kindex);
                             }
                         }
                         if (windowWidth < 991) {
 
                         } else {
-                            for (var kindex in config_tab1_1595129082.visible_fields) {
-                                show_coll_tab1_1595129082(kindex);
+                            for (var kindex in config_tab1_1595151824.visible_fields) {
+                                show_coll_tab1_1595151824(kindex);
                             }
 
                         }
@@ -1032,81 +1032,74 @@ All Active Tickets
 
                     }
                 </script>
-                <div id="mc_tab1_1595129082" class="gs-jq-grid " data-unique-id="ag_a3a7a22b">
+                <div id="mc_tab1_1595151824" class="gs-jq-grid " data-unique-id="ag_a3a7a22b">
                     <div class="ag_column-choose">
                         <div class="ag-column-container">
                             <label class="cl-chose-input"> <input data-cl-key="title" type="checkbox" checked=""> Title</label><label class="cl-chose-input"> <input data-cl-key="opened_time" type="checkbox" checked=""> Open Time</label><label class="cl-chose-input"> <input data-cl-key="assigned_on" type="checkbox" checked=""> Assigned</label><label class="cl-chose-input"> <input data-cl-key="last_replied_by" type="checkbox" checked=""> Last Reply</label><label class="cl-chose-input"> <input data-cl-key="last_reply_time" type="checkbox" checked=""> L.Reply Time</label><label class="cl-chose-input"> <input data-cl-key="custom_AA" type="checkbox" checked=""> test</label><label class="cl-chose-input"> <input data-cl-key="action" type="checkbox" checked=""> Action</label></div>
                     </div>
-                    <div class="ui-jqgrid ui-widget ui-widget-content ui-corner-all" id="gbox_tab1_1595129082" dir="ltr" style="width: 1064px;">
-                        <div class="ui-widget-overlay jqgrid-overlay" id="lui_tab1_1595129082"></div>
-                        <div class="loading ui-state-default ui-state-active" id="load_tab1_1595129082" style="display: none;"><i class="fa fa-spinner fa-spin"></i> Loading...</div>
-                        <div class="ui-jqgrid-view" id="gview_tab1_1595129082" style="width: 1064px;">
-                            <div class="ui-jqgrid-titlebar ui-jqgrid-caption ui-widget-header ui-corner-top ui-helper-clearfix"><a role="link" class="ui-jqgrid-titlebar-close ui-corner-all HeaderButton" style="right: 0px;"><span class="ui-icon ui-icon-circle-triangle-n"></span></a><span class="ui-jqgrid-title"></span><span style="float: left;" class="gridtitle left"> <a onclick="Grid_tab1_1595129082_reload()" class="btn btn-xs btn-primary added-ripples"><i class="fa fa-refresh"></i> Reload</a> </span><span class="gridtitle text-right ">&nbsp;<div class="form-group form-group-sm"><label class="control-label" for="is_auto_refresh">Enable Auto Reload (every 1 min) </label>
-                                        <div class="togglebutton "><label><input type="checkbox" value="Y" class="" id="is_auto_refresh" name="is_auto_refresh"><span class="toggle"></span></label></div>
-                                    </div> <a onclick="Grid_tab1_1595129082_download()" class="btn btn-xs btn-success added-ripples"><i class="fa fa-download"></i> Download CSV</a> <span data-gridid="mc_tab1_1595129082" class="full-screen btn btn-info btn-xs added-ripples"><i class="fa fa-expand "></i></span> </span></div>
-                            <div class="ui-state-default ui-jqgrid-hdiv" style="width: 1064px;">
+                    <div class="ui-jqgrid ui-widget ui-widget-content ui-corner-all" id="gbox_tab1_1595151824" dir="ltr" style="width: 1618px;">
+                        <div class="ui-widget-overlay jqgrid-overlay" id="lui_tab1_1595151824"></div>
+                        <div class="loading ui-state-default ui-state-active" id="load_tab1_1595151824" style="display: none;"><i class="fa fa-spinner fa-spin"></i> Loading...</div>
+                        <div class="ui-jqgrid-view" id="gview_tab1_1595151824" style="width: 1618px;">
+                            <div class="ui-jqgrid-titlebar ui-jqgrid-caption ui-widget-header ui-corner-top ui-helper-clearfix"><a role="link" class="ui-jqgrid-titlebar-close ui-corner-all HeaderButton" style="right: 0px;"><span class="ui-icon ui-icon-circle-triangle-n"></span></a><span class="ui-jqgrid-title"></span><span style="float: left;" class="gridtitle left"> <a onclick="Grid_tab1_1595151824_reload()" class="btn btn-xs btn-primary added-ripples"><i class="fa fa-refresh"></i> Reload</a> </span><span class="gridtitle text-right ">&nbsp;<div class="form-group form-group-sm"><label class="control-label" for="is_auto_refresh">Enable Auto Reload (every 1 min) </label>
+                                        <div class="togglebutton "><label><input type="checkbox" value="Y" class="" id="is_auto_refresh" name="is_auto_refresh"></label></div>
+                                    </div> <a onclick="Grid_tab1_1595151824_download()" class="btn btn-xs btn-success added-ripples"><i class="fa fa-download"></i> Download CSV</a> <span data-gridid="mc_tab1_1595151824" class="full-screen btn btn-info btn-xs added-ripples"><i class="fa fa-expand "></i></span> </span></div>
+                            <div class="ui-state-default ui-jqgrid-hdiv" style="width: 1618px;">
                                 <div class="ui-jqgrid-hbox">
-                                    <table class="ui-jqgrid-htable" style="width: 1063px;" role="grid" aria-labelledby="gbox_tab1_1595129082" cellspacing="0" cellpadding="0" border="0">
+                                    <table class="ui-jqgrid-htable" style="width: 1617px;" role="grid" aria-labelledby="gbox_tab1_1595151824" cellspacing="0" cellpadding="0" border="0">
                                         <thead>
                                             <tr class="ui-jqgrid-labels" role="rowheader">
-                                                <th id="tab1_1595129082_rn" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 25px;"><i class="apg-settings fa fa-cog"></i></th>
-                                                <th id="tab1_1595129082_ticket_track_id" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 150px; display: none;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
-                                                    <div id="jqgh_tab1_1595129082_ticket_track_id" class="ui-jqgrid-sortable no-hand-css">Track ID<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div>
+                                                <th id="tab1_1595151824_rn" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 25px;"><i class="apg-settings fa fa-cog"></i></th>
+                                                <th id="tab1_1595151824_ticket_track_id" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 150px; display: none;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+                                                    <div id="jqgh_tab1_1595151824_ticket_track_id" class="ui-jqgrid-sortable no-hand-css">Track ID<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div>
                                                 </th>
-                                                <th id="tab1_1595129082_title" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 342px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
-                                                    <div id="jqgh_tab1_1595129082_title" class="ui-jqgrid-sortable no-hand-css">Title<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div>
+                                                <th id="tab1_1595151824_title" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 531px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+                                                    <div id="jqgh_tab1_1595151824_title" class="ui-jqgrid-sortable no-hand-css">Title<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div>
                                                 </th>
-                                                <th id="tab1_1595129082_opened_time" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 79px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
-                                                    <div id="jqgh_tab1_1595129082_opened_time" class="ui-jqgrid-sortable fld-sortable">Open Time<span class="s-ico"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div>
+                                                <th id="tab1_1595151824_opened_time" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 123px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+                                                    <div id="jqgh_tab1_1595151824_opened_time" class="ui-jqgrid-sortable fld-sortable">Open Time<span class="s-ico"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div>
                                                 </th>
-                                                <th id="tab1_1595129082_assigned_on" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 131px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
-                                                    <div id="jqgh_tab1_1595129082_assigned_on" class="ui-jqgrid-sortable no-hand-css">Assigned<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div>
+                                                <th id="tab1_1595151824_assigned_on" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 204px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+                                                    <div id="jqgh_tab1_1595151824_assigned_on" class="ui-jqgrid-sortable no-hand-css">Assigned<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div>
                                                 </th>
-                                                <th id="tab1_1595129082_last_replied_by" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 131px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
-                                                    <div id="jqgh_tab1_1595129082_last_replied_by" class="ui-jqgrid-sortable no-hand-css">Last Reply<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div>
+                                                <th id="tab1_1595151824_last_replied_by" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 204px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+                                                    <div id="jqgh_tab1_1595151824_last_replied_by" class="ui-jqgrid-sortable no-hand-css">Last Reply<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div>
                                                 </th>
-                                                <th id="tab1_1595129082_last_reply_time" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 79px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
-                                                    <div id="jqgh_tab1_1595129082_last_reply_time" class="ui-jqgrid-sortable fld-sortable">L.Reply Time<span class="s-ico"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div>
+                                                <th id="tab1_1595151824_last_reply_time" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 123px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+                                                    <div id="jqgh_tab1_1595151824_last_reply_time" class="ui-jqgrid-sortable fld-sortable">L.Reply Time<span class="s-ico"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div>
                                                 </th>
-                                                <th id="tab1_1595129082_custom_AA" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 131px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
-                                                    <div id="jqgh_tab1_1595129082_custom_AA" class="ui-jqgrid-sortable no-hand-css">test<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div>
+                                                <th id="tab1_1595151824_custom_AA" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 204px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+                                                    <div id="jqgh_tab1_1595151824_custom_AA" class="ui-jqgrid-sortable no-hand-css">test<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div>
                                                 </th>
-                                                <th id="tab1_1595129082_action" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 105px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
-                                                    <div id="jqgh_tab1_1595129082_action" class="ui-jqgrid-sortable no-hand-css">Action<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div>
+                                                <th id="tab1_1595151824_action" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 163px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+                                                    <div id="jqgh_tab1_1595151824_action" class="ui-jqgrid-sortable no-hand-css">Action<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div>
                                                 </th>
-                                                <th id="tab1_1595129082_cat_id" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 150px; display: none;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
-                                                    <div id="jqgh_tab1_1595129082_cat_id" class="ui-jqgrid-sortable no-hand-css">Category<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div>
+                                                <th id="tab1_1595151824_cat_id" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 150px; display: none;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+                                                    <div id="jqgh_tab1_1595151824_cat_id" class="ui-jqgrid-sortable no-hand-css">Category<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div>
                                                 </th>
-                                                <th id="tab1_1595129082_priroty" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 150px; display: none;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
-                                                    <div id="jqgh_tab1_1595129082_priroty" class="ui-jqgrid-sortable no-hand-css">Priority<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div>
+                                                <th id="tab1_1595151824_priroty" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 150px; display: none;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span>
+                                                    <div id="jqgh_tab1_1595151824_priroty" class="ui-jqgrid-sortable no-hand-css">Priority<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-triangle-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-triangle-1-s ui-sort-ltr"></span></span></div>
                                                 </th>
                                             </tr>
                                         </thead>
-                                    </table>
-                                </div>
-                            </div>
-                            <div class="ui-jqgrid-bdiv" style="height: auto; width: 1064px;">
-                                <div style="position:relative;">
-                                    <div></div>
-                                    <table id="tab1_1595129082" tabindex="0" cellspacing="0" cellpadding="0" border="0" role="grid" aria-multiselectable="false" aria-labelledby="gbox_tab1_1595129082" class="ui-jqgrid-btable" style="width: 1063px;">
                                         <tbody>
                                             <tr class="jqgfirstrow" role="row" style="height:auto">
                                                 <td role="gridcell" style="height:0px;width:25px;"></td>
                                                 <td role="gridcell" style="height:0px;width:150px;display:none;"></td>
-                                                <td role="gridcell" style="height: 0px; width: 342px;"></td>
-                                                <td role="gridcell" style="height: 0px; width: 79px;"></td>
-                                                <td role="gridcell" style="height: 0px; width: 131px;"></td>
-                                                <td role="gridcell" style="height: 0px; width: 131px;"></td>
-                                                <td role="gridcell" style="height: 0px; width: 79px;"></td>
-                                                <td role="gridcell" style="height: 0px; width: 131px;"></td>
-                                                <td role="gridcell" style="height: 0px; width: 105px;"></td>
+                                                <td role="gridcell" style="height: 0px; width: 531px;"></td>
+                                                <td role="gridcell" style="height: 0px; width: 123px;"></td>
+                                                <td role="gridcell" style="height: 0px; width: 204px;"></td>
+                                                <td role="gridcell" style="height: 0px; width: 204px;"></td>
+                                                <td role="gridcell" style="height: 0px; width: 123px;"></td>
+                                                <td role="gridcell" style="height: 0px; width: 204px;"></td>
+                                                <td role="gridcell" style="height: 0px; width: 163px;"></td>
                                                 <td role="gridcell" style="height:0px;width:150px;display:none;"></td>
                                                 <td role="gridcell" style="height:0px;width:150px;display:none;"></td>
                                             </tr>
                                             <tr role="row" id="1" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr">
-                                                <td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;width: 25px;" title="1" aria-describedby="tab1_1595129082_rn">1</td>
-                                                <td role="gridcell" style="display:none;" title="T6DD28E9B-001-WMC" aria-describedby="tab1_1595129082_ticket_track_id">T6DD28E9B-001-WMC</td>
-                                                <td role="gridcell" style="text-align:left;" title="  Low Guest Ticket TestCategory PHP BasicCurrent Status Action RequiredReplied1Title  Low Guest Ticket TestCategory PHP BasicCurrent Status Action RequiredReplied1Open Time2 years agoAssignedadminLast ReplyadminL.Reply Time4 months agotest  Details Delete" aria-describedby="tab1_1595129082_title">
+                                                <td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;width: 25px;" title="1" aria-describedby="tab1_1595151824_rn">1</td>
+                                                <td role="gridcell" style="display:none;" title="T6DD28E9B-001-WMC" aria-describedby="tab1_1595151824_ticket_track_id">T6DD28E9B-001-WMC</td>
+                                                <td role="gridcell" style="text-align:left;" title="  Low Guest Ticket TestCategory PHP BasicCurrent Status Action RequiredReplied1Title  Low Guest Ticket TestCategory PHP BasicCurrent Status Action RequiredReplied1Open Time2 years agoAssignedadminLast ReplyadminL.Reply Time4 months agotest  Details Delete" aria-describedby="tab1_1595151824_title">
                                                     <div class="hidden-xs"> <span class="grid-t-title"><span class="text- label label-default"> Low</span> <a class="ticket-title" target="_blank" href="https://demo.appsbd.com/support-system/admin/ticket/details/6.html">Guest Ticket Test</a></span><br><span class="grid-span"><span class="gsp-title ">Category</span><span class="gsp-val "><a data-effect="mfp-move-from-top" class="popupformWR apopf" href="https://demo.appsbd.com/support-system/admin/ticket/change-category/6.html"><span class="tooltip2 cat-tool text-info text-bold tooltipstered added-tooltip2"><i class="fa fa-exclamation-circle"></i> PHP Basic</span></a></span></span><span class="grid-span"><span class="gsp-title ">Current Status</span><span class="gsp-val "><span class="text-danger text-bold"><i class="fa fa-user"></i> Action Required</span></span></span><span class="grid-span"><span class="gsp-title ">Replied</span><span class="gsp-val label label-default text-bold">1</span></span></div>
                                                     <div class="visible-xs app-grid-property-row" style="text-align:left;">
                                                         <div>
@@ -1146,27 +1139,27 @@ All Active Tickets
                                                         </div>
                                                     </div>
                                                 </td>
-                                                <td role="gridcell" style="text-align:center;" title="2 years ago" aria-describedby="tab1_1595129082_opened_time"><span class="tooltip2 tooltipstered added-tooltip2" data-tooltip-position="top">2 years ago</span></td>
-                                                <td role="gridcell" style="text-align:left;" title="admin" aria-describedby="tab1_1595129082_assigned_on">
+                                                <td role="gridcell" style="text-align:center;" title="2 years ago" aria-describedby="tab1_1595151824_opened_time"><span class="tooltip2 tooltipstered added-tooltip2" data-tooltip-position="top">2 years ago</span></td>
+                                                <td role="gridcell" style="text-align:left;" title="admin" aria-describedby="tab1_1595151824_assigned_on">
                                                     <div class="grid-img  online ">
                                                         <div><img src="https://demo.appsbd.com/support-system/data/appuser/AA/profile.jpg" alt="admin" class=""></div>
                                                     </div><span class="grid-u-c">admin</span>
                                                 </td>
-                                                <td role="gridcell" style="text-align:left;" title="admin" aria-describedby="tab1_1595129082_last_replied_by">
+                                                <td role="gridcell" style="text-align:left;" title="admin" aria-describedby="tab1_1595151824_last_replied_by">
                                                     <div class="grid-img  online ">
                                                         <div><img src="https://demo.appsbd.com/support-system/data/appuser/AA/profile.jpg" alt="admin" class=""></div>
                                                     </div><span class="grid-u-c">admin</span>
                                                 </td>
-                                                <td role="gridcell" style="text-align:center;" title="4 months ago" aria-describedby="tab1_1595129082_last_reply_time"><span class="tooltip2 tooltipstered added-tooltip2" data-tooltip-position="top">4 months ago</span></td>
-                                                <td role="gridcell" style="text-align:center;" title="" aria-describedby="tab1_1595129082_custom_AA">&nbsp;</td>
-                                                <td role="gridcell" style="text-align:center;" aria-describedby="tab1_1595129082_action" title=" "> <a class="btn btn-success btn-xs added-ripples" href="https://demo.appsbd.com/support-system/admin/ticket/details/6.html"><i class="fa fa-eye"></i> Details</a> <a class="ConfirmAjaxWR btn btn-danger btn-xs added-ripples" data-msg="Are you sure to delete?" href="https://demo.appsbd.com/support-system/admin/ticket-confirm/ticket-delete/6.html"><i class="fa fa-trash"></i>Delete</a></td>
-                                                <td role="gridcell" style="display:none;" aria-describedby="tab1_1595129082_cat_id"><a data-effect="mfp-move-from-top" class="popupformWR apopf" href="https://demo.appsbd.com/support-system/admin/ticket/change-category/6.html"><span class="tooltip2 cat-tool text-info text-bold tooltipstered added-tooltip2"><i class="fa fa-exclamation-circle"></i> PHP Basic</span></a></td>
-                                                <td role="gridcell" style="display:none;" title=" Low" aria-describedby="tab1_1595129082_priroty"><span class="text- label label-default"> Low</span></td>
+                                                <td role="gridcell" style="text-align:center;" title="4 months ago" aria-describedby="tab1_1595151824_last_reply_time"><span class="tooltip2 tooltipstered added-tooltip2" data-tooltip-position="top">4 months ago</span></td>
+                                                <td role="gridcell" style="text-align:center;" title="" aria-describedby="tab1_1595151824_custom_AA">&nbsp;</td>
+                                                <td role="gridcell" style="text-align:center;" aria-describedby="tab1_1595151824_action" title=" "> <a class="btn btn-success btn-xs added-ripples" href="https://demo.appsbd.com/support-system/admin/ticket/details/6.html"><i class="fa fa-eye"></i> Details</a> <a class="ConfirmAjaxWR btn btn-danger btn-xs added-ripples" data-msg="Are you sure to delete?" href="https://demo.appsbd.com/support-system/admin/ticket-confirm/ticket-delete/6.html"><i class="fa fa-trash"></i>Delete</a></td>
+                                                <td role="gridcell" style="display:none;" aria-describedby="tab1_1595151824_cat_id"><a data-effect="mfp-move-from-top" class="popupformWR apopf" href="https://demo.appsbd.com/support-system/admin/ticket/change-category/6.html"><span class="tooltip2 cat-tool text-info text-bold tooltipstered added-tooltip2"><i class="fa fa-exclamation-circle"></i> PHP Basic</span></a></td>
+                                                <td role="gridcell" style="display:none;" title=" Low" aria-describedby="tab1_1595151824_priroty"><span class="text- label label-default"> Low</span></td>
                                             </tr>
                                             <tr role="row" id="2" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr">
-                                                <td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;" title="2" aria-describedby="tab1_1595129082_rn">2</td>
-                                                <td role="gridcell" style="display:none;" title="T83DCEFB7-004-FMQ" aria-describedby="tab1_1595129082_ticket_track_id">T83DCEFB7-004-FMQ</td>
-                                                <td role="gridcell" style="text-align:left;" title="  High What is Lorem Ipsum?Category PHP BasicCurrent Status NewReplied0Title  High What is Lorem Ipsum?Category PHP BasicCurrent Status NewReplied0Open Time2 years agoAssignedadminLast ReplyL.Reply Time2 years agotest  Details Delete" aria-describedby="tab1_1595129082_title">
+                                                <td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;" title="2" aria-describedby="tab1_1595151824_rn">2</td>
+                                                <td role="gridcell" style="display:none;" title="T83DCEFB7-004-FMQ" aria-describedby="tab1_1595151824_ticket_track_id">T83DCEFB7-004-FMQ</td>
+                                                <td role="gridcell" style="text-align:left;" title="  High What is Lorem Ipsum?Category PHP BasicCurrent Status NewReplied0Title  High What is Lorem Ipsum?Category PHP BasicCurrent Status NewReplied0Open Time2 years agoAssignedadminLast ReplyL.Reply Time2 years agotest  Details Delete" aria-describedby="tab1_1595151824_title">
                                                     <div class="hidden-xs"> <span class="grid-t-title"><span class="text- label label-warning"> High</span> <a class="ticket-title" target="_blank" href="https://demo.appsbd.com/support-system/admin/ticket/details/4.html">What is Lorem Ipsum?</a></span><br><span class="grid-span"><span class="gsp-title ">Category</span><span class="gsp-val "><a data-effect="mfp-move-from-top" class="popupformWR apopf" href="https://demo.appsbd.com/support-system/admin/ticket/change-category/4.html"><span class="tooltip2 cat-tool text-info text-bold tooltipstered added-tooltip2"><i class="fa fa-exclamation-circle"></i> PHP Basic</span></a></span></span><span class="grid-span"><span class="gsp-title ">Current Status</span><span class="gsp-val "><span class="text-info text-bold"><i class="fa fa-dot-circle-o"></i> New</span></span></span><span class="grid-span"><span class="gsp-title ">Replied</span><span class="gsp-val label label-default text-bold">0</span></span></div>
                                                     <div class="visible-xs app-grid-property-row" style="text-align:left;">
                                                         <div>
@@ -1202,23 +1195,23 @@ All Active Tickets
                                                         </div>
                                                     </div>
                                                 </td>
-                                                <td role="gridcell" style="text-align:center;" title="2 years ago" aria-describedby="tab1_1595129082_opened_time"><span class="tooltip2 tooltipstered added-tooltip2" data-tooltip-position="top">2 years ago</span></td>
-                                                <td role="gridcell" style="text-align:left;" title="admin" aria-describedby="tab1_1595129082_assigned_on">
+                                                <td role="gridcell" style="text-align:center;" title="2 years ago" aria-describedby="tab1_1595151824_opened_time"><span class="tooltip2 tooltipstered added-tooltip2" data-tooltip-position="top">2 years ago</span></td>
+                                                <td role="gridcell" style="text-align:left;" title="admin" aria-describedby="tab1_1595151824_assigned_on">
                                                     <div class="grid-img  online ">
                                                         <div><img src="https://demo.appsbd.com/support-system/data/appuser/AA/profile.jpg" alt="admin" class=""></div>
                                                     </div><span class="grid-u-c">admin</span>
                                                 </td>
-                                                <td role="gridcell" style="text-align:left;" title="" aria-describedby="tab1_1595129082_last_replied_by">&nbsp;</td>
-                                                <td role="gridcell" style="text-align:center;" title="2 years ago" aria-describedby="tab1_1595129082_last_reply_time"><span class="tooltip2 tooltipstered added-tooltip2" data-tooltip-position="top">2 years ago</span></td>
-                                                <td role="gridcell" style="text-align:center;" title="" aria-describedby="tab1_1595129082_custom_AA">&nbsp;</td>
-                                                <td role="gridcell" style="text-align:center;" aria-describedby="tab1_1595129082_action" title=" "> <a class="btn btn-success btn-xs added-ripples" href="https://demo.appsbd.com/support-system/admin/ticket/details/4.html"><i class="fa fa-eye"></i> Details</a> <a class="ConfirmAjaxWR btn btn-danger btn-xs added-ripples" data-msg="Are you sure to delete?" href="https://demo.appsbd.com/support-system/admin/ticket-confirm/ticket-delete/4.html"><i class="fa fa-trash"></i>Delete</a></td>
-                                                <td role="gridcell" style="display:none;" aria-describedby="tab1_1595129082_cat_id"><a data-effect="mfp-move-from-top" class="popupformWR apopf" href="https://demo.appsbd.com/support-system/admin/ticket/change-category/4.html"><span class="tooltip2 cat-tool text-info text-bold tooltipstered added-tooltip2"><i class="fa fa-exclamation-circle"></i> PHP Basic</span></a></td>
-                                                <td role="gridcell" style="display:none;" title=" High" aria-describedby="tab1_1595129082_priroty"><span class="text- label label-warning"> High</span></td>
+                                                <td role="gridcell" style="text-align:left;" title="" aria-describedby="tab1_1595151824_last_replied_by">&nbsp;</td>
+                                                <td role="gridcell" style="text-align:center;" title="2 years ago" aria-describedby="tab1_1595151824_last_reply_time"><span class="tooltip2 tooltipstered added-tooltip2" data-tooltip-position="top">2 years ago</span></td>
+                                                <td role="gridcell" style="text-align:center;" title="" aria-describedby="tab1_1595151824_custom_AA">&nbsp;</td>
+                                                <td role="gridcell" style="text-align:center;" aria-describedby="tab1_1595151824_action" title=" "> <a class="btn btn-success btn-xs added-ripples" href="https://demo.appsbd.com/support-system/admin/ticket/details/4.html"><i class="fa fa-eye"></i> Details</a> <a class="ConfirmAjaxWR btn btn-danger btn-xs added-ripples" data-msg="Are you sure to delete?" href="https://demo.appsbd.com/support-system/admin/ticket-confirm/ticket-delete/4.html"><i class="fa fa-trash"></i>Delete</a></td>
+                                                <td role="gridcell" style="display:none;" aria-describedby="tab1_1595151824_cat_id"><a data-effect="mfp-move-from-top" class="popupformWR apopf" href="https://demo.appsbd.com/support-system/admin/ticket/change-category/4.html"><span class="tooltip2 cat-tool text-info text-bold tooltipstered added-tooltip2"><i class="fa fa-exclamation-circle"></i> PHP Basic</span></a></td>
+                                                <td role="gridcell" style="display:none;" title=" High" aria-describedby="tab1_1595151824_priroty"><span class="text- label label-warning"> High</span></td>
                                             </tr>
                                             <tr role="row" id="3" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr">
-                                                <td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;" title="3" aria-describedby="tab1_1595129082_rn">3</td>
-                                                <td role="gridcell" style="display:none;" title="T83DCEFB7-003-Q7B" aria-describedby="tab1_1595129082_ticket_track_id">T83DCEFB7-003-Q7B</td>
-                                                <td role="gridcell" style="text-align:left;" title="  High Another Test ticket 3Category WordPress Theme SetupCurrent Status In ProgressReplied1Title  High Another Test ticket 3Category WordPress Theme SetupCurrent Status In ProgressReplied1Open Time2 years agoAssignedadminLast ReplyadminL.Reply Time2 years agotest  Details Delete" aria-describedby="tab1_1595129082_title">
+                                                <td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;" title="3" aria-describedby="tab1_1595151824_rn">3</td>
+                                                <td role="gridcell" style="display:none;" title="T83DCEFB7-003-Q7B" aria-describedby="tab1_1595151824_ticket_track_id">T83DCEFB7-003-Q7B</td>
+                                                <td role="gridcell" style="text-align:left;" title="  High Another Test ticket 3Category WordPress Theme SetupCurrent Status In ProgressReplied1Title  High Another Test ticket 3Category WordPress Theme SetupCurrent Status In ProgressReplied1Open Time2 years agoAssignedadminLast ReplyadminL.Reply Time2 years agotest  Details Delete" aria-describedby="tab1_1595151824_title">
                                                     <div class="hidden-xs"> <span class="grid-t-title"><span class="text- label label-warning"> High</span> <a class="ticket-title" target="_blank" href="https://demo.appsbd.com/support-system/admin/ticket/details/3.html">Another Test ticket 3</a></span><br><span class="grid-span"><span class="gsp-title ">Category</span><span class="gsp-val "><a data-effect="mfp-move-from-top" class="popupformWR apopf" href="https://demo.appsbd.com/support-system/admin/ticket/change-category/3.html"><span class="tooltip2 cat-tool text-info text-bold tooltipstered added-tooltip2"><i class="fa fa-exclamation-circle"></i> WordPress Theme Setup</span></a></span></span><span class="grid-span"><span class="gsp-title ">Current Status</span><span class="gsp-val "><span class="text-info text-bold"><i class="fa fa-hourglass-1"></i> In Progress</span></span></span><span class="grid-span"><span class="gsp-title ">Replied</span><span class="gsp-val label label-default text-bold">1</span></span></div>
                                                     <div class="visible-xs app-grid-property-row" style="text-align:left;">
                                                         <div>
@@ -1258,27 +1251,27 @@ All Active Tickets
                                                         </div>
                                                     </div>
                                                 </td>
-                                                <td role="gridcell" style="text-align:center;" title="2 years ago" aria-describedby="tab1_1595129082_opened_time"><span class="tooltip2 tooltipstered added-tooltip2" data-tooltip-position="top">2 years ago</span></td>
-                                                <td role="gridcell" style="text-align:left;" title="admin" aria-describedby="tab1_1595129082_assigned_on">
+                                                <td role="gridcell" style="text-align:center;" title="2 years ago" aria-describedby="tab1_1595151824_opened_time"><span class="tooltip2 tooltipstered added-tooltip2" data-tooltip-position="top">2 years ago</span></td>
+                                                <td role="gridcell" style="text-align:left;" title="admin" aria-describedby="tab1_1595151824_assigned_on">
                                                     <div class="grid-img  online ">
                                                         <div><img src="https://demo.appsbd.com/support-system/data/appuser/AA/profile.jpg" alt="admin" class=""></div>
                                                     </div><span class="grid-u-c">admin</span>
                                                 </td>
-                                                <td role="gridcell" style="text-align:left;" title="admin" aria-describedby="tab1_1595129082_last_replied_by">
+                                                <td role="gridcell" style="text-align:left;" title="admin" aria-describedby="tab1_1595151824_last_replied_by">
                                                     <div class="grid-img  online ">
                                                         <div><img src="https://demo.appsbd.com/support-system/data/appuser/AA/profile.jpg" alt="admin" class=""></div>
                                                     </div><span class="grid-u-c">admin</span>
                                                 </td>
-                                                <td role="gridcell" style="text-align:center;" title="2 years ago" aria-describedby="tab1_1595129082_last_reply_time"><span class="tooltip2 tooltipstered added-tooltip2" data-tooltip-position="top">2 years ago</span></td>
-                                                <td role="gridcell" style="text-align:center;" title="" aria-describedby="tab1_1595129082_custom_AA">&nbsp;</td>
-                                                <td role="gridcell" style="text-align:center;" aria-describedby="tab1_1595129082_action" title=" "> <a class="btn btn-success btn-xs added-ripples" href="https://demo.appsbd.com/support-system/admin/ticket/details/3.html"><i class="fa fa-eye"></i> Details</a> <a class="ConfirmAjaxWR btn btn-danger btn-xs added-ripples" data-msg="Are you sure to delete?" href="https://demo.appsbd.com/support-system/admin/ticket-confirm/ticket-delete/3.html"><i class="fa fa-trash"></i>Delete</a></td>
-                                                <td role="gridcell" style="display:none;" aria-describedby="tab1_1595129082_cat_id"><a data-effect="mfp-move-from-top" class="popupformWR apopf" href="https://demo.appsbd.com/support-system/admin/ticket/change-category/3.html"><span class="tooltip2 cat-tool text-info text-bold tooltipstered added-tooltip2"><i class="fa fa-exclamation-circle"></i> WordPress Theme Setup</span></a></td>
-                                                <td role="gridcell" style="display:none;" title=" High" aria-describedby="tab1_1595129082_priroty"><span class="text- label label-warning"> High</span></td>
+                                                <td role="gridcell" style="text-align:center;" title="2 years ago" aria-describedby="tab1_1595151824_last_reply_time"><span class="tooltip2 tooltipstered added-tooltip2" data-tooltip-position="top">2 years ago</span></td>
+                                                <td role="gridcell" style="text-align:center;" title="" aria-describedby="tab1_1595151824_custom_AA">&nbsp;</td>
+                                                <td role="gridcell" style="text-align:center;" aria-describedby="tab1_1595151824_action" title=" "> <a class="btn btn-success btn-xs added-ripples" href="https://demo.appsbd.com/support-system/admin/ticket/details/3.html"><i class="fa fa-eye"></i> Details</a> <a class="ConfirmAjaxWR btn btn-danger btn-xs added-ripples" data-msg="Are you sure to delete?" href="https://demo.appsbd.com/support-system/admin/ticket-confirm/ticket-delete/3.html"><i class="fa fa-trash"></i>Delete</a></td>
+                                                <td role="gridcell" style="display:none;" aria-describedby="tab1_1595151824_cat_id"><a data-effect="mfp-move-from-top" class="popupformWR apopf" href="https://demo.appsbd.com/support-system/admin/ticket/change-category/3.html"><span class="tooltip2 cat-tool text-info text-bold tooltipstered added-tooltip2"><i class="fa fa-exclamation-circle"></i> WordPress Theme Setup</span></a></td>
+                                                <td role="gridcell" style="display:none;" title=" High" aria-describedby="tab1_1595151824_priroty"><span class="text- label label-warning"> High</span></td>
                                             </tr>
-                                            <tr role="row" id="4" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr ui-state-hover">
-                                                <td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;" title="4" aria-describedby="tab1_1595129082_rn">4</td>
-                                                <td role="gridcell" style="display:none;" title="T83DCEFB7-002-GOM" aria-describedby="tab1_1595129082_ticket_track_id">T83DCEFB7-002-GOM</td>
-                                                <td role="gridcell" style="text-align:left;" title="  Medium Another TestCategory Android BasicCurrent Status In ProgressReplied1Title  Medium Another TestCategory Android BasicCurrent Status In ProgressReplied1Open Time2 years agoAssignedadminLast ReplyadminL.Reply Time2 years agotest  Details Delete" aria-describedby="tab1_1595129082_title">
+                                            <tr role="row" id="4" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr">
+                                                <td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;" title="4" aria-describedby="tab1_1595151824_rn">4</td>
+                                                <td role="gridcell" style="display:none;" title="T83DCEFB7-002-GOM" aria-describedby="tab1_1595151824_ticket_track_id">T83DCEFB7-002-GOM</td>
+                                                <td role="gridcell" style="text-align:left;" title="  Medium Another TestCategory Android BasicCurrent Status In ProgressReplied1Title  Medium Another TestCategory Android BasicCurrent Status In ProgressReplied1Open Time2 years agoAssignedadminLast ReplyadminL.Reply Time2 years agotest  Details Delete" aria-describedby="tab1_1595151824_title">
                                                     <div class="hidden-xs"> <span class="grid-t-title"><span class="text- label label-info"> Medium</span> <a class="ticket-title" target="_blank" href="https://demo.appsbd.com/support-system/admin/ticket/details/2.html">Another Test</a></span><br><span class="grid-span"><span class="gsp-title ">Category</span><span class="gsp-val "><a data-effect="mfp-move-from-top" class="popupformWR apopf" href="https://demo.appsbd.com/support-system/admin/ticket/change-category/2.html"><span class="tooltip2 cat-tool text-info text-bold tooltipstered added-tooltip2"><i class="fa fa-exclamation-circle"></i> Android Basic</span></a></span></span><span class="grid-span"><span class="gsp-title ">Current Status</span><span class="gsp-val "><span class="text-info text-bold"><i class="fa fa-hourglass-1"></i> In Progress</span></span></span><span class="grid-span"><span class="gsp-title ">Replied</span><span class="gsp-val label label-default text-bold">1</span></span></div>
                                                     <div class="visible-xs app-grid-property-row" style="text-align:left;">
                                                         <div>
@@ -1318,27 +1311,27 @@ All Active Tickets
                                                         </div>
                                                     </div>
                                                 </td>
-                                                <td role="gridcell" style="text-align:center;" title="2 years ago" aria-describedby="tab1_1595129082_opened_time"><span class="tooltip2 tooltipstered added-tooltip2" data-tooltip-position="top">2 years ago</span></td>
-                                                <td role="gridcell" style="text-align:left;" title="admin" aria-describedby="tab1_1595129082_assigned_on">
+                                                <td role="gridcell" style="text-align:center;" title="2 years ago" aria-describedby="tab1_1595151824_opened_time"><span class="tooltip2 tooltipstered added-tooltip2" data-tooltip-position="top">2 years ago</span></td>
+                                                <td role="gridcell" style="text-align:left;" title="admin" aria-describedby="tab1_1595151824_assigned_on">
                                                     <div class="grid-img  online ">
                                                         <div><img src="https://demo.appsbd.com/support-system/data/appuser/AA/profile.jpg" alt="admin" class=""></div>
                                                     </div><span class="grid-u-c">admin</span>
                                                 </td>
-                                                <td role="gridcell" style="text-align:left;" title="admin" aria-describedby="tab1_1595129082_last_replied_by">
+                                                <td role="gridcell" style="text-align:left;" title="admin" aria-describedby="tab1_1595151824_last_replied_by">
                                                     <div class="grid-img  online ">
                                                         <div><img src="https://demo.appsbd.com/support-system/data/appuser/AA/profile.jpg" alt="admin" class=""></div>
                                                     </div><span class="grid-u-c">admin</span>
                                                 </td>
-                                                <td role="gridcell" style="text-align:center;" title="2 years ago" aria-describedby="tab1_1595129082_last_reply_time"><span class="tooltip2 tooltipstered added-tooltip2" data-tooltip-position="top">2 years ago</span></td>
-                                                <td role="gridcell" style="text-align:center;" title="" aria-describedby="tab1_1595129082_custom_AA">&nbsp;</td>
-                                                <td role="gridcell" style="text-align:center;" aria-describedby="tab1_1595129082_action" title=" "> <a class="btn btn-success btn-xs added-ripples" href="https://demo.appsbd.com/support-system/admin/ticket/details/2.html"><i class="fa fa-eye"></i> Details</a> <a class="ConfirmAjaxWR btn btn-danger btn-xs added-ripples" data-msg="Are you sure to delete?" href="https://demo.appsbd.com/support-system/admin/ticket-confirm/ticket-delete/2.html"><i class="fa fa-trash"></i>Delete</a></td>
-                                                <td role="gridcell" style="display:none;" aria-describedby="tab1_1595129082_cat_id"><a data-effect="mfp-move-from-top" class="popupformWR apopf" href="https://demo.appsbd.com/support-system/admin/ticket/change-category/2.html"><span class="tooltip2 cat-tool text-info text-bold tooltipstered added-tooltip2"><i class="fa fa-exclamation-circle"></i> Android Basic</span></a></td>
-                                                <td role="gridcell" style="display:none;" title=" Medium" aria-describedby="tab1_1595129082_priroty"><span class="text- label label-info"> Medium</span></td>
+                                                <td role="gridcell" style="text-align:center;" title="2 years ago" aria-describedby="tab1_1595151824_last_reply_time"><span class="tooltip2 tooltipstered added-tooltip2" data-tooltip-position="top">2 years ago</span></td>
+                                                <td role="gridcell" style="text-align:center;" title="" aria-describedby="tab1_1595151824_custom_AA">&nbsp;</td>
+                                                <td role="gridcell" style="text-align:center;" aria-describedby="tab1_1595151824_action" title=" "> <a class="btn btn-success btn-xs added-ripples" href="https://demo.appsbd.com/support-system/admin/ticket/details/2.html"><i class="fa fa-eye"></i> Details</a> <a class="ConfirmAjaxWR btn btn-danger btn-xs added-ripples" data-msg="Are you sure to delete?" href="https://demo.appsbd.com/support-system/admin/ticket-confirm/ticket-delete/2.html"><i class="fa fa-trash"></i>Delete</a></td>
+                                                <td role="gridcell" style="display:none;" aria-describedby="tab1_1595151824_cat_id"><a data-effect="mfp-move-from-top" class="popupformWR apopf" href="https://demo.appsbd.com/support-system/admin/ticket/change-category/2.html"><span class="tooltip2 cat-tool text-info text-bold tooltipstered added-tooltip2"><i class="fa fa-exclamation-circle"></i> Android Basic</span></a></td>
+                                                <td role="gridcell" style="display:none;" title=" Medium" aria-describedby="tab1_1595151824_priroty"><span class="text- label label-info"> Medium</span></td>
                                             </tr>
                                             <tr role="row" id="5" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr">
-                                                <td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;" title="5" aria-describedby="tab1_1595129082_rn">5</td>
-                                                <td role="gridcell" style="display:none;" title="T83DCEFB7-001-LDP" aria-describedby="tab1_1595129082_ticket_track_id">T83DCEFB7-001-LDP</td>
-                                                <td role="gridcell" style="text-align:left;" title="  Medium This is test ticketCategory PHP SetupCurrent Status NewReplied0Title  Medium This is test ticketCategory PHP SetupCurrent Status NewReplied0Open Time2 years agoAssignedadminLast ReplyL.Reply Time2 years agotest  Details Delete" aria-describedby="tab1_1595129082_title">
+                                                <td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;" title="5" aria-describedby="tab1_1595151824_rn">5</td>
+                                                <td role="gridcell" style="display:none;" title="T83DCEFB7-001-LDP" aria-describedby="tab1_1595151824_ticket_track_id">T83DCEFB7-001-LDP</td>
+                                                <td role="gridcell" style="text-align:left;" title="  Medium This is test ticketCategory PHP SetupCurrent Status NewReplied0Title  Medium This is test ticketCategory PHP SetupCurrent Status NewReplied0Open Time2 years agoAssignedadminLast ReplyL.Reply Time2 years agotest  Details Delete" aria-describedby="tab1_1595151824_title">
                                                     <div class="hidden-xs"> <span class="grid-t-title"><span class="text- label label-info"> Medium</span> <a class="ticket-title" target="_blank" href="https://demo.appsbd.com/support-system/admin/ticket/details/1.html">This is test ticket</a></span><br><span class="grid-span"><span class="gsp-title ">Category</span><span class="gsp-val "><a data-effect="mfp-move-from-top" class="popupformWR apopf" href="https://demo.appsbd.com/support-system/admin/ticket/change-category/1.html"><span class="tooltip2 cat-tool text-info text-bold tooltipstered added-tooltip2"><i class="fa fa-exclamation-circle"></i> PHP Setup</span></a></span></span><span class="grid-span"><span class="gsp-title ">Current Status</span><span class="gsp-val "><span class="text-info text-bold"><i class="fa fa-dot-circle-o"></i> New</span></span></span><span class="grid-span"><span class="gsp-title ">Replied</span><span class="gsp-val label label-default text-bold">0</span></span></div>
                                                     <div class="visible-xs app-grid-property-row" style="text-align:left;">
                                                         <div>
@@ -1374,52 +1367,52 @@ All Active Tickets
                                                         </div>
                                                     </div>
                                                 </td>
-                                                <td role="gridcell" style="text-align:center;" title="2 years ago" aria-describedby="tab1_1595129082_opened_time"><span class="tooltip2 tooltipstered added-tooltip2" data-tooltip-position="top">2 years ago</span></td>
-                                                <td role="gridcell" style="text-align:left;" title="admin" aria-describedby="tab1_1595129082_assigned_on">
+                                                <td role="gridcell" style="text-align:center;" title="2 years ago" aria-describedby="tab1_1595151824_opened_time"><span class="tooltip2 tooltipstered added-tooltip2" data-tooltip-position="top">2 years ago</span></td>
+                                                <td role="gridcell" style="text-align:left;" title="admin" aria-describedby="tab1_1595151824_assigned_on">
                                                     <div class="grid-img  online ">
                                                         <div><img src="https://demo.appsbd.com/support-system/data/appuser/AA/profile.jpg" alt="admin" class=""></div>
                                                     </div><span class="grid-u-c">admin</span>
                                                 </td>
-                                                <td role="gridcell" style="text-align:left;" title="" aria-describedby="tab1_1595129082_last_replied_by">&nbsp;</td>
-                                                <td role="gridcell" style="text-align:center;" title="2 years ago" aria-describedby="tab1_1595129082_last_reply_time"><span class="tooltip2 tooltipstered added-tooltip2" data-tooltip-position="top">2 years ago</span></td>
-                                                <td role="gridcell" style="text-align:center;" title="" aria-describedby="tab1_1595129082_custom_AA">&nbsp;</td>
-                                                <td role="gridcell" style="text-align:center;" aria-describedby="tab1_1595129082_action" title=" "> <a class="btn btn-success btn-xs added-ripples" href="https://demo.appsbd.com/support-system/admin/ticket/details/1.html"><i class="fa fa-eye"></i> Details</a> <a class="ConfirmAjaxWR btn btn-danger btn-xs added-ripples" data-msg="Are you sure to delete?" href="https://demo.appsbd.com/support-system/admin/ticket-confirm/ticket-delete/1.html"><i class="fa fa-trash"></i>Delete</a></td>
-                                                <td role="gridcell" style="display:none;" aria-describedby="tab1_1595129082_cat_id"><a data-effect="mfp-move-from-top" class="popupformWR apopf" href="https://demo.appsbd.com/support-system/admin/ticket/change-category/1.html"><span class="tooltip2 cat-tool text-info text-bold tooltipstered added-tooltip2"><i class="fa fa-exclamation-circle"></i> PHP Setup</span></a></td>
-                                                <td role="gridcell" style="display:none;" title=" Medium" aria-describedby="tab1_1595129082_priroty"><span class="text- label label-info"> Medium</span></td>
+                                                <td role="gridcell" style="text-align:left;" title="" aria-describedby="tab1_1595151824_last_replied_by">&nbsp;</td>
+                                                <td role="gridcell" style="text-align:center;" title="2 years ago" aria-describedby="tab1_1595151824_last_reply_time"><span class="tooltip2 tooltipstered added-tooltip2" data-tooltip-position="top">2 years ago</span></td>
+                                                <td role="gridcell" style="text-align:center;" title="" aria-describedby="tab1_1595151824_custom_AA">&nbsp;</td>
+                                                <td role="gridcell" style="text-align:center;" aria-describedby="tab1_1595151824_action" title=" "> <a class="btn btn-success btn-xs added-ripples" href="https://demo.appsbd.com/support-system/admin/ticket/details/1.html"><i class="fa fa-eye"></i> Details</a> <a class="ConfirmAjaxWR btn btn-danger btn-xs added-ripples" data-msg="Are you sure to delete?" href="https://demo.appsbd.com/support-system/admin/ticket-confirm/ticket-delete/1.html"><i class="fa fa-trash"></i>Delete</a></td>
+                                                <td role="gridcell" style="display:none;" aria-describedby="tab1_1595151824_cat_id"><a data-effect="mfp-move-from-top" class="popupformWR apopf" href="https://demo.appsbd.com/support-system/admin/ticket/change-category/1.html"><span class="tooltip2 cat-tool text-info text-bold tooltipstered added-tooltip2"><i class="fa fa-exclamation-circle"></i> PHP Setup</span></a></td>
+                                                <td role="gridcell" style="display:none;" title=" Medium" aria-describedby="tab1_1595151824_priroty"><span class="text- label label-info"> Medium</span></td>
                                             </tr>
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
                         </div>
-                        <div class="ui-jqgrid-resize-mark" id="rs_mtab1_1595129082">&nbsp;</div>
-                        <div id="pager_tab1_1595129082" class="ui-state-default ui-jqgrid-pager ui-corner-bottom" dir="ltr" style="width: 1064px;">
-                            <div id="pg_pager_tab1_1595129082" class="ui-pager-control" role="group">
+                        <div class="ui-jqgrid-resize-mark" id="rs_mtab1_1595151824">&nbsp;</div>
+                        <div id="pager_tab1_1595151824" class="ui-state-default ui-jqgrid-pager ui-corner-bottom" dir="ltr" style="width: 1618px;">
+                            <div id="pg_pager_tab1_1595151824" class="ui-pager-control" role="group">
                                 <table cellspacing="0" cellpadding="0" border="0" class="ui-pg-table" style="width:100%;table-layout:fixed;height:100%;" role="row">
                                     <tbody>
                                         <tr>
-                                            <td id="pager_tab1_1595129082_left" align="left">
+                                            <td id="pager_tab1_1595151824_left" align="left">
                                                 <table cellspacing="0" cellpadding="0" border="0" class="ui-pg-table navtable" style="float:left;table-layout:auto;">
                                                     <tbody>
                                                         <tr>
-                                                            <td class="ui-pg-button ui-corner-all" title="Reload Grid" id="refresh_tab1_1595129082">
+                                                            <td class="ui-pg-button ui-corner-all" title="Reload Grid" id="refresh_tab1_1595151824">
                                                                 <div class="ui-pg-div"><span class="ui-icon ui-icon-refresh"></span></div>
                                                             </td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
                                             </td>
-                                            <td id="pager_tab1_1595129082_center" align="center" style="white-space: pre; width: 202px;">
+                                            <td id="pager_tab1_1595151824_center" align="center" style="white-space: pre; width: 202px;">
                                                 <table cellspacing="0" cellpadding="0" border="0" style="table-layout:auto;" class="ui-pg-table">
                                                     <tbody>
                                                         <tr>
-                                                            <td id="first_pager_tab1_1595129082" class="ui-pg-button ui-corner-all ui-state-disabled"><span class="ui-icon ui-icon-seek-first"></span></td>
-                                                            <td id="prev_pager_tab1_1595129082" class="ui-pg-button ui-corner-all ui-state-disabled"><span class="ui-icon ui-icon-seek-prev"></span></td>
+                                                            <td id="first_pager_tab1_1595151824" class="ui-pg-button ui-corner-all ui-state-disabled"><span class="ui-icon ui-icon-seek-first"></span></td>
+                                                            <td id="prev_pager_tab1_1595151824" class="ui-pg-button ui-corner-all ui-state-disabled"><span class="ui-icon ui-icon-seek-prev"></span></td>
                                                             <td class="ui-pg-button ui-state-disabled" style="width:4px;"><span class="ui-separator"></span></td>
-                                                            <td dir="ltr">Page <input class="ui-pg-input" type="text" size="2" maxlength="7" value="0" role="textbox"> of <span id="sp_1_pager_tab1_1595129082">1</span></td>
+                                                            <td dir="ltr">Page <input class="ui-pg-input" type="text" size="2" maxlength="7" value="0" role="textbox"> of <span id="sp_1_pager_tab1_1595151824">1</span></td>
                                                             <td class="ui-pg-button ui-state-disabled" style="width:4px;"><span class="ui-separator"></span></td>
-                                                            <td id="next_pager_tab1_1595129082" class="ui-pg-button ui-corner-all ui-state-disabled"><span class="ui-icon ui-icon-seek-next"></span></td>
-                                                            <td id="last_pager_tab1_1595129082" class="ui-pg-button ui-corner-all ui-state-disabled"><span class="ui-icon ui-icon-seek-end"></span></td>
+                                                            <td id="next_pager_tab1_1595151824" class="ui-pg-button ui-corner-all ui-state-disabled"><span class="ui-icon ui-icon-seek-next"></span></td>
+                                                            <td id="last_pager_tab1_1595151824" class="ui-pg-button ui-corner-all ui-state-disabled"><span class="ui-icon ui-icon-seek-end"></span></td>
                                                             <td dir="ltr"><select class="ui-pg-selbox" role="listbox">
                                                                     <option role="option" value="5">5</option>
                                                                     <option role="option" value="10">10</option>
@@ -1432,7 +1425,7 @@ All Active Tickets
                                                     </tbody>
                                                 </table>
                                             </td>
-                                            <td id="pager_tab1_1595129082_right" align="right">
+                                            <td id="pager_tab1_1595151824_right" align="right">
                                                 <div dir="ltr" style="text-align:right" class="ui-paging-info">View 1 - 5 of 5</div>
                                             </td>
                                         </tr>
@@ -1440,9 +1433,9 @@ All Active Tickets
                                 </table>
                             </div>
                         </div>
-                        <div class="ui-widget ui-widget-content ui-corner-all ui-jqdialog" id="alertmod_tab1_1595129082" dir="ltr" tabindex="-1" role="dialog" aria-labelledby="alerthd_tab1_1595129082" aria-hidden="true" style="width: 200px; height: auto; z-index: 950; overflow: hidden; top: 172.5px; left: 583px;">
-                            <div class="ui-jqdialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix" id="alerthd_tab1_1595129082" style="cursor: move;"><span class="ui-jqdialog-title" style="float: left;">Warning</span><a class="ui-jqdialog-titlebar-close ui-corner-all" style="right: 0.3em;"><span class="ui-icon ui-icon-closethick"></span></a></div>
-                            <div class="ui-jqdialog-content ui-widget-content" id="alertcnt_tab1_1595129082">
+                        <div class="ui-widget ui-widget-content ui-corner-all ui-jqdialog" id="alertmod_tab1_1595151824" dir="ltr" tabindex="-1" role="dialog" aria-labelledby="alerthd_tab1_1595151824" aria-hidden="true" style="width: 200px; height: auto; z-index: 950; overflow: hidden; top: 328.5px; left: 860px;">
+                            <div class="ui-jqdialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix" id="alerthd_tab1_1595151824" style="cursor: move;"><span class="ui-jqdialog-title" style="float: left;">Warning</span><a class="ui-jqdialog-titlebar-close ui-corner-all" style="right: 0.3em;"><span class="ui-icon ui-icon-closethick"></span></a></div>
+                            <div class="ui-jqdialog-content ui-widget-content" id="alertcnt_tab1_1595151824">
                                 <div>Please, select row</div><span tabindex="0"><span tabindex="-1" id="jqg_alrt"></span></span>
                             </div>
                             <div class="jqResize ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se"></div>
@@ -1471,7 +1464,7 @@ All Active Tickets
                             function() {
                                 //gcl("Called");
 
-                                Grid_tab1_1595129082_reload();
+                                Grid_tab1_1595151824_reload();
                             }, 60000);
                     }
                 } else {
@@ -1492,8 +1485,8 @@ All Active Tickets
                     console.log("Called");
                     //return "Test";
                 });
-                AddOnCloseMethod(Grid_tab1_1595129082_reload);
-                AddOnShowNotificationMethod(Grid_tab1_1595129082_reload);
+                AddOnCloseMethod(Grid_tab1_1595151824_reload);
+                AddOnShowNotificationMethod(Grid_tab1_1595151824_reload);
                 Reload_setting();
                 $("#is_auto_refresh").on("change", function() {
                     Reload_setting();
