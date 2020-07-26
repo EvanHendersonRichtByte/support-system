@@ -9,12 +9,12 @@ use Illuminate\Support\Facades\Route;
 | User Routes
 |--------------------------------------------------------------------------
 */
+
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/user/login', function () {
-    return view('user.login');
-});
+Route::resource('/user', 'UserController');
+
 Route::get('/client/panel/dashboard', function () {
     return view('user.dashboard');
 });
