@@ -56,7 +56,6 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        return decrypt('$2y$10$6/nnr8qIqz4mNH1./gosGuW.QSIkN8pUXpYUIRyVGmVCIXqU2ne/e');
     }
 
     /**

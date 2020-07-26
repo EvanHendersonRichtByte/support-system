@@ -1,7 +1,7 @@
-@extends('layout.admin.user_settings.user_settings_master')
+@extends('layout.admin_master')
 
 @section('tab-title')
-Chat Canned Message
+Chat Panel
 @endsection
 
 @section('main-content')
@@ -13,34 +13,17 @@ Chat Canned Message
     <section class="content-header">
         <h1>
             <i class="ap ap-chat3"></i>
-            Chat Canned Message </h1>
+            Chat Panel </h1>
         <ol class="breadcrumb">
             <li>
                 <a href="https://demo.appsbd.com/support-system/"><i class=""></i> Home</a>
             </li>
             <li>
-                Chat Canned Message </li>
+                Chat Panel </li>
         </ol>
     </section>
 
     <section class="content">
-
-        <div class="system-msg-list">
-            <div id="msg_DEMPM" class="system-msg m-b-5 fadeIn animated  alert alert-success alert-dismissible">
-                <div class="system-icon">
-                    <i class="fa fa-gear"></i>
-                </div>
-                <strong class="system-title">App :</strong> <span class="system-body"> The app is in demo mode. All change data will be reset within every 30 <sup>th</sup> min.</span>
-            </div>
-        </div>
-        <div class="system-msg-list">
-            <div id="msg_2" class="system-msg m-b-5 fadeIn animated  alert alert-success alert-dismissible">
-                <div class="system-icon">
-                    <i class="fa fa-bullhorn"></i>
-                </div>
-                <strong class="system-title">Purchase Link:</strong> <span class="system-body"><span class="system-body">Do you want to purchase? Click the button </span><a class="btn btn-success added-ripples" href="https://bit.ly/2venvhL" target="_blank">Buy Now</a></span>
-            </div>
-        </div>
         <div class="box box-primary">
             <div class="box-body grid-body">
                 <script type="text/javascript">
