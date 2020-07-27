@@ -23,10 +23,10 @@ User List
     </section>
 
     <section class="content">
-        <table class="table">
-            <thead class="thead-dark">
+
+        <table class="table table-light">
+            <thead>
                 <tr>
-                    <th scope="col"></th>
                     <th scope="col">User</th>
                     <th scope="col">Title</th>
                     <th scope="col">Email</th>
@@ -37,7 +37,7 @@ User List
             </thead>
             <tbody>
                 <tr>
-                    <th scope="row">1</th>
+                    <td>1</td>
                     <td>admin</td>
                     <td>admin</td>
                     <td>support-admin@appsbd.com</td>
