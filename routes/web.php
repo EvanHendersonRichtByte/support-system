@@ -33,6 +33,10 @@ Route::get('/user/{$id}/change-password', function ($id) {
 Route::get('/ticket/open', function () {
     return view('user.open_tickets');
 });
+
+// Addon
+
+Route::post('login/cek', 'login@cek');
 /*
 |--------------------------------------------------------------------------
 | Admin Routes
@@ -60,9 +64,7 @@ Route::get('/admin/ticket-payment', function () {
 Route::get('/admin/ticket/open', function () {
     return view('admin.ticket.create_ticket');
 });
-Route::get('/admin/ticket', function () {
-    return view('admin.ticket.all_active_tickets');
-});
+
 Route::get('/admin/ticket/my-ticket', function () {
     return view('admin.ticket.my_active_tickets');
 });
@@ -117,3 +119,12 @@ Route::get('/admin/admin-message', function () {
 Route::get('/admin/admin-message/sent', function () {
     return view('admin.message.sent_message');
 });
+
+// Addon
+Route::get('/admin/ticket', "ControllerTicket@index");
+
+Route::get('/create_ticket', 'ControllerTicket@create'); 
+Route::get('/all_active_tickets/create', 'ControllerTicket@create');
+Route::post('/all_active_tickets/store', 'ControllerTicket@store');
+
+Route::delete('/ticket/hapus/{id}', 'ControllerTicket@hapus');

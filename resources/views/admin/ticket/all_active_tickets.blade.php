@@ -24,6 +24,7 @@ All Active Tickets
     </section>
 
     <section class="content">
+
         <div class="table-responsive-xs">
 
             <table class="table table-bordered table-light ">
@@ -40,96 +41,41 @@ All Active Tickets
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>
-                            <div class="hidden-xs"> <span class="grid-t-title"><span class="text- label label-default">
-                                        Low</span> <a class="ticket-title" target="_blank"
-                                        href="https://demo.appsbd.com/support-system/admin/ticket/details/6.html">Guest
-                                        Ticket
-                                        Test</a></span><br><span class="grid-span"><span
-                                        class="gsp-title ">Category</span><span class="gsp-val "><a
-                                            data-effect="mfp-move-from-top" class="popupformWR apopf"
-                                            href="https://demo.appsbd.com/support-system/admin/ticket/change-category/6.html"><span
-                                                class="tooltip2 cat-tool text-info text-bold tooltipstered added-tooltip2"><i
-                                                    class="fa fa-exclamation-circle"></i> PHP
-                                                Basic</span></a></span></span><span class="grid-span"><span
-                                        class="gsp-title ">Current Status</span><span class="gsp-val "><span
-                                            class="text-danger text-bold"><i class="fa fa-user"></i> Action
-                                            Required</span></span></span><span class="grid-span"><span
-                                        class="gsp-title ">Replied</span><span
-                                        class="gsp-val label label-default text-bold">1</span></span></div>
-                        </td>
-                        <td>2 years ago</td>
-                        <td>Admin</td>
-                        <td>Admin</td>
-                        <td>5 months ago</td>
-                        <td></td>
-                        <td><button class="btn btn-success">Details</button>
-                            <button class="btn btn-danger">Delete</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>
-                            <div class="hidden-xs"> <span class="grid-t-title"><span class="text- label label-warning">
-                                        High</span> <a class="ticket-title" target="_blank"
-                                        href="https://demo.appsbd.com/support-system/admin/ticket/details/4.html">What
-                                        is Lorem
-                                        Ipsum?</a></span><br><span class="grid-span"><span
-                                        class="gsp-title ">Category</span><span class="gsp-val "><a
-                                            data-effect="mfp-move-from-top" class="popupformWR apopf"
-                                            href="https://demo.appsbd.com/support-system/admin/ticket/change-category/4.html"><span
-                                                class="tooltip2 cat-tool text-info text-bold tooltipstered added-tooltip2"><i
-                                                    class="fa fa-exclamation-circle"></i> PHP
-                                                Basic</span></a></span></span><span class="grid-span"><span
-                                        class="gsp-title ">Current Status</span><span class="gsp-val "><span
-                                            class="text-info text-bold"><i class="fa fa-dot-circle-o"></i>
-                                            New</span></span></span><span class="grid-span"><span
-                                        class="gsp-title ">Replied</span><span
-                                        class="gsp-val label label-default text-bold">0</span></span></div>
-                        </td>
-                        <td>2 years ago</td>
-                        <td>Admin</td>
-                        <td>Admin</td>
-                        <td>2 years ago</td>
-                        <td></td>
-                        <td><button class="btn btn-success">Details</button>
-                            <button class="btn btn-danger">Delete</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>
-                            <div class="hidden-xs"> <span class="grid-t-title"><span class="text- label label-info">
-                                        Medium</span> <a class="ticket-title" target="_blank"
-                                        href="https://demo.appsbd.com/support-system/admin/ticket/details/1.html">This
-                                        is test
-                                        ticket</a></span><br><span class="grid-span"><span
-                                        class="gsp-title ">Category</span><span class="gsp-val "><a
-                                            data-effect="mfp-move-from-top" class="popupformWR apopf"
-                                            href="https://demo.appsbd.com/support-system/admin/ticket/change-category/1.html"><span
-                                                class="tooltip2 cat-tool text-info text-bold tooltipstered added-tooltip2"><i
-                                                    class="fa fa-exclamation-circle"></i> PHP
-                                                Setup</span></a></span></span><span class="grid-span"><span
-                                        class="gsp-title ">Current Status</span><span class="gsp-val "><span
-                                            class="text-info text-bold"><i class="fa fa-dot-circle-o"></i>
-                                            New</span></span></span><span class="grid-span"><span
-                                        class="gsp-title ">Replied</span><span
-                                        class="gsp-val label label-default text-bold">0</span></span></div>
-                        </td>
-                        <td>2 years ago</td>
-                        <td>Admin</td>
-                        <td>Admin</td>
-                        <td>2 years ago</td>
-                        <td></td>
-                        <td><button class="btn btn-success">Details</button>
-                            <button class="btn btn-danger">Delete</button>
-                        </td>
-                    </tr>
+                @php $no=0; @endphp
+@foreach($data as $d) 
+@php $no++; @endphp
+<tr>
+<tbody>
+<td>{{$no}}</td>
+    <td>
+    <p>Subject : {{$d->id_ticket}}</p>
+    <p>Subject : {{$d->ticket_subject}}</p>
+    <p>Category : {{$d->ticket_category}}</p>
+    <p>Priroty : {{$d->priority}}</p>
+    </td>
+    <td>2 Years Ago</td>
+    <td>Admin</td>
+    <td>Admin</td>
+    <td>2 Years Ago</td>
+    <td></td>
+    <td><a href = "/peminjaman_create" class = "btn btn-success btn-sm">Detail</a>
+    <form action="/ticket/hapus/{{$d->id_ticket}}" method="post">
+    {{csrf_field()}}
+    <input type="hidden" name="_method" value="DELETE">
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <!-- <a class = "btn btn-sm btn-danger" onclick = "return confirm('yakin ingn menghapus si ini?')" href = "/ticket/hapus/{{ $d->id_ticket }}">Delete</a></td> -->
+    </form>
+    <tbody>
+</tr>
+@endforeach
                 </tbody>
             </table>
         </div>
     </section>
 </div>
+
+
+
+
+
 @endsection
