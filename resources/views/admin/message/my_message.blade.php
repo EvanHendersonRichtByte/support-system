@@ -26,7 +26,7 @@ My Message
     <section class="content">
         <div class="table-responsive-xs">
 
-            <table class="table table-bordered ">
+            <table class="table table-bordered table-light">
                 <thead>
                     <tr>
                         <th scope="col"></th>

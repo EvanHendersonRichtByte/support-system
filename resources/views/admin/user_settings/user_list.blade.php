@@ -24,7 +24,7 @@ User List
 
     <section class="content">
 
-        <table class="table table-light">
+        <table class="table table-striped table-light">
             <thead>
                 <tr>
                     <th scope="col">User</th>
@@ -37,7 +37,7 @@ User List
             </thead>
             <tbody>
                 <tr>
-                    <td>1</td>
+                    <td scope="row">1</td>
                     <td>admin</td>
                     <td>admin</td>
                     <td>support-admin@appsbd.com</td>

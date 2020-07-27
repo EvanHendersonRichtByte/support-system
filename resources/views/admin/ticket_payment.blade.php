@@ -22,7 +22,7 @@ Ticket Payment List
         </ol>
     </section>
     <section class="content">
-        <table class="table table-striped table-inverse table-responsive">
+        <table class="table table-striped table-light">
             <thead class="thead-inverse">
                 <tr>
                     <th></th>

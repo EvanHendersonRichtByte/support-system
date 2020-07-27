@@ -26,7 +26,7 @@ Client List
     <section class="content">
         <div class="table-responsive-xs">
 
-            <table class="table table-bordered ">
+            <table class="table table-bordered table-light">
                 <thead>
                     <tr>
                         <th scope="col"></th>
@@ -52,10 +52,10 @@ Client List
                         <td>AE</td>
                         <td>Feb 02, 2018</td>
                         <td><i class="fa fa-check-circle-o"></i> Active</td>
-                        <td><button class="btn btn-xs" type="button"><i class="fa fa-chevron-circle-down"></i><span
-                                    class="hidden-sm">&nbsp; Menu</span>
-                                <div class="ripple-container"></div>
-                            </button></td>
+                        <td><button class="btn btn-info">Edit</button>
+                            <button class="btn btn-danger">Reset Email</button>
+                            <button class="btn btn-success">View Detail</button>
+                        </td>
                     </tr>
                 </tbody>
             </table>

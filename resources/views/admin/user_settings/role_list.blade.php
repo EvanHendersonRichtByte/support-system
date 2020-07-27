@@ -23,7 +23,7 @@ Role List
     </section>
 
     <section class="content">
-        <table class="table table-striped text-center">
+        <table class="table table-striped table-light text-center">
             <thead>
                 <tr>
                     <th scope="col"></th>

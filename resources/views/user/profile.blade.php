@@ -22,22 +22,7 @@ Profile
                 </div>
             </div>
         </div>
-        <div class="system-msg-list">
-            <div id="msg_1" class="system-msg m-b-5 fadeIn animated  alert alert-success alert-dismissible">
-                <div class="system-icon">
-                    <i class="fa fa-bullhorn"></i>
-                </div>
-                <strong class="system-title">Demo Site Notice:</strong> <span class="system-body">It's demo site of best support system.
-                    To Login Admin Panel Please go to : <strong> <a href="https://demo.appsbd.com/support-system/admin" target="_blank">https://demo.appsbd.com/support-system/admin</a> </strong>
-                    Username : <strong>admin</strong> Password: <strong>admin</strong></span>
-            </div>
-            <div id="msg_2" class="system-msg m-b-5 fadeIn animated  alert alert-success alert-dismissible">
-                <div class="system-icon">
-                    <i class="fa fa-bullhorn"></i>
-                </div>
-                <strong class="system-title">Purchase Link:</strong> <span class="system-body"><span class="system-body">Do you want to purchase? Click the button </span><a class="btn btn-success added-ripples" href="https://bit.ly/2venvhL" target="_blank">Buy Now</a></span>
-            </div>
-        </div>
+
         <div class="app-content p-t-15">
             <div class="container ">
                 <div class="row">

@@ -23,7 +23,7 @@ Role Access
     </section>
 
     <section class="content">
-        <table class="table table-striped">
+        <table class="table table-striped table-light">
             <thead class="text-center">
                 <tr>
                     <th scope="col">#</th>
