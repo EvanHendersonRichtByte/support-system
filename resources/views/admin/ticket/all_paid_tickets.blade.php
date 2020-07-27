@@ -7,7 +7,7 @@ All Active Tickets
 @section('main-content')
 <div id="main-content" class="content-wrapper" style="min-height: 606px;">
     <div id="MainFormLoader" class="MainLoader">
-        <div class="msgText"></div>
+        <div class="msgText"></div>d
     </div>
 
     <section class="content-header">
