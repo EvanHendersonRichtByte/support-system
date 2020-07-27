@@ -43,20 +43,6 @@
                     </ul>
                 </li>
                 <li class=" treeview">
-                    <a href="{{url('/admin')}}" class="">
-                        <i class="fa ap ap-api"></i> <span>API Setting</span>
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li class=" "><a class="" href="{{url('/admin')}}"><i class="fa fa fa-share-alt"></i> Social Login Setting</a></li>
-                        <li class=" "><a class="" href="{{url('/admin')}}"><i class="fa ap ap-remote-login"></i> Remote Server Login</a></li>
-                        <li class=" "><a class="" href="{{url('/admin')}}"><i class="fa ap ap-paypal"></i> Paypal Setting</a></li>
-                        <li class=" "><a class="" href="{{url('/admin')}}"><i class="fa ap ap-envato text-success"></i> Envato</a></li>
-
-                        <li class=" "><a class="" href="https://demo.appsbd.com/support-system/admin/api-setting/api/EliteLicenser.html"><i class="fa ap ap-elite-licenser text-info"></i> Elite Licenser</a></li>
-                    </ul>
-                </li>
-                <li class=" treeview">
                     <a href="https://demo.appsbd.com/support-system/" class="">
                         <i class="fa fa fa-user"></i> <span>User Settings</span>
                         <i class="fa fa-angle-left pull-right"></i>
@@ -75,11 +61,6 @@
                     <ul class="treeview-menu">
                         <li class=" "><a class="" href="https://demo.appsbd.com/support-system/admin/system-update.html"><i class="fa fa fa-arrow-circle-o-up"></i> App Update</a></li>
                     </ul>
-                </li>
-                <li class=" treeview">
-                    <a href="{{url('/admin/ticket-payment')}}" class="">
-                        <i class="fa fa fa-money"></i> <span>Payment List</span>
-                    </a>
                 </li>
                 <li class="header">STAFF MENU</li>
                 <li class="active selected open  treeview">
@@ -103,16 +84,6 @@
                         <li class=" "><a class="" href="{{url('/admin/ticket/unassigned-ticket')}}"><i class="fa fa-circle-o"></i> All Unassigned Tickets</a></li>
                         <li class=" "><a class="" href="{{url('/admin/ticket/all-paid-ticket')}}"><i class="fa fa-circle-o"></i> All Paid Tickets</a></li>
                         <li class=" "><a class="" href="{{url('/admin/ticket/closed-ticket')}}"><i class="fa fa-circle-o"></i> All Closed Tickets</a></li>
-                    </ul>
-                </li>
-                <li class=" treeview">
-                    <a href="https://demo.appsbd.com/support-system/" class="">
-                        <i class="fa ap ap-chat3"></i> <span>Web Chat</span>
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li class=" "><a class="" href="{{url('/admin/admin-chat')}}"><i class="fa ap ap-chat"></i> Chat Panel</a></li>
-                        <li class=" "><a class="" href="{{url('/admin/chat-canned-msg')}}"><i class="fa fa-circle-o"></i> Chat Canned Message</a></li>
                     </ul>
                 </li>
                 <li class=" treeview">
@@ -144,16 +115,6 @@
                     <a href="{{url('/admin/client')}}" class="">
                         <i class="fa ap ap-client"></i> <span>Client</span>
                     </a>
-                </li>
-                <li class=" treeview">
-                    <a href="https://demo.appsbd.com/support-system/admin/admin-message.html" class="">
-                        <i class="fa fa  fa-envelope"></i> <span>Message</span>
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li class=" "><a class="" href="{{url('/admin/admin-message')}}"><i class="fa fa fa-envelope-open"></i> My Message</a></li>
-                        <li class=" "><a class="" href="{{url('/admin/admin-message/sent')}}"><i class="fa fa fa-envelope"></i> Sent Message</a></li>
-                    </ul>
                 </li>
             </ul>
             <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 3px;">
