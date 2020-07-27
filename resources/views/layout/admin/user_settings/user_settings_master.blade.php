@@ -7,9 +7,6 @@
     <meta name="resource-type" content="document">
     <meta name="robots" content="all, index, follow">
     <meta name="googlebot" content="all, index, follow">
-    <script type="text/javascript">
-        var base_url = "https://demo.appsbd.com/support-system/";
-    </script>
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic" type="text/css">
     <link rel="stylesheet" href="{{asset('theme/default/css/skin/skin-green.min.css')}}" type="text/css">
     <link rel="apple-touch-icon" sizes="180x180" href="{{asset('images/icon-logo/apple-touch-icon.png?t=1567576828')}}">

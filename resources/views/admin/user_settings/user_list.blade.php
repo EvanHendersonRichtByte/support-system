@@ -1,4 +1,4 @@
-@extends('layout.admin.user_settings.user_settings_master')
+@extends('layout.admin_master')
 
 @section('tab-title')
 User List
@@ -15,7 +15,7 @@ User List
             User List </h1>
         <ol class="breadcrumb">
             <li>
-                <a href="https://demo.appsbd.com/support-system/admin/dashboard.html"><i class=""></i> Home</a>
+                <a href="{{url('/client/panel/dashboard')}}"><i class=""></i> Home</a>
             </li>
             <li>
                 User List </li>
@@ -23,6 +23,7 @@ User List
     </section>
 
     <section class="content">
+
         <table class="table table-light">
             <thead>
                 <tr>
@@ -41,8 +42,23 @@ User List
                     <td>admin</td>
                     <td>support-admin@appsbd.com</td>
                     <td>Super Admin</td>
-                    <td>Active</td>
-                    <td><button class="btn btn-primary">Edit</button></td>
+                    <td class="text-success"><i class="fa fa-check-circle-o"></i> Active</td>
+                    <td>
+                        <button class="btn btn-primary">Edit</button>
+                        <button class="btn btn-danger">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>agent</td>
+                    <td>Agent</td>
+                    <td>agent@appsbd.com</td>
+                    <td>Agent</td>
+                    <td class="text-success"><i class="fa fa-check-circle-o"></i> Active</td>
+                    <td>
+                        <button class="btn btn-primary">Edit</button>
+                        <button class="btn btn-danger">Delete</button>
+                    </td>
                 </tr>
             </tbody>
         </table>
