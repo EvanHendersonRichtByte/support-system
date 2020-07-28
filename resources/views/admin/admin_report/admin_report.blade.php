@@ -159,123 +159,57 @@ Admin Dashboard
                                 <div class="chart-title" style="text-align: center; font-size: 14px;">Month Report (Year 2020)</div>
                                 <button style="position: absolute;top:0;right:10px;" class="reload-btn btn btn-xs btn-primary added-ripples" type="button"><i class="fa fa-refresh"></i> Reload</button>
                             </div>
-                            <canvas class="" id="app_chart_2" style="display: block; width: 1069px; height: 427px;" height="427" width="1069">
-                            </canvas>
+                            <canvas id="myChart" width="200px" height="200px"></canvas>
                         </div>
                         <script type="text/javascript">
-                            (function() {
-                                "use strict";
-                                $("body").addClass("app-chart-loading");
-
-                                var config = null;
-                                var param = {};
-
-                                var form_element = '#chart-form';;
-                                var app_ctx = jQuery("#app_chart_2");
-                                var chart_container = jQuery("#ccontainer_app_chart_2");
-                                var chartobject = null;
-                                var last_type_selected = "";
-
-                                function LoadData() {
-                                    var obj = {};
-                                    if (form_element) {
-                                        $.each(jQuery(form_element).serializeArray(), function(i, o) {
-                                            var n = o.name,
-                                                v = o.value;
-                                            obj[n] = obj[n] === undefined ? v : $.isArray(obj[n]) ? obj[n].concat(v) : [obj[n], v];
-                                        });
-                                    }
-
-                                    var final_post_param = jQuery.extend(param, obj);
-
-                                    try {
-                                        final_post_param = set_csrf_param(final_post_param);
-                                    } catch (e) {}
-
-                                    jQuery.ajax({
-                                        url: "https://demo.appsbd.com/support-system/admin/admin-report-chart-data/get-agent-month-data.html",
-                                        data: final_post_param,
-                                        type: "POST",
-                                        scriptCharset: "utf-8",
-                                        dataType: "json",
-                                        beforeSend: function() {
-                                            chart_container.find("> .chart-loader").show();
-
+                            var ctx = document.getElementById('myChart');
+                            var myChart = new Chart(ctx, {
+                                type: 'line',
+                                data: {
+                                    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                                    datasets: [{
+                                        label: 'Active',
+                                        data: [0, 0, 0, 0, 0, 0],
+                                        backgroundColor: [
+                                            'rgba(0, 128, 255, 0.2)',
+                                        ],
+                                        borderColor: [
+                                            'rgba(0, 128, 255, 1)',
+                                        ],
+                                    }, {
+                                        label: 'Closed',
+                                        data: [0, 0, 0, 0, 0, 0],
+                                        backgroundColor: [
+                                            'rgba(0, 255, 0, 0.2)',
+                                        ],
+                                        borderColor: [
+                                            'rgba(0, 255, 0, 1)',
+                                        ],
+                                    }]
+                                },
+                                options: {
+                                    layout: {
+                                        padding: {
+                                            left: 50,
+                                            right: 0,
+                                            top: 0,
+                                            bottom: 0,
                                         },
-                                        success: function(rdata) {
-                                            var pos = $(document).scrollTop();
-
-                                            config = rdata;
-                                            if (last_type_selected != "") {
-                                                config.type = last_type_selected;
+                                    scales: {
+                                        xAxes: [{
+                                            gridLines: {
+                                                tickMarkLength: 15
                                             }
-
-                                            clear_chart();
-                                            try {
-                                                if (typeof config.title !== "undefined" && config.title != "") {
-                                                    chart_container.find("> .chart-header .chart-title").html(config.title);
-                                                }
-                                            } catch (e) {}
-
-                                            chartobject = new Chart(app_ctx, config);
-                                            $(document).scrollTop(pos);
-                                            if (config.type == "bar" || config.type == "line") {
-                                                chart_container.find("> .chart-header .line-bar").show();
-                                                var selectobj = chart_container.find(".line-bar");
-                                                selectobj.unbind("change");
-                                                selectobj.val(config.type);
-                                                selectobj.bind("change", function(e) {
-                                                    config.type = $(this).val();
-                                                    last_type_selected = config.type;
-                                                    clear_chart();
-                                                    chartobject = new Chart(app_ctx, config);
-                                                });
-
-                                            } else {
-                                                chart_container.find("> .chart-header .line-bar").hide();
+                                        }],
+                                        yAxes: [{
+                                            ticks: {
+                                                beginAtZero: false
                                             }
-
-                                            //console.log(config);
-                                        },
-                                        complete: function(jqXHR, textStatus) {
-                                            chart_container.find("> .chart-header").css("visibility", "visible");
-                                            chart_container.find("> .chart-loader").fadeOut();
-                                            $("body").removeClass("app-chart-loading");
-                                        }
-
-                                    });
-                                }
-
-                                function clear_chart() {
-                                    if (chartobject) {
-                                        chartobject.clear();
-                                        chartobject.destroy();
-
+                                        }]
+                                    }
                                     }
                                 }
-
-                                function type_change(param) {
-                                    config.type = param;
-                                    chartobject = new Chart(app_ctx, config);
-                                }
-                                jQuery(function($) {
-                                    chart_container.find("> .chart-header").css("visibility", "hidden");
-
-                                    LoadData();
-                                    if (form_element) {
-                                        jQuery(form_element).submit(function(e) {
-                                            e.preventDefault();
-                                            //alert("ok");
-                                            LoadData();
-                                        });
-                                    }
-                                    chart_container.find(".reload-btn").on("click", function(e) {
-                                        e.preventDefault();
-                                        LoadData();
-                                    });
-                                });
-
-                            }());
+                            });
                         </script>
                     </div>
 
