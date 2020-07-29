@@ -48,7 +48,7 @@ All Active Tickets
 <tbody>
 <td>{{$no}}</td>
     <td>
-    <p>Subject : {{$d->id_ticket}}</p>
+    <p>ID Ticket : {{$d->id_ticket}}</p>
     <p>Subject : {{$d->ticket_subject}}</p>
     <p>Category : {{$d->ticket_category}}</p>
     <p>Priroty : {{$d->priority}}</p>
@@ -58,7 +58,7 @@ All Active Tickets
     <td>Admin</td>
     <td>2 Years Ago</td>
     <td></td>
-    <td><a href = "/peminjaman_create" class = "btn btn-success btn-sm">Detail</a>
+    <td><a href = "/ticket/show/{{$d->id_ticket }}" class = "btn btn-success btn-sm">Detail</a>
     <form action="/ticket/hapus/{{$d->id_ticket}}" method="post">
     {{csrf_field()}}
     <input type="hidden" name="_method" value="DELETE">

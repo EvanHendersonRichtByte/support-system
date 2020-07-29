@@ -128,3 +128,5 @@ Route::get('/all_active_tickets/create', 'ControllerTicket@create');
 Route::post('/all_active_tickets/store', 'ControllerTicket@store');
 
 Route::delete('/ticket/hapus/{id}', 'ControllerTicket@hapus');
+
+Route::get('/ticket/show/{id}', "ControllerTicket@show");

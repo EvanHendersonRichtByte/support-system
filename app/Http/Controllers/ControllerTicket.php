@@ -41,4 +41,9 @@ class ControllerTicket extends Controller
         ticket::where('id_ticket', $id)->delete();
         return redirect()->action('ControllerTicket@index')->with('alert_message', 'Berhasil');
     }
+    public function show($id)
+    {
+        $data = ticket::where('id_ticket', $id)->get();
+        return view('admin.ticket.ticket_detail', compact('data'));
+    }
 }
