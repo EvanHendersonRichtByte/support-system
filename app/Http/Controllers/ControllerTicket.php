@@ -43,7 +43,7 @@ class ControllerTicket extends Controller
     }
     public function show($id)
     {
-        $data = ticket::where('id_ticket', $id)->get();
+        $data = ticket::where('id_ticket', $id)->first();
         return view('admin.ticket.ticket_detail', compact('data'));
     }
 }
