@@ -1,3 +1,5 @@
+
+
 @extends('layout.admin.ticket.ticket_master')
 @section('main-content')
 <div id="main-content" class="content-wrapper" style="min-height: 515px;">
@@ -144,7 +146,7 @@
                            <tr>
                               <th style="width: 122px; ">Ticket Track ID</th>
                               <th style="width: 10px; ">:</th>
-                              <td>T6DD28E9B-001-WMC</td>
+                              <td>{{$data->id_ticket}}</td>
                            </tr>
                            <tr>
                               <th>Ticket User</th>
@@ -192,11 +194,47 @@
                                     </div>
                                     <span class="grid-u-c">admin (You) </span>
                                  </div>
-                                 <div class="abs-r-t m-t-5 m-r-5">
-                                    <a href="https://demo.appsbd.com/support-system/admin/ticket/set-assign/6.html" data-on-complete="ReloadSiteUrl" class="popupformWR btn btn-xs btn-success apopf added-ripples" data-effect="mfp-move-from-top">
-                                       <i class="fa fa-plus-circle"></i> Change
-                                       <div class="ripple-container"></div>
-                                    </a>
+                                 
+                                    
+                                 <button class="btn btn-success" data-toggle="modal"
+                                    data-target="#change" data-effect="mfp-move-from-top"> <span><i
+                                        class="fa fa-wpforms"></i> Change </span>
+                                </button>
+                                <div class="abs-r-t m-t-5 m-r-5">
+
+                                <div class="modal fade" id="change" tabindex="-1" role="dialog"
+                                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <form action="#" method="POST">
+                                    {{ csrf_field() }}
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title">Assign On Ticket
+                                                </h4>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <div class="form-group">
+                                                            Admin
+                                                            <input id="assigned_on" type="assigned_on" class="form-control" name="assigned_on" required autofocus>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer ">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                <button type="submit" type="button" class="btn btn-primary">Submit</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
                                  </div>
                               </td>
                            </tr>
@@ -218,10 +256,56 @@
                   <div class="panel-heading bg-green">
                      <h4 class="m-0">
                         <i class="fa fa-sticky-note"></i> Admin Notes 
-                        <a data-onclose="note_added" href="https://demo.appsbd.com/support-system/admin/admin-note/add/3/6.html" data-effect="mfp-move-from-top" class="popupformWR btn btn-xs bg-white pull-right apopf added-ripples">
-                           <i class="fa fa-plus-circle"></i> Add Note
-                           <div class="ripple-container"></div>
-                        </a>
+                        
+                        
+                        <button class="btn btn-success" data-toggle="modal"
+                                    data-target="#adminnote" data-effect="mfp-move-from-top"> <span><i
+                                        class="fa fa-wpforms"></i> Add Note </span>
+                                </button>
+
+                                <div class="modal fade" id="adminnote" tabindex="-1" role="dialog"
+                                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <form action="#" method="POST">
+                                    {{ csrf_field() }}
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title">New Admin Note
+                                                </h4>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                            <div class="row">
+                                            <div class="form-group">
+                                            <p>Note On :</p>
+  <input type="radio" id="note_on" name="note_on" value="note_on">
+  <label for="note_on">This Ticket</label><br>
+  <input type="radio" id="note_on" name="note_on" value="note_on">
+  <label for="note_on">Client (User)</label><br>
+  </div>
+                                                    </div>
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <div class="form-group">
+                                                            Note
+                                                            <input id="note" type="note" class="form-control" name="note" required autofocus>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer ">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                <button type="submit" type="button" class="btn btn-primary">Submit</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+
                      </h4>
                   </div>
                   <div id="admin-note" class="panel-body p-0" style="margin-top: -1px;"></div>
@@ -230,10 +314,59 @@
                   <div class="panel-heading bg-green">
                      <h4 class="m-0">
                         <i class="fa fa-clock-o"></i> Admin Work Log 
-                        <a data-onclose="wnote_added" href="https://demo.appsbd.com/support-system/admin/work-log/add/6.html" data-effect="mfp-move-from-top" class="popupformWR btn btn-xs bg-white pull-right apopf added-ripples">
-                           <i class="fa fa-plus-circle"></i> Add Note
-                           <div class="ripple-container"></div>
-                        </a>
+
+                        <button class="btn btn-success" data-toggle="modal"
+                                    data-target="#adminlog" data-effect="mfp-move-from-top"> <span><i
+                                        class="fa fa-wpforms"></i> Add Note </span>
+                                </button>
+
+                                <div class="modal fade" id="adminlog" tabindex="-1" role="dialog"
+                                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <form action="#" method="POST">
+                                    {{ csrf_field() }}
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title">New Work Log
+                                                </h4>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <div class="form-group">
+                                                            Note
+                                                            <input id="work_log" type="work_log" class="form-control" name="work_log" required autofocus>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <div class="form-group">
+                                                            Work Time
+                                                            <div class="input-group mb-3">
+
+  <input type="text" id="work_time" class="form-control" name="work_time" aria-label="Amount (to the nearest dollar)">
+  <div class="input-group-append">
+    <span class="input-group-text">MIN</span>
+  </div>
+</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer ">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                <button type="submit" type="button" class="btn btn-primary">Submit</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
                      </h4>
                   </div>
                   <div id="wadmin-note" class="panel-body p-0" style="margin-top: -1px;"></div>
