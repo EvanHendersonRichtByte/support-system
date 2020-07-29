@@ -371,40 +371,7 @@
                   </div>
                   <div id="wadmin-note" class="panel-body p-0" style="margin-top: -1px;"></div>
                </div>
-               <div class="panel panel-default app-panel-box">
-                  <div class="panel-heading">
-                     <h4 class="m-0">Ticket History</h4>
-                  </div>
-                  <div class="panel-body p-0" style="margin-top: -1px;">
-                     <ul id="app-ticket-log" class="kn-list">
-                        <li id="log_6_4" class="">
-                           Assign self by <span class="text-info">admin (You) </span><br>
-                           <div><small><em>on Jul 29, 2020 11:44</em></small>
-                              <small style="min-width: 160px;" class="pull-right"> <em>Ticket Status : <span class="text-danger text-bold"><i class="fa fa-user"></i> Action Required</span></em></small>
-                           </div>
-                        </li>
-                        <li id="log_6_3" class="">
-                           Replied by <span class="text-info">admin (You) </span><br>
-                           <div><small><em>on Feb 20, 2020 07:07</em></small>
-                              <small style="min-width: 160px;" class="pull-right"> <em>Ticket Status : <span class="text-info text-bold"><i class="fa fa-hourglass-1"></i> In Progress</span></em></small>
-                           </div>
-                        </li>
-                        <li id="log_6_2" class="">
-                           Assign self by <span class="text-info">admin (You) </span><br>
-                           <div><small><em>on Mar 05, 2018 02:53</em></small>
-                              <small style="min-width: 160px;" class="pull-right"> <em>Ticket Status : <span class="text-info text-bold"><i class="fa fa-dot-circle-o"></i> New</span></em></small>
-                           </div>
-                        </li>
-                        <li id="log_6_1" class="">
-                           Ticket Opened <span class="text-info"> </span><br>
-                           <div><small><em>on Mar 05, 2018 02:40</em></small>
-                              <small style="min-width: 160px;" class="pull-right"> <em>Ticket Status : <span class="text-info text-bold"><i class="fa fa-dot-circle-o"></i> New</span></em></small>
-                           </div>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
+               
             <script type="text/javascript">
                var cannedMsg={"3":{"id":"3","user_id":"","title":"Thanks for patient","canned_msg":"<p>Dear\u00a0 - ,<\/p><p>Thanks for your patient.<\/p><p><br><\/p><p>We are working on it. Please wait some more time.<\/p><p>Thanks again,<br>admin<br>Super Admin<\/p>","entry_date":"2017-12-21 23:56:05","added_by":"AA","canned_type":"T","status":"A"},"4":{"id":"4","user_id":"","title":"Test Reply","canned_msg":"<p>Dear - ,<\/p><p>Thanks for your message. We are sending to our technical team to handle it.<\/p><p><br><\/p>Thanks<br>admin<br>Super Admin","entry_date":"2017-12-22 00:14:18","added_by":"AA","canned_type":"T","status":"A"}};
                 function AssignMe(rdata){
