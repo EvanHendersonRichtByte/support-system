@@ -36,7 +36,7 @@ Route::get('/ticket/open', function () {
 
 // Addon
 
-Route::post('login/cek', 'login@cek');
+Route::post('login/cek', 'LoginController@cek');
 /*
 |--------------------------------------------------------------------------
 | Admin Routes
@@ -121,12 +121,12 @@ Route::get('/admin/admin-message/sent', function () {
 });
 
 // Addon
-Route::get('/admin/ticket', "ControllerTicket@index");
+Route::get('/admin/ticket', "TicketController@index");
 
-Route::get('/create_ticket', 'ControllerTicket@create'); 
-Route::get('/all_active_tickets/create', 'ControllerTicket@create');
-Route::post('/all_active_tickets/store', 'ControllerTicket@store');
+Route::get('/create_ticket', 'TicketController@create'); 
 
-Route::delete('/ticket/hapus/{id}', 'ControllerTicket@hapus');
+Route::post('/all_active_tickets/store', 'TicketController@store');
 
-Route::get('/ticket/show/{id}', "ControllerTicket@show");
+Route::delete('/ticket/hapus/{id}', 'TicketController@hapus');
+
+Route::get('/ticket/show/{id}', "TicketController@show");

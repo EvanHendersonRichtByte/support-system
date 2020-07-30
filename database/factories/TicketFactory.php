@@ -2,7 +2,7 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\User;
+use App\Ticket;
 use Faker\Generator as Faker;
 use Illuminate\Support\Str;
 
@@ -17,12 +17,15 @@ use Illuminate\Support\Str;
 |
 */
 
-$factory->define(User::class, function (Faker $faker) {
+$factory->define(Ticket::class, function (Faker $faker) {
     return [
-        'username' => $faker->userName,
-        'email' => $faker->unique()->safeEmail,
-        'contact_number' => $faker->e164PhoneNumber,
-        'img_url' => $faker->imageUrl(400, 800, 'cats') ,
-        'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+        'ticket_subject' => $faker->company,
+        'ticket_body' => $faker->text,
+        'ticket_category' => 'Programming',
+        'priority' => 'Low',
+        'status' => 'New',
+        'assigned_on' => 'Admin',
+        'created_at' => now(),
+        'updated_at' => now()
     ];
 });

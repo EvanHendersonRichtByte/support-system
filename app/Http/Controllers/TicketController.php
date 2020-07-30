@@ -4,18 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\ticket;
-class ControllerTicket extends Controller
+class TicketController extends Controller
 {
     public function index(){
         // $data['datas']=ticket::all();
         // return view("admin.ticket.all_active_tickets",$data);
-        $data = ticket::all();
+        $data = Ticket::all();
         return view('admin.ticket.all_active_tickets', compact ('data'));
     }
     public function store(Request $request)
     {
         $this->validate($request, [
-            'email' => 'required',
+            // 'email' => 'required',
             'priority' => 'required',
             'ticket_subject' => 'required',
             'ticket_category' => 'required',
@@ -23,14 +23,15 @@ class ControllerTicket extends Controller
         ]);
 
         $data = new ticket();
-        $data->email = $request->email;
+        // $data->email = $request->email;
+        $data->user_id = 1;
         $data->ticket_subject = $request->ticket_subject;
         $data->priority = $request->priority;
         $data->ticket_category = $request->ticket_category;
         $data->ticket_body = $request->ticket_body;
         $data->save();
 
-        return redirect()->action('ControllerTicket@index')->with('alert_message', 'Berhasil menambah data!');
+        return redirect()->action('TicketController@index')->with('alert_message', 'Berhasil menambah data!');
     }
     public function create()
     {
@@ -39,7 +40,7 @@ class ControllerTicket extends Controller
     public function hapus($id)
     {
         ticket::where('id_ticket', $id)->delete();
-        return redirect()->action('ControllerTicket@index')->with('alert_message', 'Berhasil');
+        return redirect()->action('TicketController@index')->with('alert_message', 'Berhasil');
     }
     public function show($id)
     {

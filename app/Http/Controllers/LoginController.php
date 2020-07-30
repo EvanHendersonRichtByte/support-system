@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use Session;
-class login extends Controller
+class LoginController extends Controller
 {
     public function cek(Request $req)
     {

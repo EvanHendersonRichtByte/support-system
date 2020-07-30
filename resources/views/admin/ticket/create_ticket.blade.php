@@ -1,185 +1,242 @@
 @extends('layout.admin.ticket.ticket_master')
 
 @section('tab-title')
-    Admin Ticket Creation
+Admin Ticket Creation
 @endsection
 
 @section('main-content')
-    <div id="main-content" class="content-wrapper" style="min-height: 294px;">
-        <div id="MainFormLoader" class="MainLoader">
-            <div class="msgText"></div>
-        </div>
-    
-        <section class="content-header">
-            <h1>
-                <i class="fa fa-ticket"></i>
-                Admin ticket creation </h1>
-            <ol class="breadcrumb">
-                <li>
-                    Admin ticket creation </li>
-            </ol>
-        </section>
-    
-        <section class="content">
-    
-            
-            <div class="row">
+<div id="main-content" class="content-wrapper" style="min-height: 294px;">
+    <div id="MainFormLoader" class="MainLoader">
+        <div class="msgText"></div>
+    </div>
+
+    <section class="content-header">
+        <h1>
+            <i class="fa fa-ticket"></i>
+            Admin ticket creation </h1>
+        <ol class="breadcrumb">
+            <li>
+                Admin ticket creation </li>
+        </ol>
+    </section>
+
+    <section class="content">
+
+
+        <div class="row">
             <div class="col-md-12">
-                        <form action="/all_active_tickets/store" class="form bv-form" id="ticket_open_form" method="post" enctype="multipart/form-data" data-on-complete="on_complete" data-beforesend="on_beforesend" data-multipart="true" accept-charset="utf-8" novalidate="novalidate">
-                            <input type="hidden" name="app_form" value="9046055233ca3424ec67e0e89c23906c">
-                            {{ csrf_field() }}
-                            <div class="panel panel-default app-panel-box">
-                                <div class="panel-heading">New Ticket Form</div>
-                                <div class="panel-body">
-                                    <div class="form-horizontal form-horizontal-text-left">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="form-group has-feedback">
-                                                    <label class="control-label label-required col-md-4" for="email">Email Address</label>
-                                                    <div class="col-md-8">
-                                                        <input type="email" class="form-control" id="email" value="" name="email" placeholder="Email Address" data-bv-notempty="true" data-bv-emailaddress="true" data-bv-emailaddress-message="Invalid email address." data-bv-notempty-message="Email is required" data-bv-field="email"><i class="form-control-feedback" data-bv-icon-for="email" style="display: none;"></i>
-                                                        <small class="help-block" data-bv-validator="emailAddress" data-bv-for="email" data-bv-result="NOT_VALIDATED" style="display: none;">Invalid email address.</small><small class="help-block" data-bv-validator="notEmpty" data-bv-for="email" data-bv-result="NOT_VALIDATED" style="display: none;">Email is required</small></div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group has-feedback">
-                                                    <label class="control-label label-required col-md-4" for="priority">Priroty</label>
-                                                    <div class="col-md-8">
-                                                        <select class="form-control" id="priority" name="priority" data-bv-notempty="true" data-bv-notempty-message="Priroty is required" data-bv-field="priority">
-                                                            <option value="">Select</option>
-                                                            <option selected="selected" value="Low">Low</option>
-                                                            <option value="Medium">Medium</option>
-                                                            <option value="High">High</option>
-                                                            <option value="Urgent">Urgent</option>
-                                                        </select><i class="form-control-feedback" data-bv-icon-for="priority" style="display: none;"></i>
-                                                        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="priority" data-bv-result="NOT_VALIDATED" style="display: none;">Priroty is required</small></div>
-                                                </div>
-                                            </div>
-                                        </div>
+                <form action="/all_active_tickets/store" class="form bv-form" id="ticket_open_form" method="post"
+                    enctype="multipart/form-data" data-on-complete="on_complete" data-beforesend="on_beforesend"
+                    data-multipart="true" accept-charset="utf-8" novalidate="novalidate">
+                    {{-- <input type="hidden" name="app_form" value="9046055233ca3424ec67e0e89c23906c"> --}}
+                    {{ csrf_field() }}
+                    <div class="panel panel-default app-panel-box">
+                        <div class="panel-heading">New Ticket Form</div>
+                        <div class="panel-body">
+                            <div class="form-horizontal form-horizontal-text-left">
+                                <div class="row">
+                                    <div class="col-md-6">
                                         <div class="form-group has-feedback">
-                                            <label class="control-label label-required col-md-2" for="ticket_subject">Ticket Subject</label>
-                                            <div class="col-md-10">
-                                                <input type="text" maxlength="150" value="" class="form-control" id="ticket_subject" name="ticket_subject" placeholder="Title" data-bv-notempty="true" data-bv-notempty-message="Ticket subject is required" data-bv-field="ticket_subject"><i class="form-control-feedback" data-bv-icon-for="ticket_subject" style="display: none;"></i>
-                                                <small class="help-block" data-bv-validator="notEmpty" data-bv-for="ticket_subject" data-bv-result="NOT_VALIDATED" style="display: none;">Ticket subject is required</small><small class="help-block" data-bv-validator="stringLength" data-bv-for="ticket_subject" data-bv-result="NOT_VALIDATED" style="display: none;">This value is not valid</small></div>
+                                            <label class="control-label label-required col-md-4" for="email">Email
+                                                Address</label>
+                                            <div class="col-md-8">
+                                                <input type="email" class="form-control" id="email" value=""
+                                                    name="email" placeholder="Email Address" data-bv-notempty="true"
+                                                    data-bv-emailaddress="true"
+                                                    data-bv-emailaddress-message="Invalid email address."
+                                                    data-bv-notempty-message="Email is required"
+                                                    data-bv-field="email"><i class="form-control-feedback"
+                                                    data-bv-icon-for="email" style="display: none;"></i>
+                                                <small class="help-block" data-bv-validator="emailAddress"
+                                                    data-bv-for="email" data-bv-result="NOT_VALIDATED"
+                                                    style="display: none;">Invalid email address.</small><small
+                                                    class="help-block" data-bv-validator="notEmpty" data-bv-for="email"
+                                                    data-bv-result="NOT_VALIDATED" style="display: none;">Email is
+                                                    required</small></div>
                                         </div>
+                                    </div>
+                                    <div class="col-md-6">
                                         <div class="form-group has-feedback">
-                                            <label class="control-label label-required col-md-2" for="ticket_category">Ticket Category</label>
-                                            <div class="col-md-10">
-                                                <select class="form-control" id="ticket_category" name="ticket_category" data-bv-notempty="true" data-bv-notempty-message="Category is required" data-bv-field="ticket_category">
-                                                    <option value="Select">Select</option>
-                                                    <option value="Android Basic">Android Basic</option>
-                                                    <option value="Customer Support">Customer Support</option>
-                                                    <option value="Joomla Theme Setup">Joomla Theme Setup</option>
-                                                    <option value="PHP Basic">PHP Basic</option>
-                                                    <option value="PHP Setup">PHP Setup</option>
-                                                    <option value="Sales">Sales</option>
-                                                    <option value="WordPress Theme Setup">WordPress Theme Setup</option>
-                                                </select><i class="form-control-feedback" data-bv-icon-for="cat_id" style="display: none;"></i>
-                                                <small class="help-block" data-bv-validator="notEmpty" data-bv-for="cat_id" data-bv-result="NOT_VALIDATED" style="display: none;">Category is required</small></div>
-                                        </div>
-                                        <div id="custom-fields" class="">
-                                            <div class="form-group custom-field-group grp-cat-4 grp-AA has-feedback" style="display: none;">
-                                                <label class="control-label  col-md-2 label-required " for="fld_AA">test</label>
-                                                <div class="col-md-10">
-                                                    <input class="form-control " id="custom_AA" value="" name="custom_AA" type="text" data-bv-notempty="true" data-bv-notempty-message="test is required" data-bv-field="custom_AA"><i class="form-control-feedback" data-bv-icon-for="custom_AA" style="display: none;"></i>
-                                                    <span class="form-group-help-block">test</span>
-                                                    <small class="help-block" data-bv-validator="notEmpty" data-bv-for="custom_AA" data-bv-result="NOT_VALIDATED" style="display: none;">test is required</small></div>
-                                            </div>
-                                            <div class="form-group custom-field-group grp-cat-4 grp-AB has-feedback" style="display: none;">
-                                                <label class="control-label  col-md-2 label-required " for="fld_AB">radio</label>
-                                                <div class="col-md-10">
-                                                    <div class="inline radio-inline">
-                                                        <div class="radio">
-                                                            <label> <input class="" id="custom_AB" type="radio" name="custom_AB" value="OptionA" data-bv-notempty="true" data-bv-notempty-message="Choose radio" data-bv-field="custom_AB"><span class="circle"></span><span class="check"></span> OptionA </label>
-                                                        </div>
-                                                        <div class="radio">
-                                                            <label> <input class="" id="custom_AB" type="radio" name="custom_AB" value="OptionB" data-bv-notempty="true" data-bv-notempty-message="Choose radio" data-bv-field="custom_AB"><span class="circle"></span><span class="check"></span> OptionB </label>
-                                                        </div>
-                                                        <div class="radio">
-                                                            <label> <input class="" id="custom_AB" type="radio" name="custom_AB" value="OptionC" data-bv-notempty="true" data-bv-notempty-message="Choose radio" data-bv-field="custom_AB"><span class="circle"></span><span class="check"></span> OptionC </label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="radio">
-                                                        <label> <input class="" id="custom_AB" type="radio" name="custom_AB"
-                                                                value="OptionB" data-bv-notempty="true"
-                                                                data-bv-notempty-message="Choose radio"
-                                                                data-bv-field="custom_AB"><span class="circle"></span><span
-                                                                class="check"></span>
-                                                            OptionB </label>
-                                                    </div>
-                                                    <div class="radio">
-                                                        <label> <input class="" id="custom_AB" type="radio" name="custom_AB"
-                                                                value="OptionC" data-bv-notempty="true"
-                                                                data-bv-notempty-message="Choose radio"
-                                                                data-bv-field="custom_AB"><span class="circle"></span><span
-                                                                class="check"></span>
-                                                            OptionC </label>
-                                                    </div>
-                                                </div>
-                                                <span class="form-group-help-block">radio</span>
-                                                <small class="help-block" data-bv-validator="notEmpty"
-                                                    data-bv-for="custom_AB" data-bv-result="NOT_VALIDATED"
-                                                    style="display: none;">Choose radio</small>
-                                            </div>
-                                        </div>
-                                        <div class="form-group custom-field-group grp-cat-4 grp-AC has-feedback"
-                                            style="display: none;">
-                                            <label class="control-label  col-md-2 label-required " for="fld_AC">date
-                                                de retour</label>
-                                            <div class="col-md-10">
-                                                <input class="form-control app-date-picker added-picker" id="custom_AC"
-                                                    value="" name="custom_AC" type="text" data-bv-notempty="true"
-                                                    data-bv-notempty-message="date de retour is required"
-                                                    data-bv-field="custom_AC"><i class="form-control-feedback"
-                                                    data-bv-icon-for="custom_AC" style="display: none;"></i>
-                                                <span class="form-group-help-block">date de retour</span>
-                                                <small class="help-block" data-bv-validator="notEmpty"
-                                                    data-bv-for="custom_AC" data-bv-result="NOT_VALIDATED"
-                                                    style="display: none;">date de retour is required</small></div>
-                                        </div>
-                                        <div class="form-group custom-field-group grp-cat-4  grp-AD" style="display: none;">
-                                            <label class="control-label  col-md-2 label-required "
-                                                for="fld_AD">Ordinateur</label>
-                                            <div class="col-md-10">
-                                                <div class="togglebutton ">
-                                                    <input name="custom_AD" value="N" type="hidden">
-                                                    <label>
-                                                        <input type="checkbox" value="Y" class="" id="custom_AD"
-                                                            name="custom_AD"><span class="toggle"></span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group custom-field-group grp-cat-4 grp-AE has-feedback"
-                                            style="display: none;">
-                                            <label class="control-label  col-md-2 label-required "
-                                                for="fld_AE">test4</label>
-                                            <div class="col-md-10">
-                                                <select class="form-control" id="custom_AE" name="custom_AE"
-                                                    data-bv-notempty="true" data-bv-notempty-message="test4 is required"
-                                                    data-bv-field="custom_AE">
+                                            <label class="control-label label-required col-md-4"
+                                                for="priority">Priroty</label>
+                                            <div class="col-md-8">
+                                                <select class="form-control" id="priority" name="priority"
+                                                    data-bv-notempty="true"
+                                                    data-bv-notempty-message="Priroty is required"
+                                                    data-bv-field="priority">
                                                     <option value="">Select</option>
-                                                    <option value="OptionA">OptionA</option>
-                                                    <option value="OptionB">OptionB</option>
-                                                    <option value="OptionC">OptionC</option>
-                                                </select><i class="form-control-feedback" data-bv-icon-for="custom_AE"
+                                                    <option selected="selected" value="Low">Low</option>
+                                                    <option value="Medium">Medium</option>
+                                                    <option value="High">High</option>
+                                                    <option value="Urgent">Urgent</option>
+                                                </select><i class="form-control-feedback" data-bv-icon-for="priority"
                                                     style="display: none;"></i>
-                                                <span class="form-group-help-block">test4</span>
                                                 <small class="help-block" data-bv-validator="notEmpty"
-                                                    data-bv-for="custom_AE" data-bv-result="NOT_VALIDATED"
-                                                    style="display: none;">test4 is required</small></div>
+                                                    data-bv-for="priority" data-bv-result="NOT_VALIDATED"
+                                                    style="display: none;">Priroty is required</small></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group has-feedback">
-                                    <label class="control-label label-required" for="ticket_body">Ticket
-                                        Body</label>
-                                    <textarea style="height: 200px; display: none;"
-                                        class="form-control app-html-editor force-bv .added-ck" id="ticket_body"
-                                        name="ticket_body" required="required" placeholder="Ticket Body"
-                                        data-bv-notempty="true" data-bv-notempty-message="Ticket Body is required"
-                                        data-bv-field="ticket_body"></textarea>
-                                    <!-- <div class="note-editor note-frame panel panel-default">
+                                    <label class="control-label label-required col-md-2" for="ticket_subject">Ticket
+                                        Subject</label>
+                                    <div class="col-md-10">
+                                        <input type="text" maxlength="150" value="" class="form-control"
+                                            id="ticket_subject" name="ticket_subject" placeholder="Title"
+                                            data-bv-notempty="true"
+                                            data-bv-notempty-message="Ticket subject is required"
+                                            data-bv-field="ticket_subject"><i class="form-control-feedback"
+                                            data-bv-icon-for="ticket_subject" style="display: none;"></i>
+                                        <small class="help-block" data-bv-validator="notEmpty"
+                                            data-bv-for="ticket_subject" data-bv-result="NOT_VALIDATED"
+                                            style="display: none;">Ticket subject is required</small><small
+                                            class="help-block" data-bv-validator="stringLength"
+                                            data-bv-for="ticket_subject" data-bv-result="NOT_VALIDATED"
+                                            style="display: none;">This value is not valid</small></div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <label class="control-label label-required col-md-2" for="ticket_category">Ticket
+                                        Category</label>
+                                    <div class="col-md-10">
+                                        <select class="form-control" id="ticket_category" name="ticket_category"
+                                            data-bv-notempty="true" data-bv-notempty-message="Category is required"
+                                            data-bv-field="ticket_category">
+                                            <option value="Select">Select</option>
+                                            <option value="Android Basic">Android Basic</option>
+                                            <option value="Customer Support">Customer Support</option>
+                                            <option value="Joomla Theme Setup">Joomla Theme Setup</option>
+                                            <option value="PHP Basic">PHP Basic</option>
+                                            <option value="PHP Setup">PHP Setup</option>
+                                            <option value="Sales">Sales</option>
+                                            <option value="WordPress Theme Setup">WordPress Theme Setup</option>
+                                        </select><i class="form-control-feedback" data-bv-icon-for="cat_id"
+                                            style="display: none;"></i>
+                                        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="cat_id"
+                                            data-bv-result="NOT_VALIDATED" style="display: none;">Category is
+                                            required</small></div>
+                                </div>
+                                <div id="custom-fields" class="">
+                                    <div class="form-group custom-field-group grp-cat-4 grp-AA has-feedback"
+                                        style="display: none;">
+                                        <label class="control-label  col-md-2 label-required " for="fld_AA">test</label>
+                                        <div class="col-md-10">
+                                            <input class="form-control " id="custom_AA" value="" name="custom_AA"
+                                                type="text" data-bv-notempty="true"
+                                                data-bv-notempty-message="test is required" data-bv-field="custom_AA"><i
+                                                class="form-control-feedback" data-bv-icon-for="custom_AA"
+                                                style="display: none;"></i>
+                                            <span class="form-group-help-block">test</span>
+                                            <small class="help-block" data-bv-validator="notEmpty"
+                                                data-bv-for="custom_AA" data-bv-result="NOT_VALIDATED"
+                                                style="display: none;">test is required</small></div>
+                                    </div>
+                                    <div class="form-group custom-field-group grp-cat-4 grp-AB has-feedback"
+                                        style="display: none;">
+                                        <label class="control-label  col-md-2 label-required "
+                                            for="fld_AB">radio</label>
+                                        <div class="col-md-10">
+                                            <div class="inline radio-inline">
+                                                <div class="radio">
+                                                    <label> <input class="" id="custom_AB" type="radio" name="custom_AB"
+                                                            value="OptionA" data-bv-notempty="true"
+                                                            data-bv-notempty-message="Choose radio"
+                                                            data-bv-field="custom_AB"><span class="circle"></span><span
+                                                            class="check"></span> OptionA </label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label> <input class="" id="custom_AB" type="radio" name="custom_AB"
+                                                            value="OptionB" data-bv-notempty="true"
+                                                            data-bv-notempty-message="Choose radio"
+                                                            data-bv-field="custom_AB"><span class="circle"></span><span
+                                                            class="check"></span> OptionB </label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label> <input class="" id="custom_AB" type="radio" name="custom_AB"
+                                                            value="OptionC" data-bv-notempty="true"
+                                                            data-bv-notempty-message="Choose radio"
+                                                            data-bv-field="custom_AB"><span class="circle"></span><span
+                                                            class="check"></span> OptionC </label>
+                                                </div>
+                                            </div>
+                                            <div class="radio">
+                                                <label> <input class="" id="custom_AB" type="radio" name="custom_AB"
+                                                        value="OptionB" data-bv-notempty="true"
+                                                        data-bv-notempty-message="Choose radio"
+                                                        data-bv-field="custom_AB"><span class="circle"></span><span
+                                                        class="check"></span>
+                                                    OptionB </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label> <input class="" id="custom_AB" type="radio" name="custom_AB"
+                                                        value="OptionC" data-bv-notempty="true"
+                                                        data-bv-notempty-message="Choose radio"
+                                                        data-bv-field="custom_AB"><span class="circle"></span><span
+                                                        class="check"></span>
+                                                    OptionC </label>
+                                            </div>
+                                        </div>
+                                        <span class="form-group-help-block">radio</span>
+                                        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="custom_AB"
+                                            data-bv-result="NOT_VALIDATED" style="display: none;">Choose radio</small>
+                                    </div>
+                                </div>
+                                <div class="form-group custom-field-group grp-cat-4 grp-AC has-feedback"
+                                    style="display: none;">
+                                    <label class="control-label  col-md-2 label-required " for="fld_AC">date
+                                        de retour</label>
+                                    <div class="col-md-10">
+                                        <input class="form-control app-date-picker added-picker" id="custom_AC" value=""
+                                            name="custom_AC" type="text" data-bv-notempty="true"
+                                            data-bv-notempty-message="date de retour is required"
+                                            data-bv-field="custom_AC"><i class="form-control-feedback"
+                                            data-bv-icon-for="custom_AC" style="display: none;"></i>
+                                        <span class="form-group-help-block">date de retour</span>
+                                        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="custom_AC"
+                                            data-bv-result="NOT_VALIDATED" style="display: none;">date de retour is
+                                            required</small></div>
+                                </div>
+                                <div class="form-group custom-field-group grp-cat-4  grp-AD" style="display: none;">
+                                    <label class="control-label  col-md-2 label-required "
+                                        for="fld_AD">Ordinateur</label>
+                                    <div class="col-md-10">
+                                        <div class="togglebutton ">
+                                            <input name="custom_AD" value="N" type="hidden">
+                                            <label>
+                                                <input type="checkbox" value="Y" class="" id="custom_AD"
+                                                    name="custom_AD"><span class="toggle"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group custom-field-group grp-cat-4 grp-AE has-feedback"
+                                    style="display: none;">
+                                    <label class="control-label  col-md-2 label-required " for="fld_AE">test4</label>
+                                    <div class="col-md-10">
+                                        <select class="form-control" id="custom_AE" name="custom_AE"
+                                            data-bv-notempty="true" data-bv-notempty-message="test4 is required"
+                                            data-bv-field="custom_AE">
+                                            <option value="">Select</option>
+                                            <option value="OptionA">OptionA</option>
+                                            <option value="OptionB">OptionB</option>
+                                            <option value="OptionC">OptionC</option>
+                                        </select><i class="form-control-feedback" data-bv-icon-for="custom_AE"
+                                            style="display: none;"></i>
+                                        <span class="form-group-help-block">test4</span>
+                                        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="custom_AE"
+                                            data-bv-result="NOT_VALIDATED" style="display: none;">test4 is
+                                            required</small></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="control-label label-required" for="ticket_body">Ticket
+                                Body</label>
+                            <textarea style="height: 200px; display: none;"
+                                class="form-control app-html-editor force-bv .added-ck" id="ticket_body"
+                                name="ticket_body" required="required" placeholder="Ticket Body" data-bv-notempty="true"
+                                data-bv-notempty-message="Ticket Body is required"
+                                data-bv-field="ticket_body"></textarea>
+                            <!-- <div class="note-editor note-frame panel panel-default">
                                                 <div class="note-dropzone">
                                                     <div class="note-dropzone-message"></div>
                                                 </div>
@@ -423,23 +480,22 @@
                                                     </div>
                                                 </div>
                                             </div> -->
-                                    <div class="text-right app-edittor-limit-text">Characters : 0</div><i
-                                        class="form-control-feedback" data-bv-icon-for="ticket_body"
-                                        style="display: none;"></i>
-                                    <small class="help-block" data-bv-validator="notEmpty" data-bv-for="ticket_body"
-                                        data-bv-result="NOT_VALIDATED" style="display: none;">Ticket Body is
-                                        required</small></div>
-                            </div>
-                            <div class="panel-footer text-center">
-                                <button type="submit" class="btn btn-success btn-lg added-ripples"><i
-                                        class="fa fa-ticket"></i> Create Ticket</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+                            <div class="text-right app-edittor-limit-text">Characters : 0</div><i
+                                class="form-control-feedback" data-bv-icon-for="ticket_body" style="display: none;"></i>
+                            <small class="help-block" data-bv-validator="notEmpty" data-bv-for="ticket_body"
+                                data-bv-result="NOT_VALIDATED" style="display: none;">Ticket Body is
+                                required</small></div>
+                    </div>
+                    <div class="panel-footer text-center">
+                        <button type="submit" class="btn btn-success btn-lg added-ripples"><i class="fa fa-ticket"></i>
+                            Create Ticket</button>
+                    </div>
             </div>
-            <script type="text/javascript">
-                var custom_flds = {
+            </form>
+        </div>
+</div>
+<script type="text/javascript">
+    var custom_flds = {
                             "4": [{
                                 "id": "AA",
                                 "cat_id": "4",
@@ -663,7 +719,7 @@
                                 }
                             });
                         });
-            </script>
-        </section>
-    </div>
+</script>
+</section>
+</div>
 @endsection

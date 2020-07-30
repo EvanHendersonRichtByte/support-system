@@ -41,33 +41,33 @@ All Active Tickets
                     </tr>
                 </thead>
                 <tbody>
-                @php $no=0; @endphp
-@foreach($data as $d) 
-@php $no++; @endphp
-<tr>
-<tbody>
-<td>{{$no}}</td>
-    <td>
-    <p>ID Ticket : {{$d->id_ticket}}</p>
-    <p>Subject : {{$d->ticket_subject}}</p>
-    <p>Category : {{$d->ticket_category}}</p>
-    <p>Priroty : {{$d->priority}}</p>
-    </td>
-    <td>2 Years Ago</td>
-    <td>Admin</td>
-    <td>Admin</td>
-    <td>2 Years Ago</td>
-    <td></td>
-    <td><a href = "/ticket/show/{{$d->id_ticket }}" class = "btn btn-success btn-sm">Detail</a>
-    <form action="/ticket/hapus/{{$d->id_ticket}}" method="post">
-    {{csrf_field()}}
-    <input type="hidden" name="_method" value="DELETE">
-    <button type="submit" class="btn btn-danger">Delete</button>
-    <!-- <a class = "btn btn-sm btn-danger" onclick = "return confirm('yakin ingn menghapus si ini?')" href = "/ticket/hapus/{{ $d->id_ticket }}">Delete</a></td> -->
-    </form>
-    <tbody>
-</tr>
-@endforeach
+                    @php $no=0; @endphp
+                    @foreach($data as $d)
+                    @php $no++; @endphp
+                    <tr>
+                <tbody>
+                    <td>{{$no}}</td>
+                    <td>
+                        <p>ID Ticket : {{$d->id_ticket}}</p>
+                        <p>Subject : {{$d->ticket_subject}}</p>
+                        <p>Category : {{$d->ticket_category}}</p>
+                        <p>Priority : {{$d->priority}}</p>
+                    </td>
+                    <td>2 Years Ago</td>
+                    <td>Admin</td>
+                    <td>Admin</td>
+                    <td>2 Years Ago</td>
+                    <td></td>
+                    <td><a href="/ticket/show/{{$d->id_ticket }}" class="btn btn-success btn-sm">Detail</a>
+                        <form action="/ticket/hapus/{{$d->id_ticket}}" method="post">
+                            {{csrf_field()}}
+                            <input type="hidden" name="_method" value="DELETE">
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                            <!-- <a class = "btn btn-sm btn-danger" onclick = "return confirm('yakin ingn menghapus si ini?')" href = "/ticket/hapus/{{ $d->id_ticket }}">Delete</a></td> -->
+                        </form>
+                <tbody>
+                    </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>
