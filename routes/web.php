@@ -130,3 +130,10 @@ Route::post('/all_active_tickets/store', 'TicketController@store');
 Route::delete('/ticket/hapus/{id}', 'TicketController@hapus');
 
 Route::get('/ticket/show/{id}', "TicketController@show");
+
+// test
+
+Route::get('/test', function () {
+    $ticket = App\Comment::find(1)->users;
+    return $ticket;
+});

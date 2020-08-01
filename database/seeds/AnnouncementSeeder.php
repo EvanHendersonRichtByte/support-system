@@ -12,7 +12,7 @@ class AnnouncementSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('announcement')->insert([
+        DB::table('announcements')->insert([
             'title' => 'Penting',
             'start_date' => date('Y-m-d H:i:s'),
             'end_date' => date('Y-m-d H:i:s'),
