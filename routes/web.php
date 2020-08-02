@@ -127,6 +127,13 @@ Route::get('/create_ticket', 'TicketController@create');
 
 Route::post('/all_active_tickets/store', 'TicketController@store');
 
-Route::delete('/ticket/hapus/{id}', 'TicketController@hapus');
+Route::delete('/ticket/delete/{id}', 'TicketController@delete');
 
 Route::get('/ticket/show/{id}', "TicketController@show");
+
+// test
+
+Route::get('/test', function () {
+    $ticket = App\Comment::find(1)->ticket;
+    return $ticket;
+});
