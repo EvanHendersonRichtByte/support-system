@@ -3,27 +3,31 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User;
 use Session;
+use App\User;
 class LoginController extends Controller
 {
-    public function cek(Request $req)
-    {
-        $this->validate($req,[
-            'email'=>'required',
-            'password'=>'required'
-        ]);
-        $proses=User::where('email', $req->email)->where('password', $req->password)->first();
-        if($proses){
-            Session::put('email', $proses->id);
-            Session::put('email', $proses->email);
-            Session::put('password', $proses->password);
-            Session::put('login_status', true);
+    public function index () {
+        if(Session::get('user') !== null) {
             return redirect('/client/panel/dashboard');
+        } else {
+            return view ('user.login');
         }
-        else{
-            Session::flash('alert_pesan', 'Username dan Password tidak cocok');
-            return redirect('user');
+    }
+
+    public function check (Request $request) {
+        $data = User::where('email',$request->email)->where('password', $request->password);
+        if($data->count() > 0 ) {
+            $request->session()->put('logged_in', true);
+            $request->session()->put('user', $data->first());
+            $request->session()->put('role', User::find($data->first()->id)->roles()->first());
+            return redirect('/client/panel/dashboard');
+        } else {
+            return redirect('/login')->with('message','Auth Failed');
         }
+    }
+    public function logout() {
+        Session::flush();
+        return redirect('/login');
     }
 }

@@ -35,20 +35,22 @@ User Login
                             </section>
                             <div class="text-center">
                                 <h2 class="m-b-30">Login Required, Please login</h2>
-                                <button class="btn btn-warning btn-theme btn-lg popupformWR apopf added-ripples" data-toggle="modal"
-                                    data-target="#loginModal" data-effect="mfp-move-from-top"><span><i class="fa fa-lock"></i></span> Login</button>
+                                <button class="btn btn-warning btn-theme btn-lg popupformWR apopf added-ripples"
+                                    data-toggle="modal" data-target="#loginModal"
+                                    data-effect="mfp-move-from-top"><span><i class="fa fa-lock"></i></span>
+                                    Login</button>
                                 <div>
                                     <h3 class="m-30">OR</h3>
                                 </div>
                                 <button class="popupformWR btn btn-info btn-lg apopf added-ripples" data-toggle="modal"
                                     data-target="#registerModal" data-effect="mfp-move-from-top"> <span><i
-                                        class="fa fa-wpforms"></i> Register </span>
+                                            class="fa fa-wpforms"></i> Register </span>
                                 </button>
                             </div>
 
                             <div class="modal fade" id="loginModal" tabindex="-1" role="dialog"
                                 aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                                <form action="{{url('login/cek')}}" method="POST">
+                                <form action="{{url('check_login')}}" method="POST">
                                     {{ csrf_field() }}
                                     <div class="modal-dialog modal-dialog-centered" role="document">
                                         <div class="modal-content">
@@ -65,12 +67,14 @@ User Login
                                                     <div class="col-xs-12">
                                                         <div class="form-group">
                                                             Email
-                                                            <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
+                                                            <input id="email" type="email" class="form-control"
+                                                                name="email" value="{{ old('email') }}" required
+                                                                autofocus>
 
                                                             @if ($errors->has('email'))
-                                                                <span class="help-block">
-                                                                 <strong>{{ $errors->first('email') }}</strong>
-                                                                </span>
+                                                            <span class="help-block">
+                                                                <strong>{{ $errors->first('email') }}</strong>
+                                                            </span>
                                                             @endif
 
                                                         </div>
@@ -80,90 +84,93 @@ User Login
                                                     <div class="col-xs-12 ">
                                                         <div class="form-group">
                                                             Password
-                                                            <input id="password" type="password" class="form-control" name="password" value="{{ old('password') }}" required autofocus>
+                                                            <input id="password" type="password" class="form-control"
+                                                                name="password" value="{{ old('password') }}" required
+                                                                autofocus>
 
                                                             @if ($errors->has('password'))
-                                                                <span class="help-block">
-                                                                 <strong>{{ $errors->first('password') }}</strong>
-                                                                </span>
+                                                            <span class="help-block">
+                                                                <strong>{{ $errors->first('password') }}</strong>
+                                                            </span>
                                                             @endif
 
                                                         </div>
                                                     </div>
-                                            </div>
-                                            <div class="modal-footer ">
-                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                <button type="submit" type="button" class="btn btn-primary">Submit</button>
+                                                </div>
+                                                <div class="modal-footer ">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-dismiss="modal">Close</button>
+                                                    <button type="submit" type="button"
+                                                        class="btn btn-primary">Submit</button>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
                                 </form>
                             </div>
                             <!-- ----------------------------------------------------------------- -->
-                            
+
                         </div>
                         <div class="modal fade" id="registerModal" tabindex="-1" role="dialog"
-                                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                                <form action="/user" method="POST">
-                                    {{ csrf_field() }}
-                                    <div class="modal-dialog modal-dialog-centered" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h4 class="modal-title">User Registration
-                                                </h4>
-                                                <button type="button" class="close" data-dismiss="modal"
-                                                    aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <div class="row">
-                                                    <div class="col-xs-12">
-                                                        <div class="form-group">
-                                                            Email
-                                                            <input name="email" type="email" class="form-control">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-xs-6">
-                                                        <div class="form-group">
-                                                            First Name
-                                                            <input name="firstname" type="text" class="form-control">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xs-6">
-                                                        <div class="form-group">
-                                                            Last Name
-                                                            <input name="lastname" type="text" class="form-control">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-xs-6">
-                                                        <div class="form-group">
-                                                            Password
-                                                            <input name="password" type="password" class="form-control">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xs-6">
-                                                        <div class="form-group">
-                                                            Confirm Password
-                                                            <input name="confirmPassword" type="password"
-                                                                class="form-control">
-                                                        </div>
+                            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                            <form action="/user" method="POST">
+                                {{ csrf_field() }}
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">User Registration
+                                            </h4>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row">
+                                                <div class="col-xs-12">
+                                                    <div class="form-group">
+                                                        Email
+                                                        <input name="email" type="email" class="form-control">
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="modal-footer ">
-                                                <button type="button" class="btn btn-secondary"
-                                                    data-dismiss="modal">Close</button>
-                                                <button type="submit" type="button" class="btn btn-primary">Submit</button>
+                                            <div class="row">
+                                                <div class="col-xs-6">
+                                                    <div class="form-group">
+                                                        First Name
+                                                        <input name="firstname" type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-6">
+                                                    <div class="form-group">
+                                                        Last Name
+                                                        <input name="lastname" type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xs-6">
+                                                    <div class="form-group">
+                                                        Password
+                                                        <input name="password" type="password" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-6">
+                                                    <div class="form-group">
+                                                        Confirm Password
+                                                        <input name="confirmPassword" type="password"
+                                                            class="form-control">
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
+                                        <div class="modal-footer ">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-dismiss="modal">Close</button>
+                                            <button type="submit" type="button" class="btn btn-primary">Submit</button>
+                                        </div>
                                     </div>
-                                </form>
-                            </div>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>

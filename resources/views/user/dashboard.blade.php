@@ -16,7 +16,7 @@ Hello User
 
                     <section class="content-header">
                         <h1>
-                            Hello, User </h1>
+                            Hello, {{$user->username}} </h1>
                     </section>
                 </div>
             </div>
@@ -49,11 +49,11 @@ Hello User
                                                     <div class="text-center profile-container">
                                                         <div class="outer-w">
                                                             <div class="profile-img">
-                                                                <img src="https://demo.appsbd.com/support-system/images/default-user-image.png" alt="Mohamed Sharaf">
+                                                                <img src="{{$user->img_url}}" alt="{{$user->username}}">
                                                             </div>
                                                         </div>
-                                                        <div>User</div>
-                                                        <small>Join : Feb 02, 2018</small>
+                                                        <div>{{$user->username}}</div>
+                                                        <small>Join : {{$user->created_at}}</small>
                                                     </div>
                                                 </li>
                                                 <li><a class="active" href="{{url('/client/panel/dashboard')}}"><i class="fa fa-th"></i> Dashboard</a></li>
@@ -78,7 +78,9 @@ Hello User
                                             <a href="{{url('/ticket/active-tickets')}}">
                                                 <div class="panel panel-default active-text">
                                                     <div class="panel-body">
-                                                        <div class="data-counter">4</div>
+                                                        <div class="data-counter">@php
+                                                            echo count($tickets)
+                                                        @endphp</div>
                                                         <div class="data-text">Active Tickets</div>
                                                         <div class="data-note">Your total active tickets</div>
                                                     </div>

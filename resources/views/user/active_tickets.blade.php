@@ -42,7 +42,7 @@ Active Tickets
                                                 <span class="icon-bar"></span>
                                                 <span class="icon-bar"></span>
                                             </button>
-                                            <span class="visible-xs navbar-brand"><img src="https://demo.appsbd.com/support-system/images/default-user-image.png" alt="Mohamed Sharaf"> My Menu</span>
+                                            <span class="visible-xs navbar-brand"><img src="{{$user->img_url}}" alt="{{$user->username}}"> My Menu</span>
                                         </div>
                                         <div class="navbar-collapse collapse sidebar-navbar-collapse">
                                             <ul class=" client-my-menu list-group">
@@ -50,11 +50,11 @@ Active Tickets
                                                     <div class="text-center profile-container">
                                                         <div class="outer-w">
                                                             <div class="profile-img">
-                                                                <img src="https://demo.appsbd.com/support-system/images/default-user-image.png" alt="Mohamed Sharaf">
+                                                                <img src="{{$user->img_url}}" alt="{{$user->username}}">
                                                             </div>
                                                         </div>
-                                                        <div>User</div>
-                                                        <small>Join : Feb 02, 2018</small>
+                                                        <div>{{$user->username}}</div>
+                                                        <small>Join : {{$user->created_at}}</small>
                                                     </div>
                                                 </li>
                                                 <li><a class="" href="{{url('/client/panel/dashboard')}}"><i class="fa fa-th"></i> Dashboard</a></li>
@@ -71,7 +71,6 @@ Active Tickets
                     </div>
                     <div class="col-md-9 col-sm-8">
                         <div class="row">
-
                             <section class="content-breadcrumb">
                                 <ol class="breadcrumb m-b-10">
                                     <li>
@@ -86,182 +85,55 @@ Active Tickets
                                 <div class="panel-heading">Active Tickets</div>
                                 <div class="panel-body p-0 app-nice-scroll a-nice-scroll" style="max-height: 450px; overflow: hidden; outline: none;" tabindex="1">
                                     <ul class="kn-list">
-                                        <li class="">
-                                            <div class="kn-title">
-                                                <h3 class="m-0">
-                                                    <a href="https://demo.appsbd.com/support-system/ticket/details/4.html">What is Lorem Ipsum?</a>
-                                                    <span class="kn-like pull-right btn-v-dtls text-success"><a href="https://demo.appsbd.com/support-system/ticket/details/4.html" class="btn btn-xs btn-theme-light added-ripples"><i class="fa fa-eye"></i> View Details</a></span>
-                                                </h3>
-                                            </div>
-                                            <div class="kn-details ticket-item">
-                                                <div class="row m-0">
-                                                    <div class="col-md-4">
-                                                        <div class="row">
-                                                            <label class="col-md-5 col-xs-6">Ticket Track ID</label>
-                                                            <div class="col-md-7  col-xs-6">T83DCEFB7-004-FMQ</div>
+                                        @foreach ($tickets as $ticket)
+                                            <li class="">
+                                                <div class="kn-title">
+                                                    <h3 class="m-0">
+                                                        <a href="{{action('TicketController@userTicketDetail',['id' => $ticket->id])}}">{{$ticket->ticket_subject}}</a>
+                                                        <span class="kn-like pull-right btn-v-dtls text-success"><a
+                                                                href="{{action('TicketController@userTicketDetail',['id' => $ticket->id])}}"
+                                                                class="btn btn-xs btn-theme-light added-ripples"><i class="fa fa-eye"></i> View Details</a></span>
+                                                    </h3>
+                                                </div>
+                                                <div class="kn-details ticket-item">
+                                                    <div class="row m-0">
+                                                        <div class="col-md-4">
+                                                            <div class="row">
+                                                                <label class="col-md-5 col-xs-6">Ticket Track ID</label>
+                                                                <div class="col-md-7  col-xs-6">{{$ticket->id}}</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="row">
+                                                                <label class="col-md-5 col-xs-6">Current Status</label>
+                                                                <div class="col-md-7 col-xs-6"><span class="text-info text-bold"><i class="fa fa-dot-circle-o"></i>
+                                                                        New</span></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="row ">
+                                                                <label class="col-md-5 col-xs-6">Opened On</label>
+                                                                <div class="col-md-7 col-xs-6">{{$ticket->created_at}}</div>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-4">
-                                                        <div class="row">
-                                                            <label class="col-md-5 col-xs-6">Current Status</label>
-                                                            <div class="col-md-7 col-xs-6"><span class="text-info text-bold"><i class="fa fa-dot-circle-o"></i> New</span></div>
+                                                    <div class="row m-0">
+                                                        <div class="col-md-8">
+                                                            <div class="row">
+                                                                <label class="ctg col-md-2 col-xs-6">Category</label>
+                                                                <div class="col-md-7  col-xs-6"><a href="#">{{$ticket->ticket_category}}</a></div>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <div class="row ">
-                                                            <label class="col-md-5 col-xs-6">Opened On</label>
-                                                            <div class="col-md-7 col-xs-6">Feb 06, 2018 12:30</div>
+                                                        <div class="col-md-4">
+                                                            <div class="row ">
+                                                                <label class="col-md-5 col-xs-6">Last Replied On</label>
+                                                                <div class="col-md-7 col-xs-6">{{$ticket->updated_at}}</div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="row m-0">
-                                                    <div class="col-md-8">
-                                                        <div class="row">
-                                                            <label class="ctg col-md-2 col-xs-6">Category</label>
-                                                            <div class="col-md-7  col-xs-6"><a href="#">PHP Basic</a></div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <div class="row ">
-                                                            <label class="col-md-5 col-xs-6">Last Replied On</label>
-                                                            <div class="col-md-7 col-xs-6">Feb 06, 2018 12:30</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="">
-                                            <div class="kn-title">
-                                                <h3 class="m-0">
-                                                    <a href="https://demo.appsbd.com/support-system/ticket/details/3.html">Another Test ticket 3</a>
-                                                    <span class="kn-like pull-right btn-v-dtls text-success"><a href="https://demo.appsbd.com/support-system/ticket/details/3.html" class="btn btn-xs btn-theme-light added-ripples"><i class="fa fa-eye"></i> View Details</a></span>
-                                                </h3>
-                                            </div>
-                                            <div class="kn-details ticket-item">
-                                                <div class="row m-0">
-                                                    <div class="col-md-4">
-                                                        <div class="row">
-                                                            <label class="col-md-5 col-xs-6">Ticket Track ID</label>
-                                                            <div class="col-md-7  col-xs-6">T83DCEFB7-003-Q7B</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <div class="row">
-                                                            <label class="col-md-5 col-xs-6">Current Status</label>
-                                                            <div class="col-md-7 col-xs-6"><span class="text-info text-bold"><i class="fa fa-hourglass-1"></i> In Progress</span></div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <div class="row ">
-                                                            <label class="col-md-5 col-xs-6">Opened On</label>
-                                                            <div class="col-md-7 col-xs-6">Feb 06, 2018 12:26</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row m-0">
-                                                    <div class="col-md-8">
-                                                        <div class="row">
-                                                            <label class="ctg col-md-2 col-xs-6">Category</label>
-                                                            <div class="col-md-7  col-xs-6"><a href="#">WordPress Theme Setup</a></div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <div class="row ">
-                                                            <label class="col-md-5 col-xs-6">Last Replied On</label>
-                                                            <div class="col-md-7 col-xs-6">Feb 06, 2018 06:28</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="">
-                                            <div class="kn-title">
-                                                <h3 class="m-0">
-                                                    <a href="https://demo.appsbd.com/support-system/ticket/details/2.html">Another Test</a>
-                                                    <span class="kn-like pull-right btn-v-dtls text-success"><a href="https://demo.appsbd.com/support-system/ticket/details/2.html" class="btn btn-xs btn-theme-light added-ripples"><i class="fa fa-eye"></i> View Details</a></span>
-                                                </h3>
-                                            </div>
-                                            <div class="kn-details ticket-item">
-                                                <div class="row m-0">
-                                                    <div class="col-md-4">
-                                                        <div class="row">
-                                                            <label class="col-md-5 col-xs-6">Ticket Track ID</label>
-                                                            <div class="col-md-7  col-xs-6">T83DCEFB7-002-GOM</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <div class="row">
-                                                            <label class="col-md-5 col-xs-6">Current Status</label>
-                                                            <div class="col-md-7 col-xs-6"><span class="text-info text-bold"><i class="fa fa-hourglass-1"></i> In Progress</span></div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <div class="row ">
-                                                            <label class="col-md-5 col-xs-6">Opened On</label>
-                                                            <div class="col-md-7 col-xs-6">Feb 06, 2018 12:25</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row m-0">
-                                                    <div class="col-md-8">
-                                                        <div class="row">
-                                                            <label class="ctg col-md-2 col-xs-6">Category</label>
-                                                            <div class="col-md-7  col-xs-6"><a href="#">Android Basic</a></div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <div class="row ">
-                                                            <label class="col-md-5 col-xs-6">Last Replied On</label>
-                                                            <div class="col-md-7 col-xs-6">Feb 06, 2018 06:28</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="">
-                                            <div class="kn-title">
-                                                <h3 class="m-0">
-                                                    <a href="https://demo.appsbd.com/support-system/ticket/details/1.html">This is test ticket</a>
-                                                    <span class="kn-like pull-right btn-v-dtls text-success"><a href="https://demo.appsbd.com/support-system/ticket/details/1.html" class="btn btn-xs btn-theme-light added-ripples"><i class="fa fa-eye"></i> View Details</a></span>
-                                                </h3>
-                                            </div>
-                                            <div class="kn-details ticket-item">
-                                                <div class="row m-0">
-                                                    <div class="col-md-4">
-                                                        <div class="row">
-                                                            <label class="col-md-5 col-xs-6">Ticket Track ID</label>
-                                                            <div class="col-md-7  col-xs-6">T83DCEFB7-001-LDP</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <div class="row">
-                                                            <label class="col-md-5 col-xs-6">Current Status</label>
-                                                            <div class="col-md-7 col-xs-6"><span class="text-info text-bold"><i class="fa fa-dot-circle-o"></i> New</span></div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <div class="row ">
-                                                            <label class="col-md-5 col-xs-6">Opened On</label>
-                                                            <div class="col-md-7 col-xs-6">Feb 06, 2018 12:24</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row m-0">
-                                                    <div class="col-md-8">
-                                                        <div class="row">
-                                                            <label class="ctg col-md-2 col-xs-6">Category</label>
-                                                            <div class="col-md-7  col-xs-6"><a href="#">PHP Setup</a></div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <div class="row ">
-                                                            <label class="col-md-5 col-xs-6">Last Replied On</label>
-                                                            <div class="col-md-7 col-xs-6">Feb 06, 2018 12:24</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
+                                            </li>
+                                        @endforeach
                                     </ul>
                                 </div>
                             </div>

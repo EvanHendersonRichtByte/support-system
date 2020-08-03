@@ -43,7 +43,7 @@ Profile
                                                 <span class="icon-bar"></span>
                                                 <span class="icon-bar"></span>
                                             </button>
-                                            <span class="visible-xs navbar-brand"><img src="https://demo.appsbd.com/support-system/images/default-user-image.png" alt="Mohamed Sharaf"> My Menu</span>
+                                            <span class="visible-xs navbar-brand"><img src="{{$user->img_url}}" alt="{{$user->username}}"> My Menu</span>
                                         </div>
                                         <div class="navbar-collapse collapse sidebar-navbar-collapse">
                                             <ul class=" client-my-menu list-group">
@@ -51,11 +51,11 @@ Profile
                                                     <div class="text-center profile-container">
                                                         <div class="outer-w">
                                                             <div class="profile-img">
-                                                                <img src="https://demo.appsbd.com/support-system/images/default-user-image.png" alt="Mohamed Sharaf">
+                                                                <img src="{{$user->img_url}}" alt="{{$user->username}}">
                                                             </div>
                                                         </div>
-                                                        <div>User</div>
-                                                        <small>Join : Feb 02, 2018</small>
+                                                        <div>{{$user->username}}</div>
+                                                        <small>Join : {{$user->created_at}}</small>
                                                     </div>
                                                 </li>
                                                 <li><a class="" href="{{url('/client/panel/dashboard')}}"><i class="fa fa-th"></i> Dashboard</a></li>
@@ -90,17 +90,17 @@ Profile
                                             <tr>
                                                 <th style="width: 150px;">Name</th>
                                                 <th style="width: 20px;">:</th>
-                                                <td>User</td>
+                                                <td>{{$user->username}}</td>
                                             </tr>
                                             <tr>
                                                 <th>Email</th>
                                                 <th>:</th>
-                                                <td>user@support.com</td>
+                                            <td>{{$user->email}}</td>
                                             </tr>
                                             <tr>
                                                 <th>Join Date</th>
                                                 <th>:</th>
-                                                <td>Feb 02, 2018 16:26</td>
+                                                <td>{{$user->created_at}}</td>
                                             </tr>
                                             <tr>
                                                 <th>Timezone</th>

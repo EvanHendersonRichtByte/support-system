@@ -1,42 +1,41 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
-
-
 /*
 |--------------------------------------------------------------------------
 | User Routes
 |--------------------------------------------------------------------------
 */
+Route::group(['middleware' => ['check_login']], function () {
+    Route::get('/', function () {
+        return view('welcome'); 
+    });
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::resource('/user', 'UserController');
+    Route::get('/client/panel/dashboard', 'UserController@dashboard');
+    
+    Route::get('/client/panel/profile', 'UserController@profile');
 
-Route::get('/client/panel/dashboard', function () {
-    return view('user.dashboard');
-});
-Route::get('/ticket/active-tickets', function () {
-    return view('user.active_tickets');
-});
-Route::get('/ticket/closed-tickets', function () {
-    return view('user.closed_tickets');
-});
-Route::get('/client/panel/profile', function () {
-    return view('user.profile');
-});
-Route::get('/user/{$id}/change-password', function ($id) {
-    return view('alluser.change_password', compact('id'));
-});
-Route::get('/ticket/open', function () {
-    return view('user.open_tickets');
+    Route::get('/ticket/active-tickets', 'TicketController@activeTickets');
+
+    Route::get('/ticket/detail/{id}', 'TicketController@userTicketDetail');
+
+    Route::get('/ticket/closed-tickets', 'TicketController@closedTickets');
+
+    Route::resource('/user', 'UserController')->withoutMiddleware([check_login::class]);
+      
+    
+
+    
+
+    Route::get('/user/{$id}/change-password', function ($id) {
+        return view('alluser.change_password', compact('id'));
+    });
+
+    Route::get('/ticket/open', function () {
+        return view('user.open_tickets');
+    });
 });
 
-// Addon
-
-Route::post('login/cek', 'LoginController@cek');
 /*
 |--------------------------------------------------------------------------
 | Admin Routes
@@ -132,8 +131,9 @@ Route::delete('/ticket/delete/{id}', 'TicketController@delete');
 Route::get('/ticket/show/{id}', "TicketController@show");
 
 // test
-
+Route::get('/login', 'LoginController@index');
+Route::post('/check_login', 'LoginController@check');
+Route::get('logout', 'LoginController@logout');
 Route::get('/test', function () {
-    $ticket = App\Comment::find(1)->ticket;
-    return $ticket;
+    return Session::all();
 });

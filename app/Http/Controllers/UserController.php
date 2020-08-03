@@ -5,9 +5,12 @@ namespace App\Http\Controllers;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Crypt;
-
+use Session;
 class UserController extends Controller
 {
+    public function __construct() {
+        $this->middleware('check_login');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -15,7 +18,13 @@ class UserController extends Controller
      */
     public function index()
     {
-        return view('user.login');
+        $val = Session::get('logged_in');
+        $user = Session::get('user');
+        if($val === true && $user){
+            return redirect('/');
+        } else {
+            return redirect('/login');
+        }
     }
 
     /**
@@ -41,9 +50,12 @@ class UserController extends Controller
         $password = $request->password;
         $confirmPassword = $request->confirmPassword;
         if ($password !== $confirmPassword) {
-            return redirect('/user');
+            return redirect('/login');
         } else {
             User::create(['email' => $email, 'username' => $username, 'password' => $password]);
+            $request->session()->put('logged_in', true);
+            $data = User::where('email',$request->email)->where('password', $request->password);
+            $request->session()->put('user', $data->first());
             return redirect('/client/panel/dashboard');
         }
     }
@@ -90,5 +102,18 @@ class UserController extends Controller
     public function destroy(User $user)
     {
         //
+    }
+
+    public function dashboard(User $user) {
+        $user = Session::get('user');
+        $logged_in = Session::get('logged_in');
+        $tickets = User::find($user->id)->tickets()->get();
+        return view('user.dashboard', compact('user','logged_in','tickets'));
+    }
+
+    public function profile(User $user) {
+        $user = Session::get('user');
+        $logged_in = Session::get('logged_in');
+        return view('user.profile', compact('user','logged_in'));
     }
 }
