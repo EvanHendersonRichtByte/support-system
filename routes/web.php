@@ -108,9 +108,10 @@ Route::get('/admin/category', function () {
 Route::get('/admin/canned-msg', function () {
     return view('admin.canned_msg');
 });
-Route::get('/admin/client', function () {
-    return view('admin.client');
-});
+Route::get('/admin/client', "UserController@client");
+
+Route::get('/client/edit/{id}', "UserController@edit");
+Route::get('/client/update', "UserController@update");
 // -------------------------------------------------------------------------
 Route::get('/admin/admin-message', function () {
     return view('admin.message.my_message');
