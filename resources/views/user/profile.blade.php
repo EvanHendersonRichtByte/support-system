@@ -38,12 +38,14 @@ Profile
                                 <div class="sidebar-nav">
                                     <div class="navbar navbar-client-menu" role="navigation">
                                         <div class="navbar-header">
-                                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
+                                            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                                data-target=".sidebar-navbar-collapse">
                                                 <span class="icon-bar"></span>
                                                 <span class="icon-bar"></span>
                                                 <span class="icon-bar"></span>
                                             </button>
-                                            <span class="visible-xs navbar-brand"><img src="{{$user->img_url}}" alt="{{$user->username}}"> My Menu</span>
+                                            <span class="visible-xs navbar-brand"><img src="{{$user->img_url}}"
+                                                    alt="{{$user->username}}"> My Menu</span>
                                         </div>
                                         <div class="navbar-collapse collapse sidebar-navbar-collapse">
                                             <ul class=" client-my-menu list-group">
@@ -58,11 +60,17 @@ Profile
                                                         <small>Join : {{$user->created_at}}</small>
                                                     </div>
                                                 </li>
-                                                <li><a class="" href="{{url('/client/panel/dashboard')}}"><i class="fa fa-th"></i> Dashboard</a></li>
-                                                <li><a class="" href="{{url('/ticket/active-tickets')}}"><i class="fa fa-ticket"></i> Active Tickets</a></li>
-                                                <li><a class="" href="{{url('/ticket/closed-tickets')}}"><i class="fa fa-ticket"></i> Closed Tickets</a></li>
-                                                <li><a class="active" href="{{url('/client/panel/profile')}}"><i class="fa fa-user-circle-o"></i> Profile</a></li>
-                                                <li><a class="popupformWR apopf" data-effect="mfp-move-from-top" href="https://demo.appsbd.com/support-system/alluser/user/change-password.html"><i class="fa fa-hashtag"></i> Change Password</a></li>
+                                                <li><a class="" href="{{url('/client/panel/dashboard')}}"><i
+                                                            class="fa fa-th"></i> Dashboard</a></li>
+                                                <li><a class="" href="{{url('/ticket/active-tickets')}}"><i
+                                                            class="fa fa-ticket"></i> Active Tickets</a></li>
+                                                <li><a class="" href="{{url('/ticket/closed-tickets')}}"><i
+                                                            class="fa fa-ticket"></i> Closed Tickets</a></li>
+                                                <li><a class="active" href="{{url('/client/panel/profile')}}"><i
+                                                            class="fa fa-user-circle-o"></i> Profile</a></li>
+                                                <li><a class="popupformWR apopf" data-effect="mfp-move-from-top"
+                                                        href="https://demo.appsbd.com/support-system/alluser/user/change-password.html"><i
+                                                            class="fa fa-hashtag"></i> Change Password</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -76,7 +84,8 @@ Profile
                             <section class="content-breadcrumb">
                                 <ol class="breadcrumb m-b-10">
                                     <li>
-                                        <a href="{{url('/client/panel/dashboard')}}"><i class="fa fa-user-o"></i> User Panel</a>
+                                        <a href="{{url('/client/panel/dashboard')}}"><i class="fa fa-user-o"></i> User
+                                            Panel</a>
                                     </li>
                                     <li>
                                         <i class="fa fa-user-circle-o"></i>
@@ -95,7 +104,7 @@ Profile
                                             <tr>
                                                 <th>Email</th>
                                                 <th>:</th>
-                                            <td>{{$user->email}}</td>
+                                                <td>{{$user->email}}</td>
                                             </tr>
                                             <tr>
                                                 <th>Join Date</th>
@@ -105,17 +114,22 @@ Profile
                                             <tr>
                                                 <th>Timezone</th>
                                                 <th>:</th>
-                                                <td>Asia/Dhaka <a data-effect="mfp-move-from-top" data-onclose="TimezoneChanged" class="popupformWR btn btn-xs btn-theme apopf added-ripples" href="https://demo.appsbd.com/support-system/client/panel/change-timezone.html">Change</a></td>
+                                                <td>Asia/Dhaka <a data-effect="mfp-move-from-top"
+                                                        data-onclose="TimezoneChanged"
+                                                        class="popupformWR btn btn-xs btn-theme apopf added-ripples"
+                                                        href="https://demo.appsbd.com/support-system/client/panel/change-timezone.html">Change</a>
+                                                </td>
                                             </tr>
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
-                            <a href="https://demo.appsbd.com/support-system/client/panel/download-data.html">Download this account data</a><br>
+                            <a href="https://demo.appsbd.com/support-system/client/panel/download-data.html">Download
+                                this account data</a><br>
                             <form action="{{url('/user', [$user->id])}}" method="post">
-                            @csrf
-                            <input type="hidden" name="_method" value="DELETE">
-                            <button type="submit" class="btn btn-danger" >Delete Account</button>
+                                @csrf
+                                <input type="hidden" name="_method" value="DELETE">
+                                <button type="submit" class="btn btn-danger">Delete Account</button>
                             </form>
                             <script type="text/javascript">
                                 function account_deleted(rdata) {

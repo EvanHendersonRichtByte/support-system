@@ -35,10 +35,10 @@ Ticket Details
                     <div class="col-md-8 md-r-10 p-l-0 ticket-dtls">
                         <div class="panel panel-default app-panel-box m-b-10">
                             <div class="panel-heading">
-                                <h4 class="m-0" title="What is Lorem Ipsum?">{{$tickets->ticket_subject}}</h4>
+                                <h4 class="m-0" title="What is Lorem Ipsum?">{{$data->ticket_subject}}</h4>
                             </div>
                             <div class="panel-body text-justify app-ticket-dtls">
-                                {{$tickets->ticket_body}}
+                                {{$data->ticket_body}}
                             </div>
                         </div>
                         <div id="new_reply_here"></div>
@@ -46,7 +46,7 @@ Ticket Details
                             <div class="panel-body">
                                 <div class="text-success">Current Ticket Status : <span class="ticket-status"><span
                                             class="text-info text-bold"><i class="fa fa-dot-circle-o"></i>
-                                            {{$tickets->status}}</span></span></div>
+                                            {{$data->status}}</span></span></div>
                             </div>
                         </div>
                         <form action="https://demo.appsbd.com/support-system/ticket-confirm/ticket-reply/4.html"
@@ -116,7 +116,7 @@ Ticket Details
                                         <tr>
                                             <th style="width: 122px; ">Ticket Track ID</th>
                                             <th style="width: 10px; ">:</th>
-                                            <td>{{$tickets->id}}</td>
+                                            <td>{{$data->id}}</td>
                                         </tr>
                                         <tr>
                                             <th>Ticket User</th>
@@ -135,20 +135,20 @@ Ticket Details
                                         <tr>
                                             <th>Ticket Priority</th>
                                             <th>:</th>
-                                            @if ($tickets->priority == 'Low')
-                                                <td><span class="text- label label-secondary">{{$tickets->priority}}</span></td>
-                                            @elseif($tickets->priority == 'Medium')
-                                                <td><span class="text- label label-primary">{{$tickets->priority}}</span></td>
-                                            @elseif($tickets->priority == 'High')
-                                                <td><span class="text- label label-warning">{{$tickets->priority}}</span></td>
-                                            @elseif($tickets->priority == 'Urgent')
-                                                <td><span class="text- label label-danger">{{$tickets->priority}}</span></td>
+                                            @if ($data->priority == 'Low')
+                                                <td><span class="text- label label-secondary">{{$data->priority}}</span></td>
+                                            @elseif($data->priority == 'Medium')
+                                                <td><span class="text- label label-primary">{{$data->priority}}</span></td>
+                                            @elseif($data->priority == 'High')
+                                                <td><span class="text- label label-warning">{{$data->priority}}</span></td>
+                                            @elseif($data->priority == 'Urgent')
+                                                <td><span class="text- label label-danger">{{$data->priority}}</span></td>
                                             @endif
                                         </tr>
                                         <tr>
                                             <th>Ticket Category</th>
                                             <th>:</th>
-                                            <td>{{$tickets->ticket_category}}</td>
+                                            <td>{{$data->ticket_category}}</td>
                                         </tr>
                                         <tr>
                                             <th>Assigned On</th>
@@ -167,14 +167,14 @@ Ticket Details
                                         <tr>
                                             <th>Opened Time</th>
                                             <th>:</th>
-                                            <td>{{$tickets->created_at}}</td>
+                                            <td>{{$data->created_at}}</td>
                                         </tr>
                                         <tr>
                                             <th>Status</th>
                                             <th>:</th>
                                             <td><span class="ticket-status"><span class="text-info text-bold"><i
                                                             class="fa fa-dot-circle-o"></i>
-                                                        {{$tickets->status}}</span></span>
+                                                        {{$data->status}}</span></span>
                                             </td>
                                         </tr>
                                     </tbody>

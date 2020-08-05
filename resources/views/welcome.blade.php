@@ -187,7 +187,7 @@ AppsbdSupport
         <div class="row text-center need-support-panel">
             <h2>Still Need Support? <a data-effect="mfp-move-from-top"
                     class="popupformWR btn btn-theme open-ticket apopf added-ripples"
-                    href="{{url('/create_ticket')}}">
+                    href="{{url('/ticket/open')}}">
                     <i class="fa fa-ticket"></i> Open Ticket
                 </a>
             </h2>

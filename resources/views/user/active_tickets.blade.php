@@ -37,12 +37,14 @@ Active Tickets
                                 <div class="sidebar-nav">
                                     <div class="navbar navbar-client-menu" role="navigation">
                                         <div class="navbar-header">
-                                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
+                                            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                                data-target=".sidebar-navbar-collapse">
                                                 <span class="icon-bar"></span>
                                                 <span class="icon-bar"></span>
                                                 <span class="icon-bar"></span>
                                             </button>
-                                            <span class="visible-xs navbar-brand"><img src="{{$user->img_url}}" alt="{{$user->username}}"> My Menu</span>
+                                            <span class="visible-xs navbar-brand"><img src="{{$user->img_url}}"
+                                                    alt="{{$user->username}}"> My Menu</span>
                                         </div>
                                         <div class="navbar-collapse collapse sidebar-navbar-collapse">
                                             <ul class=" client-my-menu list-group">
@@ -57,11 +59,17 @@ Active Tickets
                                                         <small>Join : {{$user->created_at}}</small>
                                                     </div>
                                                 </li>
-                                                <li><a class="" href="{{url('/client/panel/dashboard')}}"><i class="fa fa-th"></i> Dashboard</a></li>
-                                                <li><a class=" active " href="{{url('/ticket/active-tickets')}}"><i class="fa fa-ticket"></i> Active Tickets</a></li>
-                                                <li><a class="" href="{{url('/ticket/closed-tickets')}}"><i class="fa fa-ticket"></i> Closed Tickets</a></li>
-                                                <li><a class="" href="{{url('/client/panel/profile')}}"><i class="fa fa-user-circle-o"></i> Profile</a></li>
-                                                <li><a class="popupformWR apopf" data-effect="mfp-move-from-top" href="https://demo.appsbd.com/support-system/alluser/user/change-password.html"><i class="fa fa-hashtag"></i> Change Password</a></li>
+                                                <li><a class="" href="{{url('/client/panel/dashboard')}}"><i
+                                                            class="fa fa-th"></i> Dashboard</a></li>
+                                                <li><a class=" active " href="{{url('/ticket/active-tickets')}}"><i
+                                                            class="fa fa-ticket"></i> Active Tickets</a></li>
+                                                <li><a class="" href="{{url('/ticket/closed-tickets')}}"><i
+                                                            class="fa fa-ticket"></i> Closed Tickets</a></li>
+                                                <li><a class="" href="{{url('/client/panel/profile')}}"><i
+                                                            class="fa fa-user-circle-o"></i> Profile</a></li>
+                                                <li><a class="popupformWR apopf" data-effect="mfp-move-from-top"
+                                                        href="https://demo.appsbd.com/support-system/alluser/user/change-password.html"><i
+                                                            class="fa fa-hashtag"></i> Change Password</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -74,7 +82,8 @@ Active Tickets
                             <section class="content-breadcrumb">
                                 <ol class="breadcrumb m-b-10">
                                     <li>
-                                        <a href="{{url('/client/panel/dashboard')}}"><i class="fa fa-user-o"></i> User Panel</a>
+                                        <a href="{{url('/client/panel/dashboard')}}"><i class="fa fa-user-o"></i> User
+                                            Panel</a>
                                     </li>
                                     <li>
                                         <i class="fa fa-ticket"></i>
@@ -83,57 +92,65 @@ Active Tickets
                             </section>
                             <div class="panel panel-default app-panel-box">
                                 <div class="panel-heading">Active Tickets</div>
-                                <div class="panel-body p-0 app-nice-scroll a-nice-scroll" style="max-height: 450px; overflow: hidden; outline: none;" tabindex="1">
+                                <div class="panel-body p-0 app-nice-scroll a-nice-scroll"
+                                    style="max-height: 450px; overflow: hidden; outline: none;" tabindex="1">
                                     <ul class="kn-list">
                                         @foreach ($tickets as $ticket)
-                                            <li class="">
-                                                <div class="kn-title">
-                                                    <h3 class="m-0">
-                                                        <a href="{{action('TicketController@userTicketDetail',['id' => $ticket->id])}}">{{$ticket->ticket_subject}}</a>
-                                                        <span class="kn-like pull-right btn-v-dtls text-success"><a
-                                                                href="{{action('TicketController@userTicketDetail',['id' => $ticket->id])}}"
-                                                                class="btn btn-xs btn-theme-light added-ripples"><i class="fa fa-eye"></i> View Details</a></span>
-                                                    </h3>
-                                                </div>
-                                                <div class="kn-details ticket-item">
-                                                    <div class="row m-0">
-                                                        <div class="col-md-4">
-                                                            <div class="row">
-                                                                <label class="col-md-5 col-xs-6">Ticket Track ID</label>
-                                                                <div class="col-md-7  col-xs-6">{{$ticket->id}}</div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <div class="row">
-                                                                <label class="col-md-5 col-xs-6">Current Status</label>
-                                                                <div class="col-md-7 col-xs-6"><span class="text-info text-bold"><i class="fa fa-dot-circle-o"></i>
-                                                                        New</span></div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <div class="row ">
-                                                                <label class="col-md-5 col-xs-6">Opened On</label>
-                                                                <div class="col-md-7 col-xs-6">{{$ticket->created_at}}</div>
-                                                            </div>
+                                        <li class="">
+                                            <div class="kn-title">
+                                                <h3 class="m-0">
+                                                    <a
+                                                        href="{{action('TicketController@userTicketDetail',['id' => $ticket->id])}}">{{$ticket->ticket_subject}}</a>
+                                                    <span class="kn-like pull-right btn-v-dtls text-success"><a
+                                                            href="{{action('TicketController@userTicketDetail',['id' => $ticket->id])}}"
+                                                            class="btn btn-xs btn-theme-light added-ripples"><i
+                                                                class="fa fa-eye"></i> View Details</a></span>
+                                                </h3>
+                                            </div>
+                                            <div class="kn-details ticket-item">
+                                                <div class="row m-0">
+                                                    <div class="col-md-4">
+                                                        <div class="row">
+                                                            <label class="col-md-5 col-xs-6">Ticket Track ID</label>
+                                                            <div class="col-md-7  col-xs-6">{{$ticket->id}}</div>
                                                         </div>
                                                     </div>
-                                                    <div class="row m-0">
-                                                        <div class="col-md-8">
-                                                            <div class="row">
-                                                                <label class="ctg col-md-2 col-xs-6">Category</label>
-                                                                <div class="col-md-7  col-xs-6"><a href="#">{{$ticket->ticket_category}}</a></div>
-                                                            </div>
+                                                    <div class="col-md-4">
+                                                        <div class="row">
+                                                            <label class="col-md-5 col-xs-6">Current Status</label>
+                                                            <div class="col-md-7 col-xs-6"><span
+                                                                    class="text-info text-bold"><i
+                                                                        class="fa fa-dot-circle-o"></i>
+                                                                    New</span></div>
                                                         </div>
-                                                        <div class="col-md-4">
-                                                            <div class="row ">
-                                                                <label class="col-md-5 col-xs-6">Last Replied On</label>
-                                                                <div class="col-md-7 col-xs-6">{{$ticket->updated_at}}</div>
-                                                            </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="row ">
+                                                            <label class="col-md-5 col-xs-6">Opened On</label>
+                                                            <div class="col-md-7 col-xs-6">{{$ticket->created_at}}</div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </li>
+                                                <div class="row m-0">
+                                                    <div class="col-md-8">
+                                                        <div class="row">
+                                                            <label class="ctg col-md-2 col-xs-6">Category</label>
+                                                            <div class="col-md-7  col-xs-6"><a
+                                                                    href="#">{{$ticket->ticket_category}}</a></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="row ">
+                                                            <label class="col-md-5 col-xs-6">Last Replied On</label>
+                                                            <div class="col-md-7 col-xs-6">{{$ticket->updated_at}}</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
                                         @endforeach
+
+
                                     </ul>
                                 </div>
                             </div>

@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use App\Ticket;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Crypt;
+use Illuminate\Support\Facades\DB;
 use Session;
 class UserController extends Controller
 {
@@ -52,11 +54,22 @@ class UserController extends Controller
         if ($password !== $confirmPassword) {
             return redirect('/login');
         } else {
-            User::create(['email' => $email, 'username' => $username, 'password' => $password]);
+            $user = new User();
+            $user->email = $email;
+            $user->username = $username;
+            $user->password = $password;
+            $user->img_url = 'https://lorempixel.com/400/800/cats/?57549';
+            $user->save();
+
+            $user->roles()->attach(2);
+            
             $request->session()->put('logged_in', true);
             $data = User::where('email',$request->email)->where('password', $request->password);
             $request->session()->put('user', $data->first());
+            
             return redirect('/client/panel/dashboard');
+            // User::create(['email' => $email, 'username' => $username, 'password' => $password]);
+            // return redirect('/client/panel/dashboard');
         }
     }
 
@@ -105,8 +118,20 @@ class UserController extends Controller
      */
     public function destroy(Request $req, User $user)
     {
-        User::find($user->id)->delete();
-        return redirect('/logout');
+        $tickets = User::find($user->id)->tickets()->get();
+        if (count($tickets) > 0) {
+            foreach ($tickets as $ticket) {
+                Ticket::find($ticket->id)->delete();
+            }
+            DB::table('role_user')->where('user_id', $user->id)->delete();
+            User::find($user->id)->delete();
+            return redirect('/logout');
+        } else {
+            DB::table('role_user')->where('user_id', $user->id)->delete();
+            User::find($user->id)->delete();
+            return redirect('/logout');
+        }
+        
     }
 
     public function dashboard(User $user) {
