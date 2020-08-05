@@ -91,11 +91,10 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        return $request;
-        // $user = User::find($id);
-        // $user->update(['email' => $request->email, 'username' => $request->username, 'password' => $request->password]);
-        //  
-        //  return redirect()->action('UserController@client')->with('alert_message', 'Berhasil mengubah data!');
+        $user = User::find($id);
+        $user->update(['email' => $request->email, 'username' => $request->username, 'password' => $request->password]);
+         
+        return redirect()->action('UserController@client')->with('alert_message', 'Berhasil mengubah data!');
      }
 
     /**
