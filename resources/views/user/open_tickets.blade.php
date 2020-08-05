@@ -119,8 +119,9 @@
 							</section>
 							<div class="row">
 								<div class="col-md-8">
-									<form action="https://demo.appsbd.com/support-system/ticket/open.html" class="form bv-form" id="ticket_open_form" method="post" enctype="multipart/form-data" data-on-complete="on_complete" data-beforesend="on_beforesend" data-multipart="true" accept-charset="utf-8" novalidate="novalidate">
-										<input type="hidden" name="app_form" value="aa401e2f7769f4ec732697f16f28e676">
+									<form action="{{url('/ticket/open')}}" class="form bv-form" id="ticket_open_form" method="post" enctype="multipart/form-data" data-on-complete="on_complete" data-beforesend="on_beforesend" data-multipart="true" accept-charset="utf-8" novalidate="novalidate">
+										@csrf
+										{{-- <input type="hidden" name="app_form" value="aa401e2f7769f4ec732697f16f28e676"> --}}
 										<div class="panel panel-default app-panel-box">
 											<div class="panel-heading">New Ticket Form</div>
 											<div class="panel-body">
@@ -128,33 +129,33 @@
 													<div class="form-group has-feedback">
 														<label class="control-label label-required col-md-3" for="title">Ticket Subject</label>
 														<div class="col-md-9">
-															<input type="text" maxlength="150" autocomplete="off" value="" class="form-control" id="title" name="title" placeholder="Title" data-bv-notempty="true" data-bv-notempty-message="Ticket subject is required" data-bv-field="title"><i class="form-control-feedback" data-bv-icon-for="title" style="display: none;"></i>
+															<input type="text" maxlength="150" autocomplete="off" value="" class="form-control" id="title" name="ticket_subject" placeholder="Title" data-bv-notempty="true" data-bv-notempty-message="Ticket subject is required" data-bv-field="title"><i class="form-control-feedback" data-bv-icon-for="title" style="display: none;"></i>
 															<small class="help-block" data-bv-validator="notEmpty" data-bv-for="title" data-bv-result="NOT_VALIDATED" style="display: none;">Ticket subject is required</small><small class="help-block" data-bv-validator="stringLength" data-bv-for="title" data-bv-result="NOT_VALIDATED" style="display: none;">This value is not valid</small></div>
 													</div>
 													<div class="form-group has-feedback">
 														<label class="control-label label-required col-md-3" for="priroty">Priority</label>
 														<div class="col-md-9">
-															<select class="form-control" id="priroty" name="priroty" data-bv-notempty="true" data-bv-notempty-message="Priority is required" data-bv-field="priroty">
+															<select class="form-control" id="priroty" name="priority" data-bv-notempty="true" data-bv-notempty-message="Priority is required" data-bv-field="priroty">
 																<option value="">Select</option>
-																<option selected="selected" value="L">Low</option>
-																<option value="M">Medium</option>
-																<option value="H">High</option>
-																<option value="U">Urgent</option>
+																<option selected="selected" value="Low">Low</option>
+																<option value="Medium">Medium</option>
+																<option value="High">High</option>
+																<option value="Urgent">Urgent</option>
 															</select><i class="form-control-feedback" data-bv-icon-for="priroty" style="display: none;"></i>
 															<small class="help-block" data-bv-validator="notEmpty" data-bv-for="priroty" data-bv-result="NOT_VALIDATED" style="display: none;">Priority is required</small></div>
 													</div>
 													<div class="form-group has-feedback">
 														<label class="control-label label-required col-md-3" for="cat_id">Ticket Category</label>
 														<div class="col-md-9">
-															<select class="form-control" id="cat_id" name="cat_id" data-bv-notempty="true" data-bv-notempty-message="Category is required" data-bv-field="cat_id">
+															<select class="form-control" id="cat_id" name="ticket_category" data-bv-notempty="true" data-bv-notempty-message="Category is required" data-bv-field="cat_id">
 																<option value="">Select</option>
-																<option value="2">Android Basic</option>
-																<option value="7">Customer Support</option>
-																<option value="6">Joomla Theme Setup</option>
-																<option value="1">PHP Basic</option>
-																<option value="3">PHP Setup</option>
-																<option value="4">Sales</option>
-																<option value="5">WordPress Theme Setup</option>
+																<option value="Android Basic">Android Basic</option>
+																<option value="Customer Support">Customer Support</option>
+																<option value="Joomla Theme Setup">Joomla Theme Setup</option>
+																<option value="PHP Basic">PHP Basic</option>
+																<option value="PHP Setup">PHP Setup</option>
+																<option value="Sales">Sales</option>
+																<option value="WordPress Theme Setup">WordPress Theme Setup</option>
 															</select><i class="form-control-feedback" data-bv-icon-for="cat_id" style="display: none;"></i>
 															<small class="help-block" data-bv-validator="notEmpty" data-bv-for="cat_id" data-bv-result="NOT_VALIDATED" style="display: none;">Category is required</small></div>
 													</div>

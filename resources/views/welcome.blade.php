@@ -29,7 +29,11 @@ AppsbdSupport
             <div class="container ">
                 <div class="row app-header-bottom">
                     <div class="app-welcome-msg alert alert-success text-center" role="alert">
+                        @if ($user)
                         <h2>Welcome <b>{{$user->username}}</b><br></h2>
+                        @else
+                        <h2>Welcome <b>Guest</b><br></h2>
+                        @endif
                     </div>
                     <div class="row">
                         <div class="text-center">
@@ -179,15 +183,27 @@ AppsbdSupport
                 </div>
             </div>
         </div>
+        @if ($user)
         <div class="row text-center need-support-panel">
             <h2>Still Need Support? <a data-effect="mfp-move-from-top"
                     class="popupformWR btn btn-theme open-ticket apopf added-ripples"
-                    href="https://demo.appsbd.com/support-system/user/login-register.html">
+                    href="{{url('/create_ticket')}}">
                     <i class="fa fa-ticket"></i> Open Ticket
                 </a>
             </h2>
         </div>
-
+        @else
+        <div class="row text-center need-support-panel">
+            <h2>You Haven't Register, please consider registering in order to access other features 
+                <br>
+                <a
+                    data-effect="mfp-move-from-top" class="popupformWR btn btn-theme open-ticket apopf added-ripples"
+                    href="{{url('/login')}}"  id="register-home">
+                    <i class="fa fa-ticket"></i> Register
+                </a>
+            </h2>
+        </div>
+        @endif
         <div class="app-content p-t-15">
             <div class="container ">
                 <div class="row">

@@ -368,3 +368,7 @@ table.scroll-tbody thead {
 #main-img-uploader-body .thumb img {
     border-radius: 0 !important;
 }
+
+#register-home {
+    margin-top: 20px;
+}

@@ -20,8 +20,9 @@ class TicketController extends Controller
     }
     public function store(Request $request)
     {
+        $user_id = Session::get('user')->id;
+        $role = Session::get('role')->name;
         $this->validate($request, [
-            'email' => 'required',
             'priority' => 'required',
             'ticket_subject' => 'required',
             'ticket_category' => 'required',
@@ -29,19 +30,23 @@ class TicketController extends Controller
         ]);
 
         $data = new Ticket();
-        $data->email = $request->email;
-        $data->user_id = 1;
+        // $data->email = $request->email;
+        $data->user_id = $user_id;
         $data->ticket_subject = $request->ticket_subject;
         $data->priority = $request->priority;
         $data->ticket_category = $request->ticket_category;
         $data->ticket_body = $request->ticket_body;
         $data->save();
-
-        return redirect(url('admin/ticket'));
+        if($role === "Admin"){
+            return redirect(url('admin/ticket'));
+        } else {
+            return redirect(url('ticket/active-tickets'));
+        }
+        return $request;
     }
     public function create()
     {
-        return view('create_ticket');
+        return view('user.open_tickets');
     }
     public function delete($id)
     {

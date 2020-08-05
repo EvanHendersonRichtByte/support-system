@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Route;
 Route::group(['middleware' => ['check_login']], function () {
     Route::get('/', function () {
         return view('welcome'); 
-    });
+    })->withoutMiddleware([check_login::class]);
 
     Route::get('/client/panel/dashboard', 'UserController@dashboard');
     
@@ -23,17 +23,13 @@ Route::group(['middleware' => ['check_login']], function () {
 
     Route::resource('/user', 'UserController')->withoutMiddleware([check_login::class]);
       
-    
-
-    
-
     Route::get('/user/{$id}/change-password', function ($id) {
         return view('alluser.change_password', compact('id'));
     });
+    
+    Route::post('/ticket/open', 'TicketController@store');
 
-    Route::get('/ticket/open', function () {
-        return view('user.open_tickets');
-    });
+    Route::get('/ticket/open', 'TicketController@create');
 });
 
 /*
@@ -123,7 +119,7 @@ Route::get('/admin/admin-message/sent', function () {
 // Addon
 Route::get('/admin/ticket', "TicketController@index");
 
-Route::get('/create_ticket', 'TicketController@create'); 
+// Route::get('/create_ticket', 'TicketController@create'); 
 
 Route::post('/all_active_tickets/store', 'TicketController@store');
 
