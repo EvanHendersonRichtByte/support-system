@@ -76,9 +76,10 @@ class UserController extends Controller
      * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function edit(User $user)
+    public function edit($id)
     {
-        //
+        $data = User::where('id', $id)->get();
+            return view('admin.client_edit', compact('data'));
     }
 
     /**
@@ -88,10 +89,14 @@ class UserController extends Controller
      * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $user)
+    public function update(Request $request, $id)
     {
-        //
-    }
+        return $request;
+        // $user = User::find($id);
+        // $user->update(['email' => $request->email, 'username' => $request->username, 'password' => $request->password]);
+        //  
+        //  return redirect()->action('UserController@client')->with('alert_message', 'Berhasil mengubah data!');
+     }
 
     /**
      * Remove the specified resource from storage.
@@ -115,5 +120,10 @@ class UserController extends Controller
         $user = Session::get('user');
         $logged_in = Session::get('logged_in');
         return view('user.profile', compact('user','logged_in'));
+    }
+
+    public function client(){
+        $data = User::all();
+        return view('admin.client', compact ('data'));
     }
 }
