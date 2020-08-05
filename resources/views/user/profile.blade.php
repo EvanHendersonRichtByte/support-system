@@ -112,7 +112,11 @@ Profile
                                 </div>
                             </div>
                             <a href="https://demo.appsbd.com/support-system/client/panel/download-data.html">Download this account data</a><br>
-                            <a href="https://demo.appsbd.com/support-system/client/panel/delete-data.html" class="confirmAjaxWR" data-on-complete="account_deleted" data-msg="Are you sure to delete your account?">Delete my account</a>
+                            <form action="{{url('/user', [$user->id])}}" method="post">
+                            @csrf
+                            <input type="hidden" name="_method" value="DELETE">
+                            <button type="submit" class="btn btn-danger" >Delete Account</button>
+                            </form>
                             <script type="text/javascript">
                                 function account_deleted(rdata) {
                                     if (rdata.status) {
