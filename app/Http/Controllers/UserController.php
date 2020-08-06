@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\DB;
 use Session;
+use PDF;
 class UserController extends Controller
 {
     public function __construct() {
@@ -150,5 +151,14 @@ class UserController extends Controller
     public function client(){
         $data = User::all();
         return view('admin.client', compact ('data'));
+    }
+    public function getDownload()
+    {
+        $user = Session::get('user');
+        $data = User::find($user->id);
+        $role = $data->roles()->first()->name;
+        $tickets = $data->tickets()->get();
+        $pdf = PDF::loadView('user.myPDF', ['data' => $data, 'role' => $role, 'tickets' => $tickets]);
+        return $pdf->download($user->username . '\'s ' . 'data' );
     }
 }
