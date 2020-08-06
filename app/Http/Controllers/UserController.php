@@ -159,6 +159,6 @@ class UserController extends Controller
         $role = $data->roles()->first()->name;
         $tickets = $data->tickets()->get();
         $pdf = PDF::loadView('user.myPDF', ['data' => $data, 'role' => $role, 'tickets' => $tickets]);
-        return $pdf->download($user->username . '\'s ' . 'data' );
+        return $pdf->download($user->username . '\'s ' . 'data' . '.pdf' );
     }
 }
