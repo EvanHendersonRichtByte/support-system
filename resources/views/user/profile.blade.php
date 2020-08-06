@@ -124,7 +124,7 @@ Profile
                                     </table>
                                 </div>
                             </div>
-                            <a href="https://demo.appsbd.com/support-system/client/panel/download-data.html">Download
+                            <a href="{{url('/download')}}">Download
                                 this account data</a><br>
                             <form action="{{url('/user', [$user->id])}}" method="post">
                                 @csrf

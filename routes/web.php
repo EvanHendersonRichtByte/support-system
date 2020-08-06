@@ -134,3 +134,4 @@ Route::get('logout', 'LoginController@logout');
 Route::get('/test', function () {
     return Session::all();
 });
+Route::get('/download', 'UserController@getDownload');
