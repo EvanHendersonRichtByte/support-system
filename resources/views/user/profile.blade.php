@@ -124,9 +124,11 @@ Profile
                                     </table>
                                 </div>
                             </div>
-                            <a href="{{url('/download')}}">Download
-                                this account data</a><br>
-                            <form action="{{url('/user', [$user->id])}}" method="post">
+                            <a href="{{url('/download')}}">
+                                <button type="submit" class="btn btn-success" style = "margin-bottom: 5px;">Download
+                                this account data</button></a>
+
+                            <form action="{{url('/user', [$user->id])}}" method="post" onclick = "return confirm('yakin ingn menghapus akun ini?')">
                                 @csrf
                                 <input type="hidden" name="_method" value="DELETE">
                                 <button type="submit" class="btn btn-danger">Delete Account</button>
