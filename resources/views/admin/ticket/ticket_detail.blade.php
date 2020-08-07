@@ -249,8 +249,8 @@
                                                       <div class="col-xs-12">
                                                          <div class="form-group">
                                                             Admin
-                                                            <input id="assigned_on" type="assigned_on"
-                                                               class="form-control" name="assigned_on" required
+                                                            <input id="assigned_on_id" type="assigned_on_idd"
+                                                               class="form-control" name="assigned_on_id" required
                                                                autofocus>
                                                          </div>
                                                       </div>

@@ -37,7 +37,7 @@ class TicketController extends Controller
         $data->ticket_category = $request->ticket_category;
         $data->ticket_body = $request->ticket_body;
         $data->status = 'New';
-        $data->assigned_on = 'Admin';
+        $data->assigned_on_id = 1;
         $data->save();
             return redirect(url('ticket/active-tickets'));
         // if($role === "Admin"){
@@ -88,5 +88,10 @@ class TicketController extends Controller
         $comments = $data->comments()->get();
         $user = $data->users()->first();
         return view('user.ticket_detail', compact('data', 'comments', 'user'));
+    }
+
+    public function adminDashboard() {
+        $role = Session::get('role')->name;
+        return view ('admin.admin', );
     }
 }

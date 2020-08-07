@@ -71,7 +71,7 @@
                             <p></p>
                         </li>
                         <li class="user-footer text-center">
-                            <a href="https://demo.appsbd.com/support-system/admin/user/logout.html" class="btn btn-default btn-flat added-ripples">Sign out</a>
+                            <a href="{{url('/admin/logout')}}" class="btn btn-default btn-flat added-ripples">Sign out</a>
                         </li>
                     </ul>
                 </li>
