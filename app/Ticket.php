@@ -13,7 +13,7 @@ class Ticket extends Model
         'ticket_body',
         'priority',
         'status',
-        'assigned_on'
+        'assigned_on_id'
     ];
 
     public function comments()
@@ -23,5 +23,9 @@ class Ticket extends Model
 
     public function users () {
         return $this->belongsTo('App\User', 'user_id');
+    }
+
+    public function assignedOnUser() {
+        return $this->belongsTo('App\User', 'assigned_on_id');
     }
 }

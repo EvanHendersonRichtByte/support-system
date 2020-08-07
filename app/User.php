@@ -19,4 +19,7 @@ class User extends Model
     public function comments () {
         return $this->hasMany('App\Comment');
     }
+    public function assignedOnTickets() {
+        return $this->hasMany('App\Ticket', 'assigned_on_id');
+    }
 }

@@ -20,11 +20,11 @@ use Illuminate\Support\Str;
 $factory->define(Ticket::class, function (Faker $faker) {
     return [
         'ticket_subject' => $faker->company,
-        'ticket_body' => $faker->randomHtml(2,3),
+        'ticket_body' => $faker->text,
         'ticket_category' => $faker->randomElement(['Android Basic', 'Customer Support', 'Joomla Theme Setup', 'PHP Basic', 'PHP Setup', 'Sales', 'WordPress Theme Setup']),
         'priority' => $faker->randomElement(['Low', 'Medium', 'High', 'Urgent']),
         'status' => 'New',
-        'assigned_on' => 'Admin',
+        'assigned_on_id' => 1,
         'created_at' => now(),
         'updated_at' => now()
     ];

@@ -22,7 +22,7 @@ class CreateTicketsTable extends Migration
             $table->text('ticket_body');
             $table->string('priority')->nullable();
             $table->string('status')->nullable();
-            $table->string('assigned_on')->nullable();
+            $table->integer('assigned_on_id')->nullable();
             $table->timestamps();
         });
     }

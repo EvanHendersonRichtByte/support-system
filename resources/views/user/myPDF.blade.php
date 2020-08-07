@@ -6,8 +6,7 @@
         <ul>
             <li>name: {{$data->username}}</li>
             <li style="margin-bottom:50px">email: {{$data->email}}</li>
-            <li>image: 
-            <img src="{{$data->img_url}}" alt="{{$data->username}}" style="height:120px;width:120px; "></li>
+            <li>image: {{$data->img_url}}</li>
             <li>joined: {{$data->created_at}}</li>
         </ul>
         <hr>
@@ -21,7 +20,7 @@
             <li>ticket_body: {{$ticket->ticket_body}}</li>
             <li>priority: {{$ticket->priority}}</li>
             <li>status: {{$ticket->status}}</li>
-            <li>assigned_on: {{$ticket->assigned_on}}</li>
+            <li>assigned_on_id: {{$ticket->assigned_on_id}}</li>
             <li>created_at: {{$ticket->created_at}}</li>
             <li>updated_at: {{$ticket->updated_at}}</li>
         </ul>

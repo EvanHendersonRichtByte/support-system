@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
@@ -30,90 +31,92 @@ Route::group(['middleware' => ['check_login']], function () {
     Route::post('/ticket/open', 'TicketController@store');
 
     Route::get('/ticket/open', 'TicketController@create');
+
+    
 });
 
-/*
-|--------------------------------------------------------------------------
-| Admin Routes
-|--------------------------------------------------------------------------
-*/
-Route::get('/admin', function () {
-    return view('admin.admin');
-});
-Route::get('/admin/admin-report', function () {
-    return view('admin.admin_report.admin_report');
-});
-Route::get('/admin/app-permission/user-list', function () {
-    return view('admin.user_settings.user_list');
-});
-Route::get('/admin/app-permission/role-list', function () {
-    return view('admin.user_settings.role_list');
-});
-Route::get('/admin/app-permission/role-access', function () {
-    return view('admin.user_settings.role_access');
-});
-Route::get('/admin/ticket-payment', function () {
-    return view('admin.ticket_payment');
-});
-// -------------------------------------------------------------------------
-Route::get('/admin/ticket/open', function () {
-    return view('admin.ticket.create_ticket');
-});
+Route::middleware(['admin_auth', 'check_login'])->group(function () {
+    /*
+    |--------------------------------------------------------------------------
+    | Admin Routes
+    |--------------------------------------------------------------------------
+    */
+    Route::get('/admin', 'TicketController@adminDashboard');
+    Route::get('/admin/admin-report', function () {
+        return view('admin.admin_report.admin_report');
+    });
+    Route::get('/admin/app-permission/user-list', function () {
+        return view('admin.user_settings.user_list');
+    });
+    Route::get('/admin/app-permission/role-list', function () {
+        return view('admin.user_settings.role_list');
+    });
+    Route::get('/admin/app-permission/role-access', function () {
+        return view('admin.user_settings.role_access');
+    });
+    Route::get('/admin/ticket-payment', function () {
+        return view('admin.ticket_payment');
+    });
+    // -------------------------------------------------------------------------
+    Route::get('/admin/ticket/open', function () {
+        return view('admin.ticket.create_ticket');
+    });
 
-Route::get('/admin/ticket/my-ticket', function () {
-    return view('admin.ticket.my_active_tickets');
-});
-Route::get('/admin/ticket/my-paid-ticket', function () {
-    return view('admin.ticket.my_paid_tickets');
-});
-Route::get('/admin/ticket/my-closed-ticket', function () {
-    return view('admin.ticket.my_closed_tickets');
-});
-Route::get('/admin/ticket/my-assigned-ticket', function () {
-    return view('admin.ticket.my_assigned_tickets');
-});
-Route::get('/admin/ticket/unassigned-ticket', function () {
-    return view('admin.ticket.my_unassigned_tickets');
-});
-Route::get('/admin/ticket/all-paid-ticket', function () {
-    return view('admin.ticket.all_paid_tickets');
-});
-Route::get('/admin/ticket/closed-ticket', function () {
-    return view('admin.ticket.all_closed_tickets');
-});
-// -------------------------------------------------------------------------
-Route::get('/admin/admin-chat', function () {
-    return view('admin.web_chat.chat_panel');
-});
-Route::get('/admin/chat-canned-msg', function () {
-    return view('admin.web_chat.chat_canned_message');
-});
-// -------------------------------------------------------------------------
-Route::get('/admin/ticket-feedback', function () {
-    return view('admin.ticket_feedback');
-});
-Route::get('/admin/notice', function () {
-    return view('admin.announcements');
-});
-Route::get('/admin/knowledge', function () {
-    return view('admin.knowledge');
-});
-Route::get('/admin/category', function () {
-    return view('admin.category');
-});
-Route::get('/admin/canned-msg', function () {
-    return view('admin.canned_msg');
-});
-Route::get('/admin/client', "UserController@client");
+    Route::get('/admin/ticket/my-ticket', function () {
+        return view('admin.ticket.my_active_tickets');
+    });
+    Route::get('/admin/ticket/my-paid-ticket', function () {
+        return view('admin.ticket.my_paid_tickets');
+    });
+    Route::get('/admin/ticket/my-closed-ticket', function () {
+        return view('admin.ticket.my_closed_tickets');
+    });
+    Route::get('/admin/ticket/my-assigned-ticket', function () {
+        return view('admin.ticket.my_assigned_tickets');
+    });
+    Route::get('/admin/ticket/unassigned-ticket', function () {
+        return view('admin.ticket.my_unassigned_tickets');
+    });
+    Route::get('/admin/ticket/all-paid-ticket', function () {
+        return view('admin.ticket.all_paid_tickets');
+    });
+    Route::get('/admin/ticket/closed-ticket', function () {
+        return view('admin.ticket.all_closed_tickets');
+    });
+    // -------------------------------------------------------------------------
+    Route::get('/admin/admin-chat', function () {
+        return view('admin.web_chat.chat_panel');
+    });
+    Route::get('/admin/chat-canned-msg', function () {
+        return view('admin.web_chat.chat_canned_message');
+    });
+    // -------------------------------------------------------------------------
+    Route::get('/admin/ticket-feedback', function () {
+        return view('admin.ticket_feedback');
+    });
+    Route::get('/admin/notice', function () {
+        return view('admin.announcements');
+    });
+    Route::get('/admin/knowledge', function () {
+        return view('admin.knowledge');
+    });
+    Route::get('/admin/category', function () {
+        return view('admin.category');
+    });
+    Route::get('/admin/canned-msg', function () {
+        return view('admin.canned_msg');
+    });
+    Route::get('/admin/client', "UserController@client");
 
-Route::get('/client/edit/{id}', "UserController@edit");
-Route::get('/client/update', "UserController@update");
-// -------------------------------------------------------------------------
-Route::get('/admin/admin-message', function () {
-    return view('admin.message.my_message');
-});
-Route::get('/admin/admin-message/sent', function () {
-    return view('admin.message.sent_message');
+    Route::get('/client/edit/{id}', "UserController@edit");
+    Route::get('/client/update', "UserController@update");
+    // -------------------------------------------------------------------------
+    Route::get('/admin/admin-message', function () {
+        return view('admin.message.my_message');
+    });
+    Route::get('/admin/admin-message/sent', function () {
+        return view('admin.message.sent_message');
+    });
 });
 
 // Addon
@@ -131,7 +134,15 @@ Route::get('/ticket/show/{id}', "TicketController@show");
 Route::get('/login', 'LoginController@index');
 Route::post('/check_login', 'LoginController@check');
 Route::get('logout', 'LoginController@logout');
-Route::get('/test', function () {
+//--------------------------------------------------------------------
+Route::get('/admin/login', 'LoginController@adminIndex');
+Route::post('/admin/check_login', 'LoginController@adminCheck');
+Route::get('/admin/logout', 'LoginController@adminLogout');
+
+
+Route::get('/test', function (Request $req) {
     return Session::all();
+    // return Session::get('role   ');
+    // return App\User::find($id)->assignedOnTickets()->get();
 });
 Route::get('/download', 'UserController@getDownload');
